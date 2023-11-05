@@ -1,8 +1,13 @@
-import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import MenuRoutes from "./routes/MenuRoutes";
 import "./App.scss";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <MenuRoutes />
+    </BrowserRouter>
+  );
+};
 
 export default App;
