@@ -28,7 +28,7 @@ const ContentBoxPicture = styled.p`
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
-  background-color: #ccc;
+  background-color: #cec;
 `;
 
 const ContentBoxText = styled.li`
