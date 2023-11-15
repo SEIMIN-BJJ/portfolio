@@ -80,7 +80,10 @@ const MainSection = () => {
     duration: 0.8,
     delay: 0.2,
   };
-
+  const transitionSecond = {
+    duration: 0.8,
+    delay: 0.3,
+  };
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     if (scrollPosition > 200) {
@@ -116,7 +119,7 @@ const MainSection = () => {
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}
+          transition={transitionSecond}
         >
           <ContentBoxTitle>1페이지</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>

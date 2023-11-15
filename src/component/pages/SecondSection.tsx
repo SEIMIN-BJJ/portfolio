@@ -22,14 +22,14 @@ const Content = styled.div`
   border: 1px solid black;
 `;
 
-const ContentBoxPicture = styled(motion.p)`
-  width: 24rem;
-  height: 40vh;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid black;
-  background-color: #cec;
-`;
+// const ContentBoxPicture = styled(motion.p)`
+//   width: 24rem;
+//   height: 40vh;
+//   display: flex;
+//   justify-content: space-between;
+//   border: 1px solid black;
+//   background-color: #cec;
+// `;
 
 const ContentBoxText = styled(motion.li)`
   width: 100%;
@@ -62,14 +62,14 @@ const ContentBoxSub = styled(motion.p)`
 const SecondSection = () => {
   const [animate, setAnimate] = useState(false);
 
-  const animationLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
+  // const animationLeft = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: { opacity: 1, x: 0 },
+  // };
 
-  const animationRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 },
+  const animationUp = {
+    hidden: { opacity: 0, y:50 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const transition = {
@@ -102,14 +102,14 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        <ContentBoxPicture
+        {/* <ContentBoxPicture
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-        ></ContentBoxPicture>
+        ></ContentBoxPicture> */}
         <ContentBoxText
-          variants={animationRight}
+          variants={animationUp}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}

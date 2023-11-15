@@ -79,7 +79,7 @@ const FouthSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition > 1500) {
+    if (scrollPosition > 1300) {
       setAnimate(true);
     } else {
       setAnimate(false);
