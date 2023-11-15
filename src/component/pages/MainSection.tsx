@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import Header from "component/block/Header/header";
-// import Footer from "component/block/Footer/footer";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
+import FouthSection from "./FouthSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -15,6 +16,7 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
 `;
+
 const Content = styled.div`
   width: 70rem !important;
   height: 100vh !important;
@@ -24,7 +26,7 @@ const Content = styled.div`
   border: 1px solid black;
 `;
 
-const ContentBoxPicture = styled.p`
+const ContentBoxPicture = styled(motion.p)`
   width: 24rem;
   height: 40vh;
   display: flex;
@@ -33,7 +35,7 @@ const ContentBoxPicture = styled.p`
   background-color: #cec;
 `;
 
-const ContentBoxText = styled.li`
+const ContentBoxText = styled(motion.li)`
   width: 100%;
   height: 40vh;
   display: flex;
@@ -43,7 +45,7 @@ const ContentBoxText = styled.li`
   padding-left: 3rem;
 `;
 
-const ContentBoxTitle = styled.p`
+const ContentBoxTitle = styled(motion.p)`
   width: 30vw;
   height: 10vh;
   border: 1px solid black;
@@ -54,7 +56,7 @@ const ContentBoxTitle = styled.p`
   padding: 30px 30px;
 `;
 
-const ContentBoxSub = styled.p`
+const ContentBoxSub = styled(motion.p)`
   width: 40vw;
   height: 50vh;
   border: 1px solid black;
@@ -62,19 +64,67 @@ const ContentBoxSub = styled.p`
 `;
 
 const MainSection = () => {
+  const [animate, setAnimate] = useState(false);
+
+  const animationLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const animationRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const transition = {
+    duration: 0.8,
+    delay: 0.2,
+  };
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 200) {
+      setAnimate(false);
+    } else {
+      setAnimate(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []); 
+
   return (
     <Container>
       <Header />
       <Content>
-        <ContentBoxPicture></ContentBoxPicture>
-        <ContentBoxText>
-          <ContentBoxTitle>Be My Work</ContentBoxTitle>
+        <ContentBoxPicture
+          variants={animationLeft}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}
+        ></ContentBoxPicture>
+        <ContentBoxText
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}
+        >
+          <ContentBoxTitle>1페이지</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
         </ContentBoxText>
       </Content>
       <SecondSection />
-     <ThirdSection />
-      {/* <Footer /> */}
+      <ThirdSection />
+      <FouthSection />
     </Container>
   );
 };

@@ -59,7 +59,7 @@ const ContentBoxSub = styled(motion.p)`
   background-color: bisque;
 `;
 
-const ThirdSection = () => {
+const FouthSection = () => {
   const [animate, setAnimate] = useState(false);
 
   const animationLeft = {
@@ -74,12 +74,12 @@ const ThirdSection = () => {
 
   const transition = {
     duration: 0.8,
-    delay: 0.2,
+    delay: 1.2,
   };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition > 1000) {
+    if (scrollPosition > 1500) {
       setAnimate(true);
     } else {
       setAnimate(false);
@@ -114,7 +114,7 @@ const ThirdSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}
         >
-          <ContentBoxTitle>3페이지</ContentBoxTitle>
+          <ContentBoxTitle>4페이지</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
         </ContentBoxText>
       </Content>
@@ -122,4 +122,4 @@ const ThirdSection = () => {
   );
 };
 
-export default ThirdSection;
+export default FouthSection;
