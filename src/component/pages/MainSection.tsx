@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "component/block/Header/header";
-// import Footer from "component/block/Footer/footer";
+import Footer from "component/block/Footer/footer";
+import SecondSection from "./SecondSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -65,21 +66,10 @@ const MainSection = () => {
           <ContentBoxTitle></ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
         </ContentBoxText>
-      </Content>{" "}
-      <Content>
-        <ContentBoxPicture></ContentBoxPicture>
-        <ContentBoxText>
-          <ContentBoxTitle></ContentBoxTitle>
-          <ContentBoxSub></ContentBoxSub>
-        </ContentBoxText>
-      </Content>{" "}
-      <Content>
-        <ContentBoxPicture></ContentBoxPicture>
-        <ContentBoxText>
-          <ContentBoxTitle></ContentBoxTitle>
-          <ContentBoxSub></ContentBoxSub>
-        </ContentBoxText>
       </Content>
+      <SecondSection />
+
+      {/* <Footer /> */}
     </Container>
   );
 };

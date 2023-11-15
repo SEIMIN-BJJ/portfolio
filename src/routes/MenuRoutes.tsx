@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import MainSection from "component/pages/MainSection";
+import SecondSection from "component/pages/SecondSection";
 
 const MenuRoutes = () => {
   const location = useLocation();
@@ -7,6 +8,7 @@ const MenuRoutes = () => {
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<MainSection />}></Route>
+      <Route path="/" element={<SecondSection />}></Route>
     </Routes>
   );
 };

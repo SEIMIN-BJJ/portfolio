@@ -5,7 +5,7 @@ import "./App.scss";
 const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <MenuRoutes />
+    <MenuRoutes />
     </BrowserRouter>
   );
 };

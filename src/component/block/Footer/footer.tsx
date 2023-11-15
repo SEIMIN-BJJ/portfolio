@@ -8,7 +8,7 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
-  position: fixed;
+  padding: 30px 30px;
   left: 0;
   bottom: 0;
   right: 0;
