@@ -32,11 +32,11 @@ const Header = styled.header`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled.h4`
   width: 5rem;
   height: 100%;
   border: 1px solid black;
-  margin: 0 11.6rem;
+  margin: 0 12.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -51,7 +51,7 @@ const Nav = styled.nav`
   width: 200px;
   height: 100%;
   border: 1px solid black;
-  margin: 0 11.6rem;
+  margin: 0 12.5rem;
 
   @media (max-width: 768px) {
     width: 100%;
