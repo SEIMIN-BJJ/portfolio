@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "component/block/Header/header";
-import Footer from "component/block/Footer/footer";
+// import Footer from "component/block/Footer/footer";
 import SecondSection from "./SecondSection";
+import ThirdSection from "./ThirdSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -46,7 +47,11 @@ const ContentBoxTitle = styled.p`
   width: 30vw;
   height: 10vh;
   border: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: salmon;
+  padding: 30px 30px;
 `;
 
 const ContentBoxSub = styled.p`
@@ -63,12 +68,12 @@ const MainSection = () => {
       <Content>
         <ContentBoxPicture></ContentBoxPicture>
         <ContentBoxText>
-          <ContentBoxTitle></ContentBoxTitle>
+          <ContentBoxTitle>Be My Work</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
         </ContentBoxText>
       </Content>
       <SecondSection />
-
+     <ThirdSection />
       {/* <Footer /> */}
     </Container>
   );

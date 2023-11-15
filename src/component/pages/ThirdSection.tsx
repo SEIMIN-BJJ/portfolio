@@ -39,7 +39,7 @@ const ContentBoxSub = styled.div`
   background-color: bisque;
 `;
 
-const SecondSection = () => {
+const ThirdSection = () => {
   return (
       <Content>
         <ContentBoxText>
@@ -50,4 +50,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default ThirdSection;
