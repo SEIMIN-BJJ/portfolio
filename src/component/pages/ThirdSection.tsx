@@ -43,7 +43,7 @@ const ThirdSection = () => {
   return (
       <Content>
         <ContentBoxText>
-          <ContentBoxTitle>My Hand Work</ContentBoxTitle>
+          <ContentBoxTitle>소개글</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
         </ContentBoxText>
       </Content>
