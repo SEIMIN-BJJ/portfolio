@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import "../../App.scss";
 
 const Container = styled.section`
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   text-align: center;
   border: 1px solid black;
   display: flex;
@@ -14,21 +14,31 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-  width: 70rem !important;
-  height: 100vh !important;
+  width: 70rem;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
-const ContentBoxPicture = styled(motion.p)`
+const ContentBoxPicture = styled(motion.picture)`
   width: 24rem;
   height: 40vh;
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
   background-color: #cec;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const ContentBoxText = styled(motion.li)`
@@ -39,6 +49,12 @@ const ContentBoxText = styled(motion.li)`
   flex-direction: column;
   border: 1px solid black;
   padding-left: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
 `;
 
 const ContentBoxTitle = styled(motion.p)`
@@ -50,6 +66,11 @@ const ContentBoxTitle = styled(motion.p)`
   align-items: center;
   background-color: salmon;
   padding: 30px 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 2rem;
+  }
 `;
 
 const ContentBoxSub = styled(motion.p)`
@@ -57,6 +78,12 @@ const ContentBoxSub = styled(motion.p)`
   height: 50vh;
   border: 1px solid black;
   background-color: bisque;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+
+  }
 `;
 
 const FouthSection = () => {

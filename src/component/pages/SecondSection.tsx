@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import "../../App.scss";
 
 const Container = styled.section`
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   text-align: center;
   border: 1px solid black;
   display: flex;
@@ -14,22 +14,32 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-  width: 70rem !important;
-  height: 100vh !important;
+  width: 70rem;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
-// const ContentBoxPicture = styled(motion.p)`
-//   width: 24rem;
-//   height: 40vh;
-//   display: flex;
-//   justify-content: space-between;
-//   border: 1px solid black;
-//   background-color: #cec;
-// `;
+const ContentBoxPicture = styled(motion.picture)`
+  width: 24rem;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: #cec;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 const ContentBoxText = styled(motion.li)`
   width: 100%;
@@ -39,6 +49,12 @@ const ContentBoxText = styled(motion.li)`
   flex-direction: column;
   border: 1px solid black;
   padding-left: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
 `;
 
 const ContentBoxTitle = styled(motion.p)`
@@ -50,6 +66,11 @@ const ContentBoxTitle = styled(motion.p)`
   align-items: center;
   background-color: salmon;
   padding: 30px 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 2rem;
+  }
 `;
 
 const ContentBoxSub = styled(motion.p)`
@@ -57,19 +78,25 @@ const ContentBoxSub = styled(motion.p)`
   height: 50vh;
   border: 1px solid black;
   background-color: bisque;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+
+  }
 `;
 
 const SecondSection = () => {
   const [animate, setAnimate] = useState(false);
 
-  // const animationLeft = {
-  //   hidden: { opacity: 0, x: -50 },
-  //   visible: { opacity: 1, x: 0 },
-  // };
+  const animationLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
 
-  const animationUp = {
-    hidden: { opacity: 0, y:50 },
-    visible: { opacity: 1, y: 0 },
+  const animationRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
   };
 
   const transition = {
@@ -77,6 +104,10 @@ const SecondSection = () => {
     delay: 0.2,
   };
 
+  const transitionSecond = {
+    duration: 0.8,
+    delay: 0.3,
+  };
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     if (scrollPosition > 400) {
@@ -102,17 +133,17 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        {/* <ContentBoxPicture
+        <ContentBoxPicture
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-        ></ContentBoxPicture> */}
+        ></ContentBoxPicture>
         <ContentBoxText
-          variants={animationUp}
+          variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}
+          transition={transitionSecond}
         >
           <ContentBoxTitle>2페이지</ContentBoxTitle>
           <ContentBoxSub></ContentBoxSub>
