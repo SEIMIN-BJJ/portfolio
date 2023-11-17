@@ -62,19 +62,61 @@ section {
 }
 
 /* ==========================     폰트      ===================== */
-//   @font-face {
-//     font-family: "ChosunCentennial";
-//     src: url("./component/assets/fonts/ChosunCentennial_otf.otf")
-//       format("truetype");
-//   }
-//   @font-face {
-//     font-family: "ChosunGs";
-//     src: url("./component/assets/fonts/ChosunGs.TTF") format("truetype");
-//   }
 
-//   @font-face {
-//     font-family: "Gmarket-Bold";
-//     src: url("./component/assets/fonts/GmarketSansTTFBold.ttf") format("truetype");
+@font-face {
+  font-family: "SB 어그로OTF B";
+  src: url("./component/assets/fonts/SB\ 어그로OTF\ B.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "SB 어그로OTF L";
+  src: url("./component/assets/fonts/SB\ 어그로OTF\ L.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "SB 어그로OTF M";
+  src: url("./component/assets/fonts/SB\ 어그로OTF\ M.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Black";
+  src: url("./component/assets/fonts/Pretendard-Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("./component/assets/fonts/Pretendard-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("./component/assets/fonts/Pretendard-ExtraBold.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("./component/assets/fonts/Pretendard-ExtraLight.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("./component/assets/fonts/Pretendard-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("./component/assets/fonts/Pretendard-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("./component/assets/fonts/Pretendard-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("./component/assets/fonts/Pretendard-SemiBold.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("./component/assets/fonts/Pretendard-Thin.otf") format("truetype");
+}
 /* ==========================     반응형 작업      ===================== */
 
 @media screen and (max-width: 1799px) {
