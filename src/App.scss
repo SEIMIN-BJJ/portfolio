@@ -1,160 +1,158 @@
 html {
-  width: 100%;
-  font-size: 20px !important;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    width: 100%;
+    font-size: 20px !important;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #000000;
 }
 
 body {
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: #000000;
+    text-decoration: none;
+    color: #000000;
 }
 
 h2 {
-  font-weight: 900;
-  font-size: 2rem;
-  padding: 3.15rem 0 1.1rem 0;
-  text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 3.15rem 0 1.1rem 0;
+    text-align: center;
 }
 
 ul {
-  margin: 0 !important;
-  list-style: none;
-  padding: 0 !important;
+    margin: 0 !important;
+    list-style: none;
+    padding: 0 !important;
 }
 
 li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 button {
-  outline: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 /* ==========================     폰트      ===================== */
 
 @font-face {
-  font-family: "SB 어그로OTF B";
-  src: url("./component/assets/fonts/SB\ 어그로OTF\ B.otf") format("truetype");
+    font-family: 'SB 어그로OTF B';
+    src: url('./component/assets/fonts/SB\ 어그로OTF\ B.otf') format('truetype');
 }
 @font-face {
-  font-family: "SB 어그로OTF L";
-  src: url("./component/assets/fonts/SB\ 어그로OTF\ L.otf") format("truetype");
+    font-family: 'SB 어그로OTF L';
+    src: url('./component/assets/fonts/SB\ 어그로OTF\ L.otf') format('truetype');
 }
 @font-face {
-  font-family: "SB 어그로OTF M";
-  src: url("./component/assets/fonts/SB\ 어그로OTF\ M.otf") format("truetype");
+    font-family: 'SB 어그로OTF M';
+    src: url('./component/assets/fonts/SB\ 어그로OTF\ M.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Black";
-  src: url("./component/assets/fonts/Pretendard-Black.otf") format("truetype");
+    font-family: 'Pretendard-Black';
+    src: url('./component/assets/fonts/Pretendard-Black.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Bold";
-  src: url("./component/assets/fonts/Pretendard-Bold.otf") format("truetype");
+    font-family: 'Pretendard-Bold';
+    src: url('./component/assets/fonts/Pretendard-Bold.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-ExtraBold";
-  src: url("./component/assets/fonts/Pretendard-ExtraBold.otf")
-    format("truetype");
+    font-family: 'Pretendard-ExtraBold';
+    src: url('./component/assets/fonts/Pretendard-ExtraBold.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-ExtraLight";
-  src: url("./component/assets/fonts/Pretendard-ExtraLight.otf")
-    format("truetype");
+    font-family: 'Pretendard-ExtraLight';
+    src: url('./component/assets/fonts/Pretendard-ExtraLight.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Light";
-  src: url("./component/assets/fonts/Pretendard-Light.otf") format("truetype");
+    font-family: 'Pretendard-Light';
+    src: url('./component/assets/fonts/Pretendard-Light.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Medium";
-  src: url("./component/assets/fonts/Pretendard-Medium.otf") format("truetype");
+    font-family: 'Pretendard-Medium';
+    src: url('./component/assets/fonts/Pretendard-Medium.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("./component/assets/fonts/Pretendard-Regular.otf") format("truetype");
+    font-family: 'Pretendard-Regular';
+    src: url('./component/assets/fonts/Pretendard-Regular.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("./component/assets/fonts/Pretendard-SemiBold.otf")
-    format("truetype");
+    font-family: 'Pretendard-SemiBold';
+    src: url('./component/assets/fonts/Pretendard-SemiBold.otf') format('truetype');
 }
 @font-face {
-  font-family: "Pretendard-Thin";
-  src: url("./component/assets/fonts/Pretendard-Thin.otf") format("truetype");
+    font-family: 'Pretendard-Thin';
+    src: url('./component/assets/fonts/Pretendard-Thin.otf') format('truetype');
 }
 /* ==========================     반응형 작업      ===================== */
 
 @media screen and (max-width: 1799px) {
-  /* 데스크탑 */
-  html {
-    font-size: 18px !important;
-  }
+    /* 데스크탑 */
+    html {
+        font-size: 18px !important;
+    }
 }
 
 @media screen and (max-width: 1199px) {
-  html {
-    font-size: 16px !important;
-  }
+    html {
+        font-size: 16px !important;
+    }
 }
 
 /* 테블릿 */
 @mixin tablet {
-  @media screen and (max-width: 899px) {
-    html {
-      font-size: 14px !important;
+    @media screen and (max-width: 899px) {
+        html {
+            font-size: 14px !important;
+        }
     }
-  }
 }
 
 /* 모바일 */
 @mixin mobile {
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
-  @media screen and (max-width: 599px) {
-    html {
-      font-size: 12px !important;
-      background-size: cover;
-      background-position: center center;
+    @media (max-width: 480px) {
+        font-size: 1rem;
     }
-  }
+    @media screen and (max-width: 599px) {
+        html {
+            font-size: 12px !important;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
 }
 @media screen and (max-width: 479px) {
-  html {
-    font-size: 10px !important;
-    background-size: cover;
-    background-position: center center;
-  }
+    html {
+        font-size: 10px !important;
+        background-size: cover;
+        background-position: center center;
+    }
 }
