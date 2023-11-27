@@ -9,30 +9,7 @@ const Header = styled.header`
   height: 3.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  background-color: #467ba1db;
-  z-index: 100;
-  transition: transform 0.3s ease-in-out; 
-  opacity: 0.5;
-  &.hidden {
-    transform: translateY(-100%); 
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 100;
-
-    &.hidden {
-      transform: translateY(-100%);
-    }
-  }
+  justify-content:center;
 `;
 
 const Logo = styled.h4`
@@ -59,6 +36,7 @@ const Nav = styled.nav`
   @media (max-width: 768px) {
     width: 100%;
   }
+
 `;
 
 const Ul = styled.ul`
@@ -88,7 +66,51 @@ const Li = styled.li`
       padding: 3px 3px;
     }
   }
+
 `;
+
+const HeaderDiv = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #00000057;
+  z-index: 100;
+  transition: background-color 0.5s, opacity 0.5s, transform 0.3s ease-in-out;
+
+  &.hidden {
+    transform: translateY(-100%); 
+  }
+
+  &:hover {
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1;
+    backdrop-filter: blur(10px)
+    ${Logo} {
+      color: #000; 
+    }
+
+    ${Li} {
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+`
 
 const HeaderComp = () => {
   const [hidden, setHidden] = useState(false);
@@ -107,7 +129,8 @@ const HeaderComp = () => {
   }, []);
 
   return (
-    <Header className={hidden ? "hidden" : ""}>
+    <Header >
+      <HeaderDiv className={hidden ? "hidden" : ""}>
       <Logo>SEIMIN</Logo>
       <Nav>
         <Ul>
@@ -122,6 +145,7 @@ const HeaderComp = () => {
           </Li>
         </Ul>
       </Nav>
+      </HeaderDiv>
     </Header>
   );
 };

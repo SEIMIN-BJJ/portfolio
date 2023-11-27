@@ -45,7 +45,7 @@ const ContentBoxText = styled(motion.li)`
   }
 `;
 
-const ContentBoxPicture = styled(motion.picture)`
+const ContentBoxPicture = styled(motion.div)`
   width: 24rem;
   height: 40vh;
   display: flex;
@@ -55,6 +55,7 @@ const ContentBoxPicture = styled(motion.picture)`
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 4rem;
+
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
