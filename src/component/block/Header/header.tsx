@@ -19,7 +19,7 @@ const Logo = styled.h4`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color:#fff;
+  color:#000;
   font-family: "Pretendard-Bold";
 
   @media (max-width: 768px) {
@@ -36,14 +36,12 @@ const Nav = styled.nav`
   @media (max-width: 768px) {
     width: 100%;
   }
-
 `;
 
 const Ul = styled.ul`
   width: 100%;
   display: flex;
   justify-content: space-between;
-
 `;
 
 const Li = styled.li`
@@ -54,7 +52,7 @@ const Li = styled.li`
   align-items: center;
 
   a {
-    color:#fff;
+    color:#000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +64,6 @@ const Li = styled.li`
       padding: 3px 3px;
     }
   }
-
 `;
 
 const HeaderDiv = styled.div`
@@ -79,7 +76,7 @@ const HeaderDiv = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  background-color: #00000057;
+  background-color: rgba(255, 255, 255, 0.3);
   z-index: 100;
   transition: background-color 0.5s, opacity 0.5s, transform 0.3s ease-in-out;
 
@@ -88,16 +85,17 @@ const HeaderDiv = styled.div`
   }
 
   &:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: #000;
     opacity: 1;
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+
     ${Logo} {
-      color: #000; 
+      color: #fff; 
     }
 
     ${Li} {
       a {
-        color: #000;
+        color: #fff;
       }
     }
   }
@@ -109,15 +107,14 @@ const HeaderDiv = styled.div`
     right: 0;
     z-index: 100;
   }
-
-`
+`;
 
 const HeaderComp = () => {
   const [hidden, setHidden] = useState(false);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setHidden(scrollPosition > 200);
+    setHidden(scrollPosition > 100 && scrollPosition < 2200);
   };
 
   useEffect(() => {

@@ -7,11 +7,12 @@ const Container = styled.section`
   width: 100%;
   height: auto;
   text-align: center;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#000000, #101010);
+  /* background: linear-gradient(#ffffff, #f2f2f2); */
+  background-color: #fff;
+
 `;
 
 const Content = styled.div`
@@ -46,7 +47,6 @@ const ContentBoxPicture = styled(motion.div)`
   height: 40vh;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   background-image: url(./images/just-me.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,17 +62,16 @@ const ContentBoxPicture = styled(motion.div)`
 const ContentBoxTitle = styled(motion.p)`
   width: 100%;
   height: 4rem;
-  border: 1px solid black;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 50px 80px;
   padding-top: 0;
-  color: #fff;
+  color: #212020;
+
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
-  /* border: 1px solid #fff; */
 
   @media (max-width: 768px) {
     width: 100%;
@@ -83,15 +82,14 @@ const ContentBoxTitle = styled(motion.p)`
 const ContentBoxSub = styled(motion.p)`
   width: 100%;
   height: auto;
-  border: 1px solid black;
   padding: 30px 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   font-family: "SB 어그로OTF M";
-  color: #fff;
-  /* border: 1px solid #fff; */
+  color: #212020;
+
 
   @media (max-width: 768px) {
     width: 100%;
