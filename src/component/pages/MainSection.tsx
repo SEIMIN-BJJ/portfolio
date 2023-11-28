@@ -20,7 +20,7 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 70rem;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,7 +132,7 @@ const MainSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition > 200) {
+    if (scrollPosition > 0) {
       setAnimate(false);
     } else {
       setAnimate(true);
