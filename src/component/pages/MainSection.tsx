@@ -23,7 +23,6 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -80,7 +79,6 @@ const ContentBoxTitle = styled(motion.p)`
   font-family: "SB 어그로OTF B";
   position: relative;
   color: #212020;
-  /* border: 1px solid black; */
 
   @media (max-width: 768px) {
     width: 100%;

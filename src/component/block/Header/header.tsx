@@ -10,10 +10,17 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0px auto;
+  }
 `;
 
+
+
 const Logo = styled.h4`
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -21,19 +28,28 @@ const Logo = styled.h4`
   color: #000;
   font-family: "Pretendard-Bold";
   margin: 0 19.2rem;
+
   @media (max-width: 768px) {
-    width: 100%;
-    margin: 0 5rem;
+  width: 100%;
+  justify-content: space-between;
+  color: #000;
+  font-family: "Pretendard-Bold";
+  margin: 0px auto;
   }
 `;
 
 const Nav = styled.nav`
-  width: 50%;
+  width: 100%;
   height: 100%;
   margin: 0 19.2rem;
 
   @media (max-width: 768px) {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000;
+  font-family: "Pretendard-Bold";
   }
 `;
 
