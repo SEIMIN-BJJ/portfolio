@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FaYoutube } from "react-icons/fa";
 
@@ -9,19 +9,18 @@ const Header = styled.header`
   height: 3.5rem;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 `;
 
 const Logo = styled.h4`
-  width: 100%;
+  width: 50%;
   height: 100%;
-  margin: 0 12.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color:#000;
+  color: #000;
   font-family: "Pretendard-Bold";
-
+  margin: 0 19.2rem;
   @media (max-width: 768px) {
     width: 100%;
     margin: 0 5rem;
@@ -29,9 +28,9 @@ const Logo = styled.h4`
 `;
 
 const Nav = styled.nav`
-  width: 30%;
+  width: 50%;
   height: 100%;
-  margin: 0 12rem;
+  margin: 0 19.2rem;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -51,12 +50,14 @@ const Li = styled.li`
   justify-content: center;
   align-items: center;
 
+
   a {
-    color:#000000;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
+    transition: background-color 0.3s;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -64,6 +65,7 @@ const Li = styled.li`
       padding: 3px 3px;
     }
   }
+
 `;
 
 const HeaderDiv = styled.div`
@@ -76,12 +78,12 @@ const HeaderDiv = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
   transition: background-color 0.5s, opacity 0.5s, transform 0.3s ease-in-out;
 
   &.hidden {
-    transform: translateY(-100%); 
+    transform: translateY(-100%);
   }
 
   &:hover {
@@ -90,13 +92,14 @@ const HeaderDiv = styled.div`
     backdrop-filter: blur(10px);
 
     ${Logo} {
-      color: #fff; 
+      color: #fff;
     }
 
+
     ${Li} {
-      a {
-        color: #fff;
-      }
+
+      a{
+      color: #fff; 
     }
   }
 
@@ -106,6 +109,7 @@ const HeaderDiv = styled.div`
     top: 0;
     right: 0;
     z-index: 100;
+   }
   }
 `;
 
@@ -114,7 +118,8 @@ const HeaderComp = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setHidden(scrollPosition > 100 && scrollPosition < 2200);
+    setHidden(scrollPosition > 1500);
+    // setHidden(scrollPosition > 0 && scrollPosition < 1000);
   };
 
   useEffect(() => {
@@ -126,22 +131,28 @@ const HeaderComp = () => {
   }, []);
 
   return (
-    <Header >
+    <Header>
       <HeaderDiv className={hidden ? "hidden" : ""}>
-      <Logo>SEIMIN</Logo>
-      <Nav>
-        <Ul>
+        <Logo>SEIMIN</Logo>
+        <Nav>
+          <Ul>
           <Li>
-            <a href="/"><FaGithub /></a>
-          </Li>
-          <Li>
-            <a href="/"><FiMail /></a>
-          </Li>
-          <Li>
-            <a href="/"><FaYoutube /></a>
-          </Li>
-        </Ul>
-      </Nav>
+              <a href="/">
+                <FaGithub />
+              </a>
+            </Li>
+            <Li>
+              <a href="/">
+                <FiMail />
+              </a>
+            </Li>
+            <Li>
+              <a href="/">
+                <FaYoutube />
+              </a>
+            </Li>
+          </Ul>
+        </Nav>
       </HeaderDiv>
     </Header>
   );
