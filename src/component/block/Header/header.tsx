@@ -13,11 +13,10 @@ const Header = styled.header`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
   }
 `;
-
-
 
 const Logo = styled.h4`
   width: 100%;
@@ -30,11 +29,14 @@ const Logo = styled.h4`
   margin: 0 19.2rem;
 
   @media (max-width: 768px) {
-  width: 100%;
-  justify-content: space-between;
-  color: #000;
-  font-family: "Pretendard-Bold";
-  margin: 0px auto;
+    width: 100vw;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: "Pretendard-Bold";
+    margin: 0 auto;
+    padding: 0px 30px;
+    position: relative;
+
   }
 `;
 
@@ -44,19 +46,18 @@ const Nav = styled.nav`
   margin: 0 19.2rem;
 
   @media (max-width: 768px) {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  width: 50vw;
   color: #000;
   font-family: "Pretendard-Bold";
+  margin: 0 auto;
+  position: relative;
+  padding: 0px 30px;
   }
 `;
 
 const Ul = styled.ul`
   width: 100%;
   display: flex;
-  justify-content: space-between;
 `;
 
 const Li = styled.li`
@@ -65,7 +66,6 @@ const Li = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-
 
   a {
     color: #000000;
@@ -76,9 +76,8 @@ const Li = styled.li`
     transition: background-color 0.3s;
 
     @media (max-width: 768px) {
-      width: 100%;
-      font-size: 10px;
-      padding: 3px 3px;
+      font-size: 1.5rem;
+      margin: 0 auto;
     }
   }
 
@@ -94,7 +93,7 @@ const HeaderDiv = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 100;
   transition: background-color 0.5s, opacity 0.5s, transform 0.3s ease-in-out;
 

@@ -23,9 +23,11 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
+    margin: 5rem auto;
   }
 `;
 
@@ -38,7 +40,7 @@ const ContentBoxText = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -105,7 +107,6 @@ const ContentBoxSub = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +148,6 @@ const ContentBoxHashTag = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
