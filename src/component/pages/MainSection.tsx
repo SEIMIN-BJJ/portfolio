@@ -134,6 +134,14 @@ const ContentBoxHashTag = styled(motion.p)`
     font-size: 0.8rem;
     color: #ccc;
     padding: 0.1rem 1.2rem; 
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+      color:#fff;
+      opacity: 1;
+    }
 
   }
 
