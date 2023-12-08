@@ -3,6 +3,15 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobexd } from "react-icons/si";
+import { SiAdobepremierepro } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { SiHtml5 } from "react-icons/si";
+import { SiCss3 } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+import { SiSass } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiReact } from "react-icons/si";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -106,6 +115,14 @@ const SecondBoxSub = styled(motion.p)`
   font-size: 3rem;
   font-family: "SB 어그로OTF M";
   color:#fff;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -236,8 +253,13 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-              <SiAdobephotoshop />
-              <SiAdobeillustrator />
+            <ul>
+              <SiAdobephotoshop style={{marginRight:'1rem'}}/>
+              <SiAdobeillustrator style={{marginRight:'1rem'}} />
+              <SiAdobexd style={{marginRight:'1rem'}}/>
+              <SiAdobepremierepro style={{marginRight: '1rem'}}/>
+              <SiFigma style={{marginRight:'1rem'}} />
+            </ul>
           </SecondBoxSub>
           <SecondBoxHashTag          
           variants={animationRight}
@@ -258,6 +280,14 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
+            <ul>
+            <SiHtml5 style={{marginRight:'1rem'}}/> 
+            <SiCss3 style={{marginRight:'1rem'}}/>
+            <SiJavascript style={{marginRight:'1rem'}}/>
+            <SiSass style={{marginRight:'1rem'}}/>
+            <SiGithub style={{marginRight:'1rem'}}/>
+            <SiReact style={{marginRight:'1rem'}}/>
+            </ul>
           </SecondBoxSub>
           <SecondBoxHashTag          
           variants={animationRight}
