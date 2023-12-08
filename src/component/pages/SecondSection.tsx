@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -15,42 +17,33 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 55rem;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
   @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
   }
 `;
 
-const ContentBoxText = styled(motion.li)`
+const SecondBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 40vh;
+  height: 100%;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-const ContentBoxPicture = styled(motion.div)`
-  width: 24rem;
-  height: 40vh;
-  display: flex;
-  justify-content: space-between;
-  background-image: url(./images/IMG_2819.png);
+  background-image: url(./images/desktop-1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 0rem;
+  background-position: center center;
+  position: absolute;
+  text-align: center;
+  opacity: 0.1;
+  z-index: 0;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -61,20 +54,36 @@ const ContentBoxPicture = styled(motion.div)`
   }
 `;
 
+const SecondBoxText = styled(motion.li)`
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
-const ContentBoxTitle = styled(motion.p)`
+const SecondBoxTitle = styled(motion.p)`
   width: 100%;
   height: 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px 60px;
-  padding-top: 0;
+  padding: 30px 0px;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
   position: relative;
-  color: #212020;
+  color:#fff;
+
 
   @media (max-width: 768px) {
     width: 100%;
@@ -86,18 +95,17 @@ const ContentBoxTitle = styled(motion.p)`
   }
 `;
 
-const ContentBoxSub = styled(motion.p)`
+const SecondBoxSub = styled(motion.p)`
   width: 100%;
   height: auto;
-  padding: 20px 60px;
+  padding: 50px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 0.89rem;
+  font-size: 3rem;
   font-family: "SB 어그로OTF M";
-  color: #171717a7;
-  /* border: 1px solid black; */
+  color:#fff;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -111,15 +119,16 @@ const ContentBoxSub = styled(motion.p)`
   }
 `;
 
-const ContentBoxHashTag = styled(motion.p)`
+const SecondBoxHashTag = styled(motion.p)`
   width: 100%;
-  padding: 0px 60px;
+  height: auto;
   font-family: "SB 어그로OTF M";
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   color: #171717a7;
-  /* border: 1px solid black; */
 
   p {
     border: 1px solid #ccc;
@@ -182,7 +191,7 @@ const SecondSection = () => {
 
     console.log(scrollPosition);
 
-    if (scrollPosition > 500 && scrollPosition < 1200)  {
+    if (scrollPosition > 650 && scrollPosition < 1500)  {
       setAnimate(true);
 
     } else  {
@@ -205,31 +214,32 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        <ContentBoxPicture
+        <SecondBoxPicture
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-        ></ContentBoxPicture>
-        <ContentBoxText
+        ></SecondBoxPicture>
+        <SecondBoxText
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}
         >
-          <ContentBoxTitle       
+          <SecondBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>My Developer Life</ContentBoxTitle>
-          <ContentBoxSub          
+          transition={transition}>Graphic Design</SecondBoxTitle>
+          <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. 웹퍼블리셔, UI / UX 디자이너 임성민이라고 합니다.<br /><br /> 개발과 디자인은 동일하다는 생각을 하면서 동시에 작업을 하는 사람입니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다.<br /> <br /> 어떻게 해야 더 편하게 사용할 수 있을까.<br /> <br /> 어떻게 하면 더 편하게 볼 수 있을까를 궁극적인 목표로 작업을 하는 사람입니다.<br /> <br /> 그러다 보면 점점 더 실력이 좋아지겠지요?
-          </ContentBoxSub>
-          <ContentBoxHashTag          
+              <SiAdobephotoshop />
+              <SiAdobeillustrator />
+          </SecondBoxSub>
+          <SecondBoxHashTag          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
@@ -237,8 +247,28 @@ const SecondSection = () => {
             <p>#노력</p>
             <p>#연륜</p>
             <p>#미친놈</p>
-          </ContentBoxHashTag>
-        </ContentBoxText>
+          </SecondBoxHashTag>
+          <SecondBoxTitle       
+          variants={animationLeft}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}>Development</SecondBoxTitle>
+          <SecondBoxSub          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionText}>
+          </SecondBoxSub>
+          <SecondBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            <p>#노력</p>
+            <p>#연륜</p>
+            <p>#미친놈</p>
+          </SecondBoxHashTag>
+        </SecondBoxText>
       </Content>
     </Container>
   );

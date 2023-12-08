@@ -235,7 +235,7 @@ const MainSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인은 동일하다는 생각을 하면서 동시에 작업을 하는 사람입니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다.<br /> <br /> 어떻게 해야 더 편하게 볼 수 있을까.<br /> <br /> 어떻게 하면 더 편하게 사용할 수 있을까를 궁극적인 목표로 작업을 하는 사람입니다.<br /> <br /> 그러다 보면 점점 더 실력이 좋아지겠지요?
+            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인은 동일하다는 생각을 하면서 동시에 작업을 하는 사람입니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다.<br /> <br /> 어떻게 해야 더 편하게 볼 수 있을까.<br /> <br /> 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 작업을 하는 사람입니다.
           </ContentBoxSub>
           <ContentBoxHashTag          
           variants={animationRight}
@@ -243,7 +243,7 @@ const MainSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
             <p>#노력</p>
-            <p>#연륜</p>
+            <p>#오타쿠</p>
             <p>#미친놈</p>
           </ContentBoxHashTag>
         </ContentBoxText>
