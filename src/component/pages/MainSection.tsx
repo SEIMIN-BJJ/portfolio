@@ -15,6 +15,10 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #fff;
+
+  @media screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 const Content = styled.div`
@@ -29,7 +33,6 @@ const Content = styled.div`
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    /* margin: 5rem auto; */
   }
 `;
 

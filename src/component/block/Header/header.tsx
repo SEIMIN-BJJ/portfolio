@@ -33,7 +33,6 @@ const Logo = styled.h4`
     font-size: 1.5rem;
     color: #000;
     font-family: "Pretendard-Bold";
-    margin: 0 auto;
     padding: 0px 30px;
     position: relative;
 
@@ -46,12 +45,11 @@ const Nav = styled.nav`
   padding: 0 20rem;
 
   @media (max-width: 768px) {
-  width: 100%;
+  width: 50%;
   color: #000;
   font-family: "Pretendard-Bold";
-  margin: 0 auto;
   position: relative;
-  padding: 0px 100px;
+  padding: 0;
   }
 `;
 
