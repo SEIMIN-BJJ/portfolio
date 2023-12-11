@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bca08f2b.css",
-    "main.js": "/portfolio/static/js/main.48aa8d49.js",
+    "main.js": "/portfolio/static/js/main.bb4522b5.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/Pretendard-Light.otf": "/portfolio/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
     "static/media/Pretendard-Medium.otf": "/portfolio/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
@@ -17,11 +17,11 @@
     "static/media/SB 어그로OTF L.otf": "/portfolio/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
     "index.html": "/portfolio/index.html",
     "main.bca08f2b.css.map": "/portfolio/static/css/main.bca08f2b.css.map",
-    "main.48aa8d49.js.map": "/portfolio/static/js/main.48aa8d49.js.map",
+    "main.bb4522b5.js.map": "/portfolio/static/js/main.bb4522b5.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bca08f2b.css",
-    "static/js/main.48aa8d49.js"
+    "static/js/main.bb4522b5.js"
   ]
 }
