@@ -10,7 +10,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  position: relative;
   @media (max-width: 768px) {
     width: auto;
     display: flex;
@@ -20,7 +20,6 @@ const Header = styled.header`
 
 const Logo = styled.h4`
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -41,7 +40,6 @@ const Logo = styled.h4`
 
 const Nav = styled.nav`
   width: 100%;
-  height: 100%;
   margin: 0 20rem;
 
   @media (max-width: 768px) {
@@ -83,10 +81,11 @@ const Li = styled.li`
 
 const HeaderDiv = styled.div`
   width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
   position: fixed;
   left: 0;
   top: 0;
