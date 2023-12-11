@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
-import ThirdSection from "./ThirdSection";
+// import ThirdSection from "./ThirdSection";
 // import FouthSection from "./FouthSection";
 import "../../App.scss";
 
@@ -31,7 +31,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     flex-direction: column;
   }
 `;

@@ -11,6 +11,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: center;
   position: relative;
+
   @media (max-width: 768px) {
     width: auto;
     display: flex;
@@ -19,13 +20,14 @@ const Header = styled.header`
 `;
 
 const Logo = styled.h4`
-  width: 100%;
+  width: 50%;
+  height: 3.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: #000;
   font-family: "Pretendard-Bold";
-  margin: 0 20rem;
+  padding: 0 19rem;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -39,8 +41,8 @@ const Logo = styled.h4`
 `;
 
 const Nav = styled.nav`
-  width: 100%;
-  margin: 0 20rem;
+  width: 50%;
+  padding: 0 18rem;
 
   @media (max-width: 768px) {
   width: 50%;
@@ -52,13 +54,15 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-  width: 100%;
+  width: 10rem;
   display: flex;
+  align-items: center;
+
 `;
 
 const Li = styled.li`
   width: 100%;
-  height: 3.3rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

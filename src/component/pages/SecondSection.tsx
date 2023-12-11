@@ -54,7 +54,7 @@ const SecondBoxPicture = styled(motion.div)`
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     margin: 2rem auto;
   }
@@ -74,7 +74,7 @@ const SecondBoxText = styled(motion.li)`
     height: 100%;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 `;
@@ -103,7 +103,7 @@ const SecondBoxTitle = styled(motion.p)`
   }
 `;
 
-const SecondBoxSub = styled(motion.p)`
+const SecondBoxSub = styled(motion.section)`
   width: 100%;
   height: auto;
   padding: 50px 0px;
@@ -125,12 +125,8 @@ const SecondBoxSub = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.2rem;
+    height: 10vh;
+    font-size: 3rem;
 
   }
 `;
