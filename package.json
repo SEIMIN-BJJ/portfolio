@@ -1,6 +1,6 @@
 {
     "homepage": "https://seimin-bjj.github.io/portfolio/",
-    "name": "portfolio-main",
+    "name": "portfolio",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
