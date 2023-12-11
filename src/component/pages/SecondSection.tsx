@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import TechIMG from "../assets/images/desktop.png";
 import { motion } from "framer-motion";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
@@ -43,7 +44,7 @@ const SecondBoxPicture = styled(motion.div)`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  background-image: url(./images/desktop.png);
+  background-image: url(${TechIMG});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
