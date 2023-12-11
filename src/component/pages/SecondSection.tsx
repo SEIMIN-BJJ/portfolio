@@ -122,7 +122,7 @@ const ThirdBoxTitle = styled(motion.p)`
     width: 100%;
     height: 4vh;
     font-size: 1.5rem;
-    margin-top: 7rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
