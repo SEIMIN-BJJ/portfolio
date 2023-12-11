@@ -60,11 +60,11 @@ const ContentBoxPicture = styled(motion.div)`
   height: 40vh;
   display: flex;
   justify-content: space-between;
-  background-image: url(./images/IMG_2819.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -20vh;
   margin-left: 0rem;
+  background-image: url(../aseets/images/me.png);
 
   @media (max-width: 768px) {
     width: 100%;

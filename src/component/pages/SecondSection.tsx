@@ -43,7 +43,7 @@ const SecondBoxPicture = styled(motion.div)`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  background-image: url(./images/desktop-1.png);
+  background-image: url(./images/desktop.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
