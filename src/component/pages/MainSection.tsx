@@ -200,10 +200,22 @@ const MainSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition > 0) {
-      setAnimate(false);
+    console.log(scrollPosition)
+  
+    if (window.innerWidth >= 768) {
+      // 웹페이지에서의 스크롤 범위
+      if (scrollPosition > 0) {
+        setAnimate(false);
+      } else {
+        setAnimate(true);
+      }
     } else {
-      setAnimate(true);
+      // 모바일에서의 스크롤 범위
+      if (scrollPosition > 600) {
+        setAnimate(false);
+      } else {
+        setAnimate(true);
+      }
     }
   };
 
