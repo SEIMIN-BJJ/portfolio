@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
 // import ThirdSection from "./ThirdSection";
@@ -64,7 +65,7 @@ const ContentBoxPicture = styled(motion.div)`
   background-repeat: no-repeat;
   margin-top: -20vh;
   margin-left: 0rem;
-  background-image: url(../aseets/images/me.png);
+  background-image: url(${MeIMG});
 
   @media (max-width: 768px) {
     width: 100%;
