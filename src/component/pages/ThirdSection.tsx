@@ -16,11 +16,12 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-  width: 70rem;
+  width: 55rem;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 
   @media screen and (max-width: 768px) {
     width: 100%;

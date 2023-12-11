@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 import { FaYoutube } from "react-icons/fa";
 
 const Header = styled.header`
-  width: 100%;
+  width: 55rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ const Logo = styled.h4`
   align-items: center;
   color: #000;
   font-family: "Pretendard-Bold";
-  margin: 0 19.2rem;
+  padding: 0 20rem;
 
   @media (max-width: 768px) {
     width: 100vw;
@@ -43,7 +43,7 @@ const Logo = styled.h4`
 const Nav = styled.nav`
   width: 100%;
   height: 100%;
-  margin: 0 19.2rem;
+  padding: 0 20rem;
 
   @media (max-width: 768px) {
   width: 50vw;

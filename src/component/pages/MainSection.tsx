@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
-import FouthSection from "./FouthSection";
+// import FouthSection from "./FouthSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -19,10 +19,11 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 55rem;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -37,6 +38,7 @@ const ContentBoxText = styled(motion.li)`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-top: -20vh;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -56,6 +58,7 @@ const ContentBoxPicture = styled(motion.div)`
   background-image: url(./images/IMG_2819.png);
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: -20vh;
   margin-left: 0rem;
 
   @media (max-width: 768px) {
@@ -250,7 +253,7 @@ const MainSection = () => {
       </Content>
       <SecondSection />
       <ThirdSection />
-      <FouthSection />
+       {/*<FouthSection /> */}
     </Container>
   );
 };
