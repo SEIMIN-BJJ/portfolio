@@ -12,6 +12,7 @@ import { SiJavascript } from "react-icons/si";
 import { SiSass } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiReact } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -41,9 +42,6 @@ const Content = styled.div`
 const SecondBoxPicture = styled(motion.div)`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   background-image: url(./images/desktop-1.png);
   background-size: cover;
@@ -51,7 +49,6 @@ const SecondBoxPicture = styled(motion.div)`
   background-position: center center;
   position: absolute;
   text-align: center;
-  opacity: 0.1;
   z-index: 0;
 
   @media (max-width: 768px) {
@@ -65,11 +62,13 @@ const SecondBoxPicture = styled(motion.div)`
 
 const SecondBoxText = styled(motion.li)`
   width: 100%;
-  height: 70vh;
+  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   z-index: 1;
+
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
@@ -155,7 +154,15 @@ const SecondBoxHashTag = styled(motion.p)`
     border-radius: 10rem;
     font-size: 0.8rem;
     color: #ccc;
-    padding: 0.1rem 1.2rem; 
+    padding: 0.2rem 1.2rem; 
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+      color:#fff;
+      opacity: 1;
+    }
 
   }
 
@@ -266,9 +273,10 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
-            <p>#노력</p>
-            <p>#연륜</p>
-            <p>#미친놈</p>
+            <p>#꼼꼼함</p>
+            <p>#협동력</p>
+            <p>#창의력</p>
+            <p>#그리드</p>
           </SecondBoxHashTag>
           <SecondBoxTitle       
           variants={animationLeft}
@@ -284,6 +292,7 @@ const SecondSection = () => {
             <SiHtml5 style={{marginRight:'1rem'}}/> 
             <SiCss3 style={{marginRight:'1rem'}}/>
             <SiJavascript style={{marginRight:'1rem'}}/>
+            <SiTypescript style={{marginRight:'1rem'}}/>
             <SiSass style={{marginRight:'1rem'}}/>
             <SiGithub style={{marginRight:'1rem'}}/>
             <SiReact style={{marginRight:'1rem'}}/>
@@ -294,9 +303,9 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
-            <p>#노력</p>
-            <p>#연륜</p>
-            <p>#미친놈</p>
+            <p>#클린코드</p>
+            <p>#컴포넌트</p>
+            <p>#끈기</p>
           </SecondBoxHashTag>
         </SecondBoxText>
       </Content>

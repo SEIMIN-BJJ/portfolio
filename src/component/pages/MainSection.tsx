@@ -139,6 +139,7 @@ const ContentBoxHashTag = styled(motion.p)`
     color: #ccc;
     padding: 0.1rem 1.2rem; 
     transition: 0.15s ease-in-out;
+    font-family: 'SB 어그로OTF L';
     cursor: pointer;
 
     &:hover {
@@ -246,13 +247,13 @@ const MainSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
             <p>#노력</p>
-            <p>#오타쿠</p>
-            <p>#미친놈</p>
+            <p>#끈기</p>
+            <p>#편의성</p>
           </ContentBoxHashTag>
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <ThirdSection />
+      {/* <ThirdSection /> */}
        {/*<FouthSection /> */}
     </Container>
   );
