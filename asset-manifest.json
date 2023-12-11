@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.bca08f2b.css",
+    "main.js": "/portfolio/static/js/main.ca26d506.js",
+    "static/js/787.02627b16.chunk.js": "/portfolio/static/js/787.02627b16.chunk.js",
+    "static/media/Pretendard-Light.otf": "/portfolio/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
+    "static/media/Pretendard-Medium.otf": "/portfolio/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
+    "static/media/Pretendard-SemiBold.otf": "/portfolio/static/media/Pretendard-SemiBold.4b3283bc0e29a9c97c11.otf",
+    "static/media/Pretendard-Bold.otf": "/portfolio/static/media/Pretendard-Bold.4e72d46e664b88a6b5c8.otf",
+    "static/media/Pretendard-Regular.otf": "/portfolio/static/media/Pretendard-Regular.57ca7a4b20797e3b9625.otf",
+    "static/media/Pretendard-ExtraBold.otf": "/portfolio/static/media/Pretendard-ExtraBold.fa944c3a241cdef4584a.otf",
+    "static/media/Pretendard-Black.otf": "/portfolio/static/media/Pretendard-Black.ed4fa19a4df95cb6740b.otf",
+    "static/media/Pretendard-ExtraLight.otf": "/portfolio/static/media/Pretendard-ExtraLight.c1677723ce338097648f.otf",
+    "static/media/Pretendard-Thin.otf": "/portfolio/static/media/Pretendard-Thin.e45abc28d4828e92dd10.otf",
+    "static/media/SB 어그로OTF B.otf": "/portfolio/static/media/SB 어그로OTF B.fac7e68fc73cf64ea2fe.otf",
+    "static/media/SB 어그로OTF M.otf": "/portfolio/static/media/SB 어그로OTF M.780ac39bb4c413cd8e16.otf",
+    "static/media/SB 어그로OTF L.otf": "/portfolio/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
+    "index.html": "/portfolio/index.html",
+    "main.bca08f2b.css.map": "/portfolio/static/css/main.bca08f2b.css.map",
+    "main.ca26d506.js.map": "/portfolio/static/js/main.ca26d506.js.map",
+    "787.02627b16.chunk.js.map": "/portfolio/static/js/787.02627b16.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bca08f2b.css",
+    "static/js/main.ca26d506.js"
+  ]
+}
