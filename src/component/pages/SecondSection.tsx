@@ -72,7 +72,7 @@ const SecondBoxText = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 50%;
     padding: 0;
     display: flex;
     justify-content: flex-start;
@@ -86,7 +86,7 @@ const SecondBoxTitle = styled(motion.p)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 30px 0px;
+  padding: 3rem 0px;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
@@ -96,8 +96,33 @@ const SecondBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: auto;
+    height: 4vh;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const ThirdBoxTitle = styled(motion.p)`
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem 0px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: "SB 어그로OTF B";
+  position: relative;
+  color:#fff;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 4vh;
+    font-size: 1.5rem;
+    margin-top: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,19 +141,26 @@ const SecondBoxSub = styled(motion.section)`
   font-family: "SB 어그로OTF M";
   color:#fff;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 5vh;
+    font-size: 3rem;
+   }
+
   ul {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  }
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 10vh;
     font-size: 3rem;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
   }
 `;
 
@@ -153,6 +185,7 @@ const SecondBoxHashTag = styled(motion.p)`
     color: #ccc;
     padding: 0.2rem 1.2rem; 
     transition: 0.15s ease-in-out;
+    margin-bottom: 3rem;
     cursor: pointer;
 
     &:hover {
@@ -165,7 +198,7 @@ const SecondBoxHashTag = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +207,6 @@ const SecondBoxHashTag = styled(motion.p)`
 
   }
 `;
-
 
 const SecondSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -209,15 +241,22 @@ const SecondSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-
-    console.log(scrollPosition);
-
-    if (scrollPosition > 650 && scrollPosition < 1500)  {
-      setAnimate(true);
-
-    } else  {
-      setAnimate(false);
-    };
+  
+    if (window.innerWidth >= 768) {
+      // 웹페이지에서의 스크롤 범위
+      if (scrollPosition > 650 && scrollPosition < 1500) {
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    } else {
+      // 모바일에서의 스크롤 범위
+      if (scrollPosition > 450 && scrollPosition < 1200) {
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    }
   };
 
   useEffect(() => {
@@ -275,11 +314,11 @@ const SecondSection = () => {
             <p>#창의력</p>
             <p>#그리드</p>
           </SecondBoxHashTag>
-          <SecondBoxTitle       
+          <ThirdBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Development</SecondBoxTitle>
+          transition={transition}>Development</ThirdBoxTitle>
           <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
