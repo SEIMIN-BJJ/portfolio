@@ -27,8 +27,9 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    height: 100vh;
     flex-direction: column;
-    margin: 5rem auto;
+    /* margin: 5rem auto; */
   }
 `;
 
@@ -47,6 +48,7 @@ const ContentBoxText = styled(motion.li)`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
 `;
 
@@ -63,7 +65,7 @@ const ContentBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-size: contain;
     background-position: center center;
     margin: 2rem auto;

@@ -12,7 +12,7 @@ const Header = styled.header`
   justify-content: center;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-between;
   }
@@ -29,7 +29,7 @@ const Logo = styled.h4`
   padding: 0 20rem;
 
   @media (max-width: 768px) {
-    width: 100vw;
+    width: 100%;
     font-size: 1.5rem;
     color: #000;
     font-family: "Pretendard-Bold";
@@ -46,12 +46,12 @@ const Nav = styled.nav`
   padding: 0 20rem;
 
   @media (max-width: 768px) {
-  width: 50vw;
+  width: 100%;
   color: #000;
   font-family: "Pretendard-Bold";
   margin: 0 auto;
   position: relative;
-  padding: 0px 30px;
+  padding: 0px 100px;
   }
 `;
 
