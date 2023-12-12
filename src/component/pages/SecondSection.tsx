@@ -104,31 +104,6 @@ const SecondBoxTitle = styled(motion.p)`
   }
 `;
 
-const ThirdBoxTitle = styled(motion.p)`
-  width: 100%;
-  height: 4rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 3rem 0px;
-  font-weight: bold;
-  font-size: 2.5rem;
-  font-family: "SB 어그로OTF B";
-  position: relative;
-  color:#fff;
-
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 4vh;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
 const SecondBoxSub = styled(motion.section)`
   width: 100%;
   height: auto;
@@ -208,8 +183,45 @@ const SecondBoxHashTag = styled(motion.p)`
   }
 `;
 
+// const ModalContainer = styled.div`
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right:0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
+// const ModalContent = styled.div`
+//   width: 50%;
+//   height: 50%;
+//   background-color: #fff;
+//   padding: 20px;
+//   border-radius: 10px;
+// `;
+
+// const ModalCloseButton = styled.button`
+//   margin-top: 1rem;
+//   background-color: #ccc;
+//   color: #fff;
+//   border: none;
+//   padding: 10px;
+//   position: relative;
+//   cursor: pointer;
+// `;
+
+// const ModalDescription = styled.p`
+//   font-size: 16px;
+//   color: #333;
+// `;
+
 const SecondSection = () => {
   const [animate, setAnimate] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -271,6 +283,14 @@ const SecondSection = () => {
     handleScroll();
   }, []); 
 
+
+  // const handleModalOpen = () => {
+  //   setModalOpen(true);
+  // };
+  
+  // const handleModalClose = () => {
+  //   setModalOpen(false);
+  // };
   return (
     <Container>
       <Content>
@@ -291,6 +311,7 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}>Graphic Design</SecondBoxTitle>
+
           <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
@@ -304,21 +325,34 @@ const SecondSection = () => {
               <SiFigma style={{marginRight:'1rem'}} />
             </ul>
           </SecondBoxSub>
+          {/* {modalOpen && (
+          <ModalContainer>
+            <ModalContent>
+              <ModalDescription>
+                - 꼼꼼함은 디자이너든 개발자든 어떤일을 하든 필수적인 것이라고 생각합니다.<br /><br />일을함에 있어서 프로세스가 있듯이 끝내고 한번 더 두번 더 검수를 하는 것이 몸에 배어있습니다.
+              </ModalDescription>
+              <ModalCloseButton onClick={handleModalClose}>닫기</ModalCloseButton>
+            </ModalContent>
+          </ModalContainer>
+          )} */}
           <SecondBoxHashTag          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
+            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
             <p>#꼼꼼함</p>
             <p>#협동력</p>
             <p>#창의력</p>
             <p>#그리드</p>
           </SecondBoxHashTag>
-          <ThirdBoxTitle       
+
+          <SecondBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Development</ThirdBoxTitle>
+          transition={transition}>Development</SecondBoxTitle>
+
           <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
@@ -345,6 +379,7 @@ const SecondSection = () => {
           </SecondBoxHashTag>
         </SecondBoxText>
       </Content>
+
     </Container>
   );
 };

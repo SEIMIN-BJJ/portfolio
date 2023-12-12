@@ -74,6 +74,8 @@ const Li = styled.li`
     font-size: 1.3rem;
     transition: background-color 0.3s;
 
+
+
     @media (max-width: 768px) {
       font-size: 1.5rem;
       margin: 0 auto;
@@ -111,8 +113,9 @@ const HeaderDiv = styled.div`
     }
 
     ${Li} {
+      
       a{
-      color: #fff; 
+      color: #ffffff; 
     }
   }
 

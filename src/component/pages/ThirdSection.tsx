@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import MeIMG from "../assets/images/me.png";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -12,6 +13,9 @@ const Container = styled.section`
   align-items: center;
   background-color: #fff;
 
+  @media screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 const Content = styled.div`
@@ -24,6 +28,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    height: 90vh;
     flex-direction: column;
   }
 `;
@@ -37,8 +42,12 @@ const ContentBoxText = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
   }
 `;
 
@@ -47,14 +56,16 @@ const ContentBoxPicture = styled(motion.div)`
   height: 40vh;
   display: flex;
   justify-content: space-between;
-  background-image: url(./images/just-me.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 4rem;
+  background-image: url(${MeIMG});
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 40%;
+    background-size: contain;
+    background-position: center center;
+    margin: 2rem auto;
   }
 `;
 
@@ -65,38 +76,90 @@ const ContentBoxTitle = styled(motion.p)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 50px 80px;
+  padding: 20px 60px;
   padding-top: 0;
-  color: #212020;
-
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
+  position: relative;
+  color: #212020;
 
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 const ContentBoxSub = styled(motion.p)`
   width: 100%;
   height: auto;
-  padding: 30px 80px;
+  padding: 20px 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
+  font-size: 0.89rem;
   font-family: "SB 어그로OTF M";
-  color: #212020;
-
+  color: #171717a7;
+  /* border: 1px solid black; */
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
 
   }
 `;
+
+const ContentBoxHashTag = styled(motion.p)`
+  width: 100%;
+  padding: 0px 60px;
+  font-family: "SB 어그로OTF M";
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #171717a7;
+  /* border: 1px solid black; */
+
+  p {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    font-size: 0.8rem;
+    color: #ccc;
+    padding: 0.1rem 1.2rem; 
+    transition: 0.15s ease-in-out;
+    font-family: 'SB 어그로OTF L';
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+      color:#fff;
+      opacity: 1;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+
+  }
+`;
+
 
 const ThirdSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -124,6 +187,11 @@ const ThirdSection = () => {
     delay: 1.5,
   };
 
+    const transitionHashTag = {
+    duration: 1,
+    delay: 2,
+  };
+
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
 
@@ -149,7 +217,7 @@ const ThirdSection = () => {
     handleScroll();
   }, []); 
 
-  return (
+ return (
     <Container>
       <Content>
         <ContentBoxPicture
@@ -174,8 +242,18 @@ const ThirdSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. 웹퍼블리셔, UI / UX 디자이너 임성민이라고 합니다.<br /><br /> 개발과 디자인은 동일하다는 생각을 하면서 동시에 작업을 하는 사람입니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다.<br /> <br /> 어떻게 해야 더 편하게 사용할 수 있을까.<br /> <br /> 어떻게 하면 더 편하게 볼 수 있을까를 궁극적인 목표로 작업을 하는 사람입니다.<br /> <br /> 그러다 보면 점점 더 실력이 좋아지겠지요?
+            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인 어떤것 하나 쉬운 것은 없다라는 생각을 가지고 작업을 하고 있습니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다. 그리고 보는 수준이 높습니다.<br /> <br /> 그래서 어떻게 해야 더 편하게 볼 수 있을까. 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 공부하고 있습니다.<br /><br />CSS와 Javascript 등으로 동적화면을 구축하는것에 관심이 많고 
+            <br /><br /> 인터랙티브 웹에 관심이 많아 현재도 꾸준히 노력 및 공부중입니다.
           </ContentBoxSub>
+          <ContentBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            <p>#노력</p>
+            <p>#끈기</p>
+            <p>#편의성</p>
+          </ContentBoxHashTag>
         </ContentBoxText>
       </Content>
     </Container>
