@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
-// import ThirdSection from "./ThirdSection";
+import ThirdSection from "./ThirdSection";
 // import FouthSection from "./FouthSection";
 import "../../App.scss";
 
@@ -64,7 +64,6 @@ const ContentBoxPicture = styled(motion.div)`
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -20vh;
-  margin-left: 0rem;
   background-image: url(${MeIMG});
 
   @media (max-width: 768px) {
@@ -257,7 +256,8 @@ const MainSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인은 동일하다는 생각을 하면서 동시에 작업을 하는 사람입니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다.<br /> <br /> 어떻게 해야 더 편하게 볼 수 있을까.<br /> <br /> 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 작업을 하는 사람입니다.
+            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인 어떤것 하나 쉬운 것은 없다라는 생각을 가지고 작업을 하고 있습니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다. 그리고 보는 수준이 높습니다.<br /> <br /> 그래서 어떻게 해야 더 편하게 볼 수 있을까. 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 공부하고 있습니다.<br /><br />CSS와 Javascript 등으로 동적화면을 구축하는것에 관심이 많고 
+            <br /><br /> 인터랙티브 웹에 관심이 많아 현재도 꾸준히 노력 및 공부중입니다.
           </ContentBoxSub>
           <ContentBoxHashTag          
           variants={animationRight}
@@ -271,7 +271,7 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      {/* <ThirdSection /> */}
+      <ThirdSection /> 
        {/*<FouthSection /> */}
     </Container>
   );

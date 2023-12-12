@@ -10,7 +10,6 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(#ffffff, #f2f2f2); */
   background-color: #fff;
 
 `;
