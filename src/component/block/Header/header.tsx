@@ -26,14 +26,13 @@ const Logo = styled.h4`
   justify-content: flex-start;
   align-items: center;
   color: #000;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Medium';
   padding: 0 19rem;
 
   @media (max-width: 768px) {
     width: 100%;
     font-size: 1.5rem;
     color: #000;
-    font-family: "Pretendard-Bold";
     padding: 0px 30px;
     position: relative;
 
@@ -45,7 +44,7 @@ const Nav = styled.nav`
   padding: 0 18rem;
 
   @media (max-width: 768px) {
-  width: 50%;
+  width: 35%;
   color: #000;
   font-family: "Pretendard-Bold";
   position: relative;
@@ -54,7 +53,7 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-  width: 10rem;
+  width: 8rem;
   display: flex;
   align-items: center;
 
@@ -111,9 +110,7 @@ const HeaderDiv = styled.div`
       color: #fff;
     }
 
-
     ${Li} {
-
       a{
       color: #fff; 
     }
