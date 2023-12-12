@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import TechIMG from "../assets/images/desktop.png";
 import { motion } from "framer-motion";
-import MeIMG from "../assets/images/me.png";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobexd } from "react-icons/si";
+import { SiAdobepremierepro } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { SiHtml5 } from "react-icons/si";
+import { SiCss3 } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+import { SiSass } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiReact } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -12,10 +24,6 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #fff;
-
-  @media screen and (max-width: 768px) {
-    overflow-x: hidden;
-  }
 `;
 
 const Content = styled.div`
@@ -24,69 +32,71 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  flex-direction: column;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 90vh;
     flex-direction: column;
   }
 `;
 
-const ContentBoxText = styled(motion.li)`
+const SecondBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 40vh;
-  display: flex;
-  align-items: flex-start;
+  height: 100%;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-  }
-`;
-
-const ContentBoxPicture = styled(motion.div)`
-  width: 24rem;
-  height: 40vh;
-  display: flex;
-  justify-content: space-between;
+  background-image: url(${TechIMG});
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${MeIMG});
+  background-position: center center;
+  position: absolute;
+  text-align: center;
+  z-index: 0;
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 40%;
-    background-size: contain;
+    height: 100%;
+    background-size: cover;
     background-position: center center;
     margin: 2rem auto;
   }
 `;
 
+const SecondBoxText = styled(motion.li)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1;
 
-const ContentBoxTitle = styled(motion.p)`
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+`;
+
+const SecondBoxTitle = styled(motion.p)`
   width: 100%;
   height: 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px 60px;
-  padding-top: 0;
+  padding: 3rem 0px;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
   position: relative;
-  color: #212020;
+  color:#fff;
+
 
   @media (max-width: 768px) {
     width: 100%;
-    height: auto;
+    height: 4vh;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -94,39 +104,51 @@ const ContentBoxTitle = styled(motion.p)`
   }
 `;
 
-const ContentBoxSub = styled(motion.p)`
+const SecondBoxSub = styled(motion.section)`
   width: 100%;
   height: auto;
-  padding: 20px 60px;
+  padding: 50px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 0.89rem;
+  font-size: 3rem;
   font-family: "SB 어그로OTF M";
-  color: #171717a7;
-  /* border: 1px solid black; */
+  color:#fff;
 
   @media (max-width: 768px) {
     width: 100%;
+    height: 5vh;
+    font-size: 3rem;
+   }
+
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 1.2rem;
-
+   }
   }
 `;
 
-const ContentBoxHashTag = styled(motion.p)`
+const SecondBoxHashTag = styled(motion.p)`
   width: 100%;
-  padding: 0px 60px;
+  height: auto;
   font-family: "SB 어그로OTF M";
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   color: #171717a7;
-  /* border: 1px solid black; */
 
   p {
     border: 1px solid #ccc;
@@ -136,9 +158,9 @@ const ContentBoxHashTag = styled(motion.p)`
     border-radius: 10rem;
     font-size: 0.8rem;
     color: #ccc;
-    padding: 0.1rem 1.2rem; 
+    padding: 0.2rem 1.2rem; 
     transition: 0.15s ease-in-out;
-    font-family: 'SB 어그로OTF L';
+    margin-bottom: 3rem;
     cursor: pointer;
 
     &:hover {
@@ -151,6 +173,7 @@ const ContentBoxHashTag = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,9 +183,45 @@ const ContentBoxHashTag = styled(motion.p)`
   }
 `;
 
+// const ModalContainer = styled.div`
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right:0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
+// const ModalContent = styled.div`
+//   width: 50%;
+//   height: 50%;
+//   background-color: #fff;
+//   padding: 20px;
+//   border-radius: 10px;
+// `;
+
+// const ModalCloseButton = styled.button`
+//   margin-top: 1rem;
+//   background-color: #ccc;
+//   color: #fff;
+//   border: none;
+//   padding: 10px;
+//   position: relative;
+//   cursor: pointer;
+// `;
+
+// const ModalDescription = styled.p`
+//   font-size: 16px;
+//   color: #333;
+// `;
 
 const ThirdSection = () => {
   const [animate, setAnimate] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -187,22 +246,29 @@ const ThirdSection = () => {
     delay: 1.5,
   };
 
-    const transitionHashTag = {
+  const transitionHashTag = {
     duration: 1,
     delay: 2,
   };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-
-    console.log(scrollPosition);
-
-    if (scrollPosition > 1200 && scrollPosition < 2000)  {
-      setAnimate(true);
-
-    } else  {
-      setAnimate(false);
-    };
+  
+    if (window.innerWidth >= 768) {
+      // 웹페이지에서의 스크롤 범위
+      if (scrollPosition > 1200 && scrollPosition < 2000) {
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    } else {
+      // 모바일에서의 스크롤 범위
+      if (scrollPosition > 450 && scrollPosition < 1200) {
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    }
   };
 
   useEffect(() => {
@@ -217,45 +283,91 @@ const ThirdSection = () => {
     handleScroll();
   }, []); 
 
- return (
+
+  // const handleModalOpen = () => {
+  //   setModalOpen(true);
+  // };
+  
+  // const handleModalClose = () => {
+  //   setModalOpen(false);
+  // };
+  return (
     <Container>
       <Content>
-        <ContentBoxPicture
+        <SecondBoxPicture
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-        ></ContentBoxPicture>
-        <ContentBoxText
+        ></SecondBoxPicture>
+        <SecondBoxText
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}
         >
-          <ContentBoxTitle       
+          <SecondBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>My Developer Life</ContentBoxTitle>
-          <ContentBoxSub          
+          transition={transition}>Graphic Design</SecondBoxTitle>
+
+          <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. UI / UX 디자이너, 웹 UI 개발자 임성민입니다.<br /><br /> 개발과 디자인 어떤것 하나 쉬운 것은 없다라는 생각을 가지고 작업을 하고 있습니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다. 그리고 보는 수준이 높습니다.<br /> <br /> 그래서 어떻게 해야 더 편하게 볼 수 있을까. 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 공부하고 있습니다.<br /><br />CSS와 Javascript 등으로 동적화면을 구축하는것에 관심이 많고 
-            <br /><br /> 인터랙티브 웹에 관심이 많아 현재도 꾸준히 노력 및 공부중입니다.
-          </ContentBoxSub>
-          <ContentBoxHashTag          
+            <ul>
+            </ul>
+          </SecondBoxSub>
+          {/* {modalOpen && (
+          <ModalContainer>
+            <ModalContent>
+              <ModalDescription>
+                - 꼼꼼함은 디자이너든 개발자든 어떤일을 하든 필수적인 것이라고 생각합니다.<br /><br />일을함에 있어서 프로세스가 있듯이 끝내고 한번 더 두번 더 검수를 하는 것이 몸에 배어있습니다.
+              </ModalDescription>
+              <ModalCloseButton onClick={handleModalClose}>닫기</ModalCloseButton>
+            </ModalContent>
+          </ModalContainer>
+          )} */}
+          <SecondBoxHashTag          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
-            <p>#노력</p>
+            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
+            <p>#꼼꼼함</p>
+            <p>#협동력</p>
+            <p>#창의력</p>
+            <p>#그리드</p>
+          </SecondBoxHashTag>
+
+          <SecondBoxTitle       
+          variants={animationLeft}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}>Development</SecondBoxTitle>
+
+          <SecondBoxSub          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionText}>
+            <ul>
+            </ul>
+          </SecondBoxSub>
+          <SecondBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            <p>#클린코드</p>
+            <p>#컴포넌트</p>
             <p>#끈기</p>
-            <p>#편의성</p>
-          </ContentBoxHashTag>
-        </ContentBoxText>
+          </SecondBoxHashTag>
+        </SecondBoxText>
       </Content>
+
     </Container>
   );
 };

@@ -335,7 +335,7 @@ const SecondSection = () => {
             </ModalContent>
           </ModalContainer>
           )} */}
-          <SecondBoxHashTag          
+          {/* <SecondBoxHashTag          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
@@ -345,7 +345,7 @@ const SecondSection = () => {
             <p>#협동력</p>
             <p>#창의력</p>
             <p>#그리드</p>
-          </SecondBoxHashTag>
+          </SecondBoxHashTag> */}
 
           <SecondBoxTitle       
           variants={animationLeft}
@@ -368,7 +368,7 @@ const SecondSection = () => {
             <SiReact style={{marginRight:'1rem'}}/>
             </ul>
           </SecondBoxSub>
-          <SecondBoxHashTag          
+          {/* <SecondBoxHashTag          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
@@ -376,7 +376,7 @@ const SecondSection = () => {
             <p>#클린코드</p>
             <p>#컴포넌트</p>
             <p>#끈기</p>
-          </SecondBoxHashTag>
+          </SecondBoxHashTag> */}
         </SecondBoxText>
       </Content>
 
