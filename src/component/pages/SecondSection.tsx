@@ -57,7 +57,6 @@ const SecondBoxPicture = styled(motion.div)`
     height: 100%;
     background-size: cover;
     background-position: center center;
-    margin: 2rem auto;
   }
 `;
 
@@ -69,24 +68,24 @@ const SecondBoxText = styled(motion.li)`
   align-items: flex-start;
   flex-direction: column;
   z-index: 1;
+  margin-bottom: 3rem;
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 50%;
-    padding: 0;
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 `;
 
 const SecondBoxTitle = styled(motion.p)`
   width: 100%;
-  height: 4rem;
+  height: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 3rem 0px;
+  padding: 3.5rem 0;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
@@ -96,30 +95,33 @@ const SecondBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 4vh;
+    height: 2vh;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0 auto;
+
   }
 `;
 
 const SecondBoxSub = styled(motion.section)`
   width: 100%;
   height: auto;
-  padding: 50px 0px;
+  padding: 1rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "SB 어그로OTF M";
   color:#fff;
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 5vh;
-    font-size: 3rem;
+    height: auto;
+    font-size: 1.3rem;
+
    }
 
   ul {
@@ -128,59 +130,55 @@ const SecondBoxSub = styled(motion.section)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color:#fff;
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 3rem;
+    height: 10vh;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+  }
+
   }
 `;
 
 const SecondBoxHashTag = styled(motion.p)`
   width: 100%;
   height: auto;
-  font-family: "SB 어그로OTF M";
+  font-family: "SB 어그로OTF L";
+  font-weight: bold;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  align-items: flex-start;
   color: #171717a7;
+  flex-direction: column;
+  padding-top: 1rem;
 
   p {
-    border: 1px solid #ccc;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     border-radius: 10rem;
-    font-size: 0.8rem;
-    color: #ccc;
-    padding: 0.2rem 1.2rem; 
-    transition: 0.15s ease-in-out;
-    margin-bottom: 3rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #ccc;
-      color:#fff;
-      opacity: 1;
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 0.5rem 0;
+    letter-spacing: 2px;
     }
-
-  }
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 10vh;
+    height: 18vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
     font-size: 1.2rem;
-
+    padding: 2rem 2rem; 
   }
+
 `;
 
 // const ModalContainer = styled.div`
@@ -241,16 +239,16 @@ const SecondSection = () => {
     duration: 1,
     delay: 0.9,
   };
-  const transitionText = {
+  const transitionHashTag = {
     duration: 1,
     delay: 1.5,
   };
 
-  const transitionHashTag = {
+  const transitionText = {
     duration: 1,
     delay: 2,
   };
-
+  
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
   
@@ -312,6 +310,19 @@ const SecondSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}>Graphic Design</SecondBoxTitle>
 
+          <SecondBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
+            <p>#특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
+            <p>#팀원들과의 순조로운 협동 및 의견을 반영해 더 나은 결과물을 도출하기 위해 논의하며 수긍할 줄 압니다.</p>
+            <p>#레이아웃의 배치 및 그리드를 명확하게 사용함으로써 사용자가 더 편하게 볼수 있도록 노력합니다.</p>
+            <p>#photoshop / illustrator를 이용하여 디자인 및 편집이 가능합니다.</p>
+            <p>#XD / Figma를 이용하여 UX / UI 프로토타이핑 설계 및 디자인이 가능합니다.</p>
+          </SecondBoxHashTag>
+
           <SecondBoxSub          
           variants={animationRight}
           initial="hidden"
@@ -335,23 +346,25 @@ const SecondSection = () => {
             </ModalContent>
           </ModalContainer>
           )} */}
-          <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
-            <p>#꼼꼼함</p>
-            <p>#협동력</p>
-            <p>#창의력</p>
-            <p>#그리드</p>
-          </SecondBoxHashTag>
+
 
           <SecondBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}>Development</SecondBoxTitle>
+
+        <SecondBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            <p>#SCSS를 이용한 컴파일링을 통하여 보다 나은 보수작업을 위해 코드를 작성하려 노력합니다.</p>
+            <p>#styled-components를 이용하여 보다 빠른 마크업이 가능하며 Router를 적극 활용합니다.</p>
+            <p>#Figma 및 XD의 디자인을 흡사하게 퍼블리싱 하여 웹구현을 할 수 있으며 반응형 퍼블리싱 또한 가능합니다.</p>
+            <p>#웹 접근성, 웹 표준성을 고려하며 SEO의 최적화를 위해 웹 페이지를 구축합니다. </p>
+            <p>#여러가지 기술스택을 습득하기 이전에 한가지 기술에 자신감을 가질때까지 노력하지만 필요시 유연하게 기술스택에 접근할 줄 압니다. </p>
+          </SecondBoxHashTag>
 
           <SecondBoxSub          
           variants={animationRight}
@@ -368,15 +381,7 @@ const SecondSection = () => {
             <SiReact style={{marginRight:'1rem'}}/>
             </ul>
           </SecondBoxSub>
-          <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            <p>#클린코드</p>
-            <p>#컴포넌트</p>
-            <p>#끈기</p>
-          </SecondBoxHashTag>
+
         </SecondBoxText>
       </Content>
 
