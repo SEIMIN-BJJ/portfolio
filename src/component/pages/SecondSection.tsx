@@ -76,6 +76,7 @@ const SecondBoxText = styled(motion.li)`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 `;
 
@@ -100,7 +101,7 @@ const SecondBoxTitle = styled(motion.p)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0 auto;
+    padding: 2rem 0 auto;
 
   }
 `;
@@ -116,13 +117,6 @@ const SecondBoxSub = styled(motion.section)`
   font-size: 2rem;
   font-family: "SB 어그로OTF M";
   color:#fff;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    font-size: 1.3rem;
-
-   }
 
   ul {
     width: 100%;
@@ -170,13 +164,13 @@ const SecondBoxHashTag = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 18vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     font-size: 1.2rem;
-    padding: 2rem 2rem; 
+    padding: 1rem 3rem; 
   }
 
 `;
@@ -363,7 +357,7 @@ const SecondSection = () => {
             <p>#styled-components를 이용하여 보다 빠른 마크업이 가능하며 Router를 적극 활용합니다.</p>
             <p>#Figma 및 XD의 디자인을 흡사하게 퍼블리싱 하여 웹구현을 할 수 있으며 반응형 퍼블리싱 또한 가능합니다.</p>
             <p>#웹 접근성, 웹 표준성을 고려하며 SEO의 최적화를 위해 웹 페이지를 구축합니다. </p>
-            <p>#여러가지 기술스택을 습득하기 이전에 한가지 기술에 자신감을 가질때까지 노력하지만 필요시 유연하게 기술스택에 접근할 줄 압니다. </p>
+            <p>#기술을 습득할때 한가지 기술에 자신감을 가질때까지 노력하지만 필요시 유연하게 기술스택에 접근할 줄 압니다. </p>
           </SecondBoxHashTag>
 
           <SecondBoxSub          
