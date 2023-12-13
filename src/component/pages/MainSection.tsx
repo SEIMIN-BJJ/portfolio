@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
-import ThirdSection from "./ThirdSection";
+// import ThirdSection from "./ThirdSection";
 // import FouthSection from "./FouthSection";
 import "../../App.scss";
 
@@ -32,7 +32,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     flex-direction: column;
   }
 `;
@@ -45,7 +45,7 @@ const ContentBoxText = styled(motion.li)`
   flex-direction: column;
   margin-top: -20vh;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
     padding: 0;
@@ -271,8 +271,8 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <ThirdSection /> 
-       {/*<FouthSection /> */}
+     {/* <ThirdSection /> 
+       <FouthSection /> */}
     </Container>
   );
 };
