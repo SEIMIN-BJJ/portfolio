@@ -7,6 +7,7 @@ import SecondSection from "./SecondSection";
 // import ThirdSection from "./ThirdSection";
 // import FouthSection from "./FouthSection";
 import "../../App.scss";
+import { SiAdobeillustrator } from 'react-icons/si';
 
 const Container = styled.section`
   width: 100%;
@@ -52,7 +53,7 @@ const ContentBoxText = styled(motion.li)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin: 0;
   }
 `;
 
@@ -92,7 +93,6 @@ const ContentBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: auto;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -119,8 +119,8 @@ const ContentBoxSub = styled(motion.p)`
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.2rem;
-
+    font-size: 1rem;
+    padding: 1rem auto;
   }
 `;
 
@@ -141,6 +141,7 @@ const ContentBoxHashTag = styled(motion.p)`
     align-items: center;
     border-radius: 10rem;
     font-size: 0.8rem;
+    font-weight: bold;
     color: #ccc;
     padding: 0.1rem 1.2rem; 
     transition: 0.15s ease-in-out;

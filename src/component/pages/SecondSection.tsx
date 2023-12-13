@@ -43,7 +43,7 @@ const Content = styled.div`
 
 const SecondBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   background-image: url(${TechIMG});
   background-size: cover;
@@ -53,12 +53,6 @@ const SecondBoxPicture = styled(motion.div)`
   text-align: center;
   z-index: 0;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-  }
 `;
 
 const SecondBoxText = styled(motion.li)`
@@ -69,7 +63,7 @@ const SecondBoxText = styled(motion.li)`
   align-items: flex-start;
   flex-direction: column;
   z-index: 1;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 
   @media (max-width: 768px) {
     width: 100%;
