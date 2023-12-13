@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
-// import ThirdSection from "./ThirdSection";
+import ThirdSection from "./ThirdSection";
 // import FouthSection from "./FouthSection";
 import "../../App.scss";
-import { SiAdobeillustrator } from 'react-icons/si';
 
 const Container = styled.section`
   width: 100%;
@@ -273,8 +272,8 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-     {/* <ThirdSection /> 
-       <FouthSection /> */}
+      <ThirdSection /> 
+      {/* <FouthSection /> */}
     </Container>
   );
 };
