@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import TechIMG from "../assets/images/desktop.png";
+import DeskTopIMG from "../assets/images/desktopTwo.jpg";
 import { motion } from "framer-motion";
-import { SiAdobephotoshop } from "react-icons/si";
-import { SiAdobeillustrator } from "react-icons/si";
-import { SiAdobexd } from "react-icons/si";
-import { SiAdobepremierepro } from "react-icons/si";
-import { SiFigma } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiSass } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
-import { SiReact } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -36,15 +24,16 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    height: 100vh;
     flex-direction: column;
   }
 `;
 
-const SecondBoxPicture = styled(motion.div)`
+const ThirdBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
-  background-image: url(${TechIMG});
+  background-image: url(${DeskTopIMG});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -52,16 +41,9 @@ const SecondBoxPicture = styled(motion.div)`
   text-align: center;
   z-index: 0;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    margin: 2rem auto;
-  }
 `;
 
-const SecondBoxText = styled(motion.li)`
+const ThirdBoxText = styled(motion.li)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -72,21 +54,20 @@ const SecondBoxText = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 50%;
-    padding: 0;
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 `;
 
-const SecondBoxTitle = styled(motion.p)`
+const ThirdBoxTitle = styled(motion.p)`
   width: 100%;
-  height: 4rem;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 3rem 0px;
+  padding: 0 0 1rem;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
@@ -96,90 +77,36 @@ const SecondBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 4vh;
+    height: 2vh;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0 auto;
+
   }
 `;
 
-const SecondBoxSub = styled(motion.section)`
+const ThirdBoxSub = styled(motion.section)`
   width: 100%;
-  height: auto;
-  padding: 50px 0px;
+  height: 60%;
+  padding: 2rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "SB 어그로OTF M";
   color:#fff;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 5vh;
-    font-size: 3rem;
-   }
-
-  ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-  }
-`;
-
-const SecondBoxHashTag = styled(motion.p)`
-  width: 100%;
-  height: auto;
-  font-family: "SB 어그로OTF M";
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  color: #171717a7;
-
-  p {
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rem;
-    font-size: 0.8rem;
-    color: #ccc;
-    padding: 0.2rem 1.2rem; 
-    transition: 0.15s ease-in-out;
-    margin-bottom: 3rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #ccc;
-      color:#fff;
-      opacity: 1;
-    }
-
-  }
+  border: 1px solid #fff;
 
   @media (max-width: 768px) {
     width: 100%;
     height: 10vh;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 1.2rem;
-
   }
 `;
 
@@ -246,11 +173,6 @@ const ThirdSection = () => {
     delay: 1.5,
   };
 
-  const transitionHashTag = {
-    duration: 1,
-    delay: 2,
-  };
-
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
   
@@ -263,7 +185,7 @@ const ThirdSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition > 450 && scrollPosition < 1200) {
+      if (scrollPosition > 1300 && scrollPosition < 2000) {
         setAnimate(true);
       } else {
         setAnimate(false);
@@ -294,32 +216,32 @@ const ThirdSection = () => {
   return (
     <Container>
       <Content>
-        <SecondBoxPicture
+        <ThirdBoxPicture
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-        ></SecondBoxPicture>
-        <SecondBoxText
+        ></ThirdBoxPicture>
+        <ThirdBoxText
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}
         >
-          <SecondBoxTitle       
+          <ThirdBoxTitle       
           variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Graphic Design</SecondBoxTitle>
+          transition={transition}>HandiCraft</ThirdBoxTitle>
 
-          <SecondBoxSub          
+          <ThirdBoxSub          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            <ul>
-            </ul>
-          </SecondBoxSub>
+
+
+          </ThirdBoxSub>
           {/* {modalOpen && (
           <ModalContainer>
             <ModalContent>
@@ -330,42 +252,7 @@ const ThirdSection = () => {
             </ModalContent>
           </ModalContainer>
           )} */}
-          <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
-            <p>#꼼꼼함</p>
-            <p>#협동력</p>
-            <p>#창의력</p>
-            <p>#그리드</p>
-          </SecondBoxHashTag>
-
-          <SecondBoxTitle       
-          variants={animationLeft}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transition}>Development</SecondBoxTitle>
-
-          <SecondBoxSub          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionText}>
-            <ul>
-            </ul>
-          </SecondBoxSub>
-          <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            <p>#클린코드</p>
-            <p>#컴포넌트</p>
-            <p>#끈기</p>
-          </SecondBoxHashTag>
-        </SecondBoxText>
+        </ThirdBoxText>
       </Content>
 
     </Container>
