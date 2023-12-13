@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Slider from "react-slick";
 import DeskTopIMG from "../assets/images/desktopTwo.jpg";
 import { motion } from "framer-motion";
 import "../../App.scss";
@@ -90,15 +91,16 @@ const ThirdBoxTitle = styled(motion.p)`
 const ThirdBoxSub = styled(motion.section)`
   width: 100%;
   height: 60%;
-  padding: 2rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   font-size: 2rem;
   font-family: "SB 어그로OTF M";
-  color:#fff;
+  color: #fff;
   border: 1px solid #fff;
+  white-space: nowrap;
+  overflow: hidden; // 추가된 부분
 
   @media (max-width: 768px) {
     width: 100%;
@@ -147,6 +149,7 @@ const ThirdBoxSub = styled(motion.section)`
 // `;
 
 const ThirdSection = () => {
+
   const [animate, setAnimate] = useState(false);
   // const [modalOpen, setModalOpen] = useState(false);
 
@@ -234,14 +237,13 @@ const ThirdSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}>HandiCraft</ThirdBoxTitle>
 
-          <ThirdBoxSub          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionText}>
-
-
-          </ThirdBoxSub>
+            <ThirdBoxSub
+              variants={animationRight}
+              initial="hidden"
+              animate={animate ? "visible" : "hidden"}
+              transition={transitionText}
+            >
+            </ThirdBoxSub>
           {/* {modalOpen && (
           <ModalContainer>
             <ModalContent>
