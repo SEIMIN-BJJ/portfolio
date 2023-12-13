@@ -145,6 +145,7 @@ const ContentBoxHashTag = styled(motion.p)`
     padding: 0.1rem 1.2rem; 
     transition: 0.15s ease-in-out;
     font-family: 'SB 어그로OTF L';
+    font-weight: bold;
     cursor: pointer;
 
     &:hover {
@@ -161,7 +162,7 @@ const ContentBoxHashTag = styled(motion.p)`
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
   }
 `;
