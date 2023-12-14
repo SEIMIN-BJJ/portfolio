@@ -173,7 +173,7 @@ const HeaderComp = () => {
               </a>
             </Li>
             <Li>
-              <a href="/">
+              <a href="/" >
                 <FaYoutube className="youtube"/>
               </a>
             </Li>

@@ -204,7 +204,7 @@ const MainSection = () => {
   
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 0) {
+      if (scrollPosition > 300 && scrollPosition < 600) {
         setAnimate(false);
       } else {
         setAnimate(true);

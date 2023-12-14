@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Slider from "react-slick";
 import DeskTopIMG from "../assets/images/desktopTwo.jpg";
 import { motion } from "framer-motion";
 import "../../App.scss";
@@ -30,19 +29,19 @@ const Content = styled.div`
   }
 `;
 
-const ThirdBoxPicture = styled(motion.div)`
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  background-image: url(${DeskTopIMG});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  text-align: center;
-  z-index: 0;
+// const ThirdBoxPicture = styled(motion.div)`
+//   width: 100%;
+//   height: 100vh;
+//   flex-direction: column;
+//   /* background-image: url(${DeskTopIMG}); */
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   position: absolute;
+//   text-align: center;
+//   z-index: 0;
 
-`;
+// `;
 
 const ThirdBoxText = styled(motion.li)`
   width: 100%;
@@ -73,8 +72,7 @@ const ThirdBoxTitle = styled(motion.p)`
   font-size: 2.5rem;
   font-family: "SB 어그로OTF B";
   position: relative;
-  color:#fff;
-
+  color: #212020;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -98,9 +96,26 @@ const ThirdBoxSub = styled(motion.section)`
   font-size: 2rem;
   font-family: "SB 어그로OTF M";
   color: #fff;
-  border: 1px solid #fff;
-  white-space: nowrap;
-  overflow: hidden; // 추가된 부분
+  border: 1px solid #171717a7;
+
+  ul {
+    width:100%;
+    height: 100%;
+    border: 1px solid #000;
+    display: grid;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    li {
+
+      width: 10rem;
+      height: 5rem;
+      border: 1px solid #000;
+
+    }
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -112,46 +127,11 @@ const ThirdBoxSub = styled(motion.section)`
   }
 `;
 
-// const ModalContainer = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right:0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
 
-// const ModalContent = styled.div`
-//   width: 50%;
-//   height: 50%;
-//   background-color: #fff;
-//   padding: 20px;
-//   border-radius: 10px;
-// `;
-
-// const ModalCloseButton = styled.button`
-//   margin-top: 1rem;
-//   background-color: #ccc;
-//   color: #fff;
-//   border: none;
-//   padding: 10px;
-//   position: relative;
-//   cursor: pointer;
-// `;
-
-// const ModalDescription = styled.p`
-//   font-size: 16px;
-//   color: #333;
-// `;
 
 const ThirdSection = () => {
 
   const [animate, setAnimate] = useState(false);
-  // const [modalOpen, setModalOpen] = useState(false);
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -209,22 +189,10 @@ const ThirdSection = () => {
   }, []); 
 
 
-  // const handleModalOpen = () => {
-  //   setModalOpen(true);
-  // };
-  
-  // const handleModalClose = () => {
-  //   setModalOpen(false);
-  // };
   return (
     <Container>
       <Content>
-        <ThirdBoxPicture
-          variants={animationLeft}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transition}
-        ></ThirdBoxPicture>
+
         <ThirdBoxText
           variants={animationRight}
           initial="hidden"
@@ -243,17 +211,17 @@ const ThirdSection = () => {
               animate={animate ? "visible" : "hidden"}
               transition={transitionText}
             >
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
             </ThirdBoxSub>
-          {/* {modalOpen && (
-          <ModalContainer>
-            <ModalContent>
-              <ModalDescription>
-                - 꼼꼼함은 디자이너든 개발자든 어떤일을 하든 필수적인 것이라고 생각합니다.<br /><br />일을함에 있어서 프로세스가 있듯이 끝내고 한번 더 두번 더 검수를 하는 것이 몸에 배어있습니다.
-              </ModalDescription>
-              <ModalCloseButton onClick={handleModalClose}>닫기</ModalCloseButton>
-            </ModalContent>
-          </ModalContainer>
-          )} */}
+    
         </ThirdBoxText>
       </Content>
 
