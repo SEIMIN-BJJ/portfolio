@@ -23,7 +23,6 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
 `;
 
 const Content = styled.div`
@@ -152,9 +151,16 @@ const SecondBoxHashTag = styled(motion.p)`
     text-align: left;
     border-radius: 10rem;
     font-size: 0.9rem;
-    color: #fff;
+    color: #9c9c9c;
     padding: 0.5rem 0;
     letter-spacing: 2px;
+    transition: 0.21s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      color:#fff;
+      font-size:0.92rem;
+    }
     }
 
   @media (max-width: 768px) {

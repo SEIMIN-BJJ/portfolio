@@ -74,8 +74,6 @@ const Li = styled.li`
     font-size: 1.3rem;
     transition: background-color 0.3s;
 
-
-
     @media (max-width: 768px) {
       font-size: 1.5rem;
       margin: 0 auto;
@@ -105,17 +103,29 @@ const HeaderDiv = styled.div`
 
   &:hover {
     background-color: #000;
-    opacity: 1;
     backdrop-filter: blur(10px);
+    transition: 0.21s ease-in-out;
 
     ${Logo} {
       color: #fff;
+      opacity: 1;
+
     }
 
     ${Li} {
       
       a{
       color: #ffffff; 
+
+      .github:hover {
+        color: #ccc;
+      }
+      .mail:hover {
+        color: #76adfb;
+      }
+      .youtube:hover {
+        color: #FF0000;
+      }
     }
   }
 
@@ -154,17 +164,17 @@ const HeaderComp = () => {
           <Ul>
           <Li>
               <a href="/">
-                <FaGithub />
+                <FaGithub className="github" />
               </a>
             </Li>
             <Li>
               <a href="/">
-                <FiMail />
+                <FiMail className="mail" />
               </a>
             </Li>
             <Li>
               <a href="/">
-                <FaYoutube />
+                <FaYoutube className="youtube"/>
               </a>
             </Li>
           </Ul>
