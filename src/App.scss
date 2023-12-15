@@ -112,6 +112,12 @@ section {
     font-family: 'Pretendard-Thin';
     src: url('./component/assets/fonts/Pretendard-Thin.otf') format('truetype');
 }
+
+@font-face {
+    font-family: "ChosunCentennial";
+    src: url("./component/assets/fonts/ChosunCentennial_otf.otf")
+      format("truetype");
+  }
 /* ==========================     반응형 작업      ===================== */
 
 @media screen and (max-width: 1799px) {

@@ -163,17 +163,26 @@ const HeaderComp = () => {
         <Nav>
           <Ul>
           <Li>
-              <a href="/">
+              <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/SEIMIN-BJJ">
                 <FaGithub className="github" />
               </a>
             </Li>
             <Li>
-              <a href="/">
+              <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:interkp12@gmail.com">
                 <FiMail className="mail" />
               </a>
             </Li>
             <Li>
-              <a href="/" >
+              <a                       
+              href="https://www.youtube.com/@seimin00"
+              target="_blank"
+              rel="noopener noreferrer">
                 <FaYoutube className="youtube"/>
               </a>
             </Li>
