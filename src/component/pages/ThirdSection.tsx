@@ -290,16 +290,19 @@ const ModalContent = styled(motion.div)`
           font-family: "ChosunCentennial";
           z-index: 999;
           border-radius: 50px;
+          transition: 0.3s ease-in-out;
+
           a {
           color: #fff;
+          font-weight: 900;
         }
           &:hover {
           color: #171717;
           background-color: #fff;
+          opacity: 1;
 
           a {
             color: #171717;
-            background-color: #fff;
           }
         }
           }
