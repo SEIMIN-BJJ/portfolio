@@ -161,7 +161,6 @@ const SecondBoxHashTag = styled(motion.p)`
       color:#fff;
       font-size:0.92rem;
     }
-    }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -170,10 +169,10 @@ const SecondBoxHashTag = styled(motion.p)`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size:0.92rem;
     padding: 1rem 3rem; 
   }
-
+}
 `;
 
 // const ModalContainer = styled.div`

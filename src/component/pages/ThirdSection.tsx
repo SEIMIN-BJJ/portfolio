@@ -140,6 +140,10 @@ const ThirdBoxSub = styled(motion.section)`
       transition: 1s ease-in-out ;
       cursor: pointer;
 
+      &:hover {
+      border: 2.5px solid #ffffff; 
+      transition: border 0.1s ease-in-out; 
+
       @media (max-width: 768px) {
       width: 100%;
       height: 15vh;
@@ -149,6 +153,7 @@ const ThirdBoxSub = styled(motion.section)`
       }
     }
   }
+}
 `;
 
 const ModalBackground = styled(motion.div)`
@@ -192,6 +197,7 @@ const ModalContent = styled(motion.div)`
       justify-content: center;
       align-items: center;
       border: 1px solid black;
+
       .Monitor {
       width: 100%;
       height: 80%;
@@ -220,6 +226,10 @@ const ThirdSection = () => {
     visible: { opacity: 1, x: 0 },
   };
 
+  const animationUp = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
   const transition = {
     duration: 1,
     delay: 0.2,
@@ -277,7 +287,6 @@ const ThirdSection = () => {
   return (
     <Container>
       <Content>
-
         <ThirdBoxText
           variants={animationRight}
           initial="hidden"
@@ -317,7 +326,11 @@ const ThirdSection = () => {
               exit={{ opacity: 0}}
               onClick={closeModal}
             >
-              <ModalContent>
+              <ModalContent
+              variants={animationUp}
+              initial="hidden"
+              animate={animate ? "visible" : "hidden"}
+              transition={transition}>
                 <article>
                   <ul>
                     <li className="Monitor"></li>
