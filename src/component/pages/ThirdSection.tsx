@@ -121,7 +121,13 @@ const ThirdBoxSub = styled(motion.section)`
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: border 0.21s ease-in-out;
 
+      &:hover {
+        border: 3px solid #fff;
+        opacity: 1;
+      }
+      
       @media (max-width: 768px) {
       width: 100%;
       height: 15vh;
