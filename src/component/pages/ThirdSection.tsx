@@ -121,7 +121,7 @@ const ThirdBoxSub = styled(motion.section)`
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: border 0.21s ease-in-out;
+      transition: border 0.2s ease-in-out;
 
       &:hover {
         border: 3px solid #fff;
@@ -174,7 +174,7 @@ const ModalBackground = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.26);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,9 +214,9 @@ const ModalContent = styled(motion.div)`
       width: 100%;
       height: 75%;
       background-image: url(${ImacIMG});
-      background-position: center center;
-      background-repeat: no-repeat;
       background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
 
       p {
         width: 80%;
@@ -227,7 +227,7 @@ const ModalContent = styled(motion.div)`
         background-position: center center;
         margin: 1rem auto;
       }
-        }
+    }
 
       .MonitorTitle {
         width: 100%;
@@ -255,8 +255,8 @@ const ModalContent = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 20px;
-        margin-bottom: 3rem;
+        padding: 20px ;
+        margin-bottom: 1rem;
         }
       }
 
@@ -320,18 +320,20 @@ const ModalContent = styled(motion.div)`
 
 const MonitorDiscriptions = [
   {
-    title: (
+    soundnovel: (
       <p>
-        레트로 게임의 장르 중 하나로 BGM과 소설을 합쳐 사운드 노벨이라 칭한다.
-        <br />
+        레트로 게임의 장르 중 하나로 BGM과 소설을 합쳐 사운드 노벨이라 칭한다.<br /><br />
         글의 내용과 어울리는 사운드를 접목하여 책을 읽듯이 BGM을 통하여
-        <br />내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다.<br />또한, 말그대로 노벨이기 때문에 기술적인 목적보단 <br />글의 내용과 사운드에 집중을 하였다. 
+        내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
+        또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
+        모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
+        좀 더 재미있게 읽을 수 있도록 개발하였다.
       </p>
     ),
 
-    text: (
+    soundnoveltext: (
       <p>
-        제작기간 : 1일 / 기여도: 100% 
+        제작기간 : 2일 / 기여도: 100% 
       </p>
     )
   },
@@ -457,51 +459,57 @@ const ThirdSection = () => {
               initial="hidden"
               animate={animate ? "visible" : "hidden"}
               transition={transition}>
-                <article>
+              <article>
+                <ul>
+                  <div className="Monitor">
+                    <p></p>
+                  </div>
+                </ul>
+                <ul>
+                  <li className="MonitorTitle">SOUND NOVEL</li>
                   <ul>
-                    <li className="Monitor">
-                      <p></p>
-                    </li>
+                    {MonitorDiscriptions.map((item, index) => (
+                      <li className="MonitorText" key={index}>
+                        <p>{item.soundnovel}</p>
+                      </li>
+                    ))}
                   </ul>
-                    <ul>
-                      <li className="MonitorTitle">SOUND NOVEL</li>
-                      <ul>
-                        {MonitorDiscriptions.map((item, index) => (
-                        <li className="MonitorText" key={index}>
-                          <p>{item.title}</p>
-                        </li>
-                        ))}
-                      </ul>
-                      <ul>
-                        {MonitorDiscriptions.map((item,index) => (
+                  <ul>
+                    {MonitorDiscriptions.map((item, index) => (
                       <li className="MonitorFooter" key={index}>
-                        <p>{item.text}</p>
+                        <p>{item.soundnoveltext}</p>
                         <div>
                           <button>
-                            <a 
+                            <a
                               target="_blank"
                               rel="noopener noreferrer"
-                              href="https://github.com/SEIMIN-BJJ/Sound-Novel-react">Github</a>
-                            </button>
-                            <button>
-                            <a 
+                              href="https://github.com/SEIMIN-BJJ/Sound-Novel-react"
+                            >
+                              Github
+                            </a>
+                          </button>
+                          <button>
+                            <a
                               target="_blank"
                               rel="noopener noreferrer"
-                              href="https://seimin-bjj.github.io/Sound-Novel-react/">Web</a>
-                            </button>
+                              href="https://seimin-bjj.github.io/Sound-Novel-react/"
+                            >
+                              Web
+                            </a>
+                          </button>
                         </div>
                       </li>
-                      ))}
-                      </ul>
-                    </ul>
-                </article>
-              </ModalContent>
-            </ModalBackground>
-          )}
-        </AnimatePresence>
-      </Content>
-    </Container>
-  );
-};
+                    ))}
+                  </ul>
+                </ul>
+              </article>
+                            </ModalContent>
+                          </ModalBackground>
+                        )}
+                      </AnimatePresence>
+                    </Content>
+                  </Container>
+                );
+              };
 
 export default ThirdSection;
