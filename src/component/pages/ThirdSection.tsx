@@ -165,6 +165,11 @@ const ThirdBoxSub = styled(motion.section)`
       align-items: center;
       }
   }
+
+      .Rock-Page {
+        background-color: #b23d39;
+        color: #fcfcfc;
+      }
 }
 `;
 
@@ -437,7 +442,9 @@ const ThirdSection = () => {
                 <li className="Sn-Page" onClick={openModal}>
                   <p>SOUND NOVEL</p>
                 </li>
-                <li></li>
+                <li className="Rock-Page">
+                <p>ROCK FESTA</p>
+                </li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -503,13 +510,13 @@ const ThirdSection = () => {
                   </ul>
                 </ul>
               </article>
-                            </ModalContent>
-                          </ModalBackground>
-                        )}
-                      </AnimatePresence>
-                    </Content>
-                  </Container>
-                );
-              };
+                </ModalContent>
+              </ModalBackground>
+            )}
+          </AnimatePresence>
+        </Content>
+      </Container>
+    );
+  };
 
 export default ThirdSection;
