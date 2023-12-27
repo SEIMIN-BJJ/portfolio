@@ -142,7 +142,7 @@ const SecondBoxHashTag = styled(motion.p)`
   align-items: flex-start;
   color: #171717a7;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 
   p {
     display: flex;
@@ -150,7 +150,7 @@ const SecondBoxHashTag = styled(motion.p)`
     align-items: flex-start;
     text-align: left;
     border-radius: 10rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #9c9c9c;
     padding: 0.5rem 0;
     letter-spacing: 2px;
@@ -159,7 +159,7 @@ const SecondBoxHashTag = styled(motion.p)`
     &:hover {
       opacity: 1;
       color:#fff;
-      font-size:0.92rem;
+      font-size:0.81rem;
     }
 
   @media (max-width: 768px) {
@@ -353,11 +353,12 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
-            <p>#SCSS를 이용한 컴파일링을 통하여 보다 나은 보수작업을 위해 코드를 작성하려 노력합니다.</p>
-            <p>#styled-components를 이용하여 보다 빠른 마크업이 가능하며 Router를 적극 활용합니다.</p>
-            <p>#Figma 및 XD의 디자인을 흡사하게 퍼블리싱 하여 웹구현을 할 수 있으며 반응형 퍼블리싱 또한 가능합니다.</p>
-            <p>#웹 접근성, 웹 표준성을 고려하며 SEO의 최적화를 위해 웹 페이지를 구축합니다. </p>
-            <p>#기술을 습득할때 한가지 기술에 자신감을 가질때까지 노력하지만 필요시 유연하게 기술스택에 접근할 줄 압니다. </p>
+            <p>#SCSS 컴파일링을 통해 코드를 작성함으로써 효율적인 보수작업을 지향합니다.</p>
+            <p>#styled-components를 활용하여 신속한 마크업 작업을 통해 프로젝트에 빠르게 결과물을 도출하고, <br />Router를 적극 활용하여 사용자 경험을 극대화합니다.</p>
+            <p>#RESTful API 호출에는 axios를 활용하여 데이터 획득 및 전송 작업을 신속하게 처리합니다. </p>
+            <p>#Figma와 XD의 디자인을 참조하여 퍼블리싱을 진행하며, 반응형 퍼블리싱을 통해 모바일 및 데스크톱 환경에서 <br />일관된 사용자 경험을 제공합니다.</p>
+            <p>#웹 접근성과 웹 표준성을 고려하여 SEO 최적화를 실시하며, 페이지 구축에 있어 최상의 성능과 <br />사용자 친화적인 디자인을 추구합니다.</p>
+            <p>#더 나은 사용자 경험과 효율적인 개발을 위해 끊임없는 자기 계발에 주력하며, 협업에서의 커뮤니케이션과 <br />문제 해결 능력을 강조합니다.</p>
           </SecondBoxHashTag>
 
           <SecondBoxSub          
