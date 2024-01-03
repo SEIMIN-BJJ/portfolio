@@ -474,7 +474,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       </RockFestaContent>
     
     ),
-    githubLink: "https://github.com/your-github-link-for-rockfest",
+    githubLink: "https://github.com/SEIMIN-BJJ/Rock-Festa-react",
     webLink: "https://seimin-bjj.github.io/Rock-Festa-react/"
   },
   }
