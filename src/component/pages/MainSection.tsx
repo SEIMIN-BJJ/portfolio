@@ -52,7 +52,7 @@ const ContentBoxText = styled(motion.li)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 2rem auto;
   }
 `;
 
@@ -68,10 +68,10 @@ const ContentBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 40%;
+    height: 30%;
     background-size: contain;
     background-position: center center;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 `;
 
@@ -96,6 +96,7 @@ const ContentBoxTitle = styled(motion.p)`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 3rem 3rem;
   }
 `;
 

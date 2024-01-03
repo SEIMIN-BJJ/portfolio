@@ -23,6 +23,12 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
 `;
 
 const Content = styled.div`
@@ -38,6 +44,7 @@ const Content = styled.div`
     height: 100vh;
     flex-direction: column;
   }
+
 `;
 
 const SecondBoxPicture = styled(motion.div)`
@@ -51,6 +58,14 @@ const SecondBoxPicture = styled(motion.div)`
   position: absolute;
   text-align: center;
   z-index: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin: 1rem auto;
+  }
 
 `;
 
@@ -66,11 +81,11 @@ const SecondBoxText = styled(motion.li)`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin-top: 20rem;
   }
 
 `;
@@ -89,17 +104,17 @@ const SecondBoxTitle = styled(motion.p)`
   color:#fff;
 
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
-    height: 2vh;
+    height: 100%;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 auto;
-
   }
 `;
+
+
 
 const SecondBoxSub = styled(motion.section)`
   width: 100%;

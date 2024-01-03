@@ -294,15 +294,42 @@ const ModalContent = styled(motion.div)`
       background-repeat: no-repeat;
       background-position: center center;
 
+      @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 2rem auto;
+    }
+
       p {
-        width: 80%;
-        height: 62%;
-        background-image: url(${NovelIMGFirst});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        margin: 1rem auto;
+
+      width: 80%;
+      height: 62%;
+      background-image: url(${NovelIMGFirst});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      margin: 1rem auto;
+
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-size: contain;
+        position: relative;
+        margin: 0 auto;
+
+  }
       }
+
+      
     }
 
       .MonitorText {
