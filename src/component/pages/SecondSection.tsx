@@ -64,14 +64,15 @@ const SecondBoxText = styled(motion.li)`
   z-index: 1;
   margin-bottom: 3rem;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
   }
+
 `;
 
 const SecondBoxTitle = styled(motion.p)`
@@ -88,7 +89,7 @@ const SecondBoxTitle = styled(motion.p)`
   color:#fff;
 
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: 2vh;
     font-size: 1.5rem;
@@ -120,7 +121,7 @@ const SecondBoxSub = styled(motion.section)`
     align-items: center;
     color:#fff;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: 10vh;
     font-size: 2.5rem;
@@ -162,15 +163,19 @@ const SecondBoxHashTag = styled(motion.p)`
       font-size:0.81rem;
     }
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-size:0.92rem;
+    font-size:0.9rem;
     padding: 1rem 3rem; 
+
+    &:hover {
+    font-size:0.9rem;
+    }
   }
 }
 `;

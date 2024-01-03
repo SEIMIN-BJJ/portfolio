@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import ImacIMG from "../assets/images/pngwing.com.png";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
+import RockIMGFirst from "../assets/images/rock.png";
 import "../../App.scss";
+
+interface MonitorDescription {
+  content: React.ReactNode;
+  text: React.ReactNode;
+  githubLink: string;
+  webLink: string;
+}
 
 const Container = styled.section`
   width: 100%;
@@ -55,7 +63,7 @@ const ThirdBoxText = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 `;
 
@@ -95,7 +103,7 @@ const ThirdBoxSub = styled(motion.section)`
   color: #fff;
 
   @media (max-width: 768px) {
-    height: 100%;
+    height: 50%;
   }
 
   ul {
@@ -147,16 +155,6 @@ const ThirdBoxSub = styled(motion.section)`
       transition: 1s ease-in-out ;
       cursor: pointer;
 
-      &:hover {
-        color:#fff;
-        text-shadow:
-          0 0 30px #000,
-          0 0 60px #b23d39,
-          0 0 70px #b23d39,
-          0 0 90px #b23d39;
-        opacity: 1;
-      }
-      
       @media (max-width: 768px) {
       width: 100%;
       height: 10vh;
@@ -167,8 +165,23 @@ const ThirdBoxSub = styled(motion.section)`
   }
 
       .Rock-Page {
-        background-color: #b23d39;
-        color: #fcfcfc;
+      width: 100%;
+      height: 100%;
+      color: #000000;
+      font-size: 2rem;
+      background-color: #ffffff;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      transition: 1s ease-in-out ;
+      letter-spacing: 0.5rem;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
       }
 }
 `;
@@ -188,16 +201,61 @@ const ModalBackground = styled(motion.div)`
 
 `;
 
+const MonitorTitle = styled(motion.p)
+<{
+  soundnovel?: boolean;
+  rockfest?: boolean;
+}>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  ${props =>
+    props.soundnovel &&
+    css`
+      font-family: "ChosunCentennial";
+    `}
+
+  ${props =>
+    props.rockfest &&
+    css`
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    `}
+`;
+
 const ModalContent = styled(motion.div)`
   width: 100%;
   height: 100%;
   max-width: 80%;
   max-height: 80%;
-  background-color: #171717;
+  background-color: #000000e3;
   padding: 20px;
-  border-radius: 8px;
   overflow-y: auto;
   color: #fff;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   article {
     width: 100%;
@@ -207,6 +265,17 @@ const ModalContent = styled(motion.div)`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
     ul {
       width: 100%;
       height: 100%;
@@ -214,6 +283,7 @@ const ModalContent = styled(motion.div)`
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      font-family: "ChosunCentennial";
 
       .Monitor {
       width: 100%;
@@ -234,24 +304,12 @@ const ModalContent = styled(motion.div)`
       }
     }
 
-      .MonitorTitle {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        font-family: "ChosunCentennial";
-
-      }
-
       .MonitorText {
         width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "ChosunCentennial";
         font-size: 1rem;
 
         p {
@@ -263,6 +321,10 @@ const ModalContent = styled(motion.div)`
         padding: 20px ;
         margin-bottom: 1rem;
         }
+
+        @media (max-width: 768px) {
+        margin-top: 7rem;
+      }
       }
 
       .MonitorFooter {
@@ -271,7 +333,6 @@ const ModalContent = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "ChosunCentennial";
         font-size: 1.2rem;
         flex-direction: column;
 
@@ -282,6 +343,10 @@ const ModalContent = styled(motion.div)`
         justify-content: center;
         align-items: center;
         padding: 20px 20px;
+
+        @media (max-width: 768px) {
+        margin-top: 5rem;
+      }
         }
 
         div {
@@ -298,10 +363,14 @@ const ModalContent = styled(motion.div)`
           border: 1px solid white;
           padding: 0.5rem auto;
           margin: 0.3rem;
-          font-family: "ChosunCentennial";
           z-index: 999;
           border-radius: 50px;
           transition: 0.3s ease-in-out;
+
+          @media (max-width: 768px) {
+          margin-top: 2rem;
+          font-size: 0.9rem;
+          }
 
           a {
           color: #fff;
@@ -323,31 +392,84 @@ const ModalContent = styled(motion.div)`
     }
 `;
 
-const MonitorDiscriptions = [
-  {
-    soundnovel: (
-      <p>
-        레트로 게임의 장르 중 하나로 BGM과 소설을 합쳐 사운드 노벨이라 칭한다.<br /><br />
-        글의 내용과 어울리는 사운드를 접목하여 책을 읽듯이 BGM을 통하여
-        내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
-        또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
-        모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
-        좀 더 재미있게 읽을 수 있도록 개발하였다.
-      </p>
-    ),
 
-    soundnoveltext: (
-      <p>
-        제작기간 : 2일 / 기여도: 100% 
-      </p>
-    )
+const SoundNovelContent = styled.div`
+  font-family: "ChosunCentennial";
+`;
+
+const SoundNovelTextContent = styled.p`
+  font-family: "ChosunCentennial";
+`;
+
+const SoundNovelTextDescription = styled.p`
+  font-family: "ChosunCentennial";
+`;
+
+const RockFestaContent = styled.div`
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+`;
+
+const RockFestaTextContent = styled.p`
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+`;
+
+const RockFestaTextDescription = styled.p`
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+`;
+
+const MonitorDiscriptions: Record<string, MonitorDescription>  = {
+    soundnovel: {
+      content: (
+        <SoundNovelContent>
+          <SoundNovelTextContent>
+            레트로 게임의 장르 중 하나로 BGM과 소설을 합쳐 사운드 노벨이라 칭한다.<br /><br />
+            글의 내용과 어울리는 사운드를 접목하여 책을 읽듯이 BGM을 통하여
+            내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
+            또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
+            모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
+            좀 더 재미있게 읽을 수 있도록 개발하였다.
+          </SoundNovelTextContent>
+      </SoundNovelContent>
+      ),
+      text: (
+        <SoundNovelContent>
+          <SoundNovelTextDescription>
+          제작기간 : 2일 / 기여도: 100% 
+          </SoundNovelTextDescription>
+        </SoundNovelContent>
+      ),
+      githubLink: "https://github.com/SEIMIN-BJJ/Sound-Novel-react",
+      webLink: "https://seimin-bjj.github.io/Sound-Novel-react/",
+    },
+
+    rockfest: {
+      content: (
+      <RockFestaContent>
+        <RockFestaTextContent>
+        락페티벌 컨셉으로 잡은 이번 프로젝트는 인천 펜타포트 페스티벌의 <br />컨셉을 가져와 제작을 하였다.
+        <br /> 제작자가 좋아하는 모일수가 없는 밴드들만을 모아서 제작하였으며 <br />밴드들의 정보 및 영상들을<br />
+        유튜브 API를 이용해서 axios를 통해 밴드들의 영상을 담았다. 
+        </RockFestaTextContent>
+      </RockFestaContent>
+    ),
+    text: (
+      <RockFestaContent>
+        <RockFestaTextDescription>
+        제작기간 : 3일 / 기여도: 100%
+        </RockFestaTextDescription> 
+      </RockFestaContent>
+    
+    ),
+    githubLink: "https://github.com/your-github-link-for-rockfest",
+    webLink: "https://seimin-bjj.github.io/Rock-Festa-react/"
   },
-];
+  }
 
 const ThirdSection = () => {
 
   const [animate, setAnimate] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -402,6 +524,16 @@ const ThirdSection = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    setSelectedSection(null);
+  };
+
+  const handleSectionClick = (section: string) => {
+    if (selectedSection === section) {
+      closeModal();
+    } else {
+      setSelectedSection(section);
+      openModal();
+    }
   };
 
   useEffect(() => {
@@ -414,7 +546,7 @@ const ThirdSection = () => {
 
   useEffect(() => {
     handleScroll();
-  }, []); 
+  }, []);
 
 
   return (
@@ -439,15 +571,12 @@ const ThirdSection = () => {
               transition={transitionText}
             >
               <ul>
-                <li className="Sn-Page" onClick={openModal}>
-                  <p>SOUND NOVEL</p>
-                </li>
-                <li className="Rock-Page">
+              <li className="Sn-Page" onClick={() => handleSectionClick("soundnovel")}>
+                <p>SOUND NOVEL</p>
+              </li>
+              <li className="Rock-Page" onClick={() => handleSectionClick("rockfest")}>
                 <p>ROCK FESTA</p>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
+              </li>
                 <li></li>
               </ul>
             </ThirdBoxSub>
@@ -458,65 +587,68 @@ const ThirdSection = () => {
             <ModalBackground
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0}}
+              exit={{ opacity: 0 }}
               onClick={closeModal}
             >
               <ModalContent
-              variants={animationUp}
-              initial="hidden"
-              animate={animate ? "visible" : "hidden"}
-              transition={transition}>
-              <article>
-                <ul>
-                  <div className="Monitor">
-                    <p></p>
-                  </div>
-                </ul>
-                <ul>
-                  <li className="MonitorTitle">SOUND NOVEL</li>
+                variants={animationUp}
+                initial="hidden"
+                animate={animate ? "visible" : "hidden"}
+                transition={transition}
+              >
+                <article>
                   <ul>
-                    {MonitorDiscriptions.map((item, index) => (
-                      <li className="MonitorText" key={index}>
-                        <p>{item.soundnovel}</p>
-                      </li>
-                    ))}
+                    <div className="Monitor">
+                    <p style={{ backgroundImage: `url(${selectedSection === "soundnovel" ? NovelIMGFirst : RockIMGFirst})` }}></p>
+                    </div>
                   </ul>
                   <ul>
-                    {MonitorDiscriptions.map((item, index) => (
-                      <li className="MonitorFooter" key={index}>
-                        <p>{item.soundnoveltext}</p>
-                        <div>
-                          <button>
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href="https://github.com/SEIMIN-BJJ/Sound-Novel-react"
-                            >
-                              Github
-                            </a>
-                          </button>
-                          <button>
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href="https://seimin-bjj.github.io/Sound-Novel-react/"
-                            >
-                              Web
-                            </a>
-                          </button>
-                        </div>
-                      </li>
-                    ))}
+                  <MonitorTitle soundnovel={selectedSection === "soundnovel"} rockfest={selectedSection === "rockfest"}>
+                    {selectedSection && selectedSection.toUpperCase()}
+                  </MonitorTitle>
+                    {selectedSection && MonitorDiscriptions[selectedSection] && (
+                      <>
+                        <ul>
+                          <li className="MonitorText">
+                            <p>{MonitorDiscriptions[selectedSection].content}</p>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li className="MonitorFooter">
+                            <p>{MonitorDiscriptions[selectedSection].text}</p>
+                            <div>
+                              <button>
+                                <a
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={MonitorDiscriptions[selectedSection].githubLink}
+                                >
+                                  Github
+                                </a>
+                              </button>
+                              <button>
+                                <a
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={MonitorDiscriptions[selectedSection].webLink}
+                                >
+                                  Web
+                                </a>
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </>
+                    )}
                   </ul>
-                </ul>
-              </article>
-                </ModalContent>
-              </ModalBackground>
-            )}
-          </AnimatePresence>
-        </Content>
-      </Container>
-    );
-  };
+                </article>
+              </ModalContent>
+            </ModalBackground>
+          )}
+        </AnimatePresence>
+      </Content>
+    </Container>
+  );
+};
 
 export default ThirdSection;
