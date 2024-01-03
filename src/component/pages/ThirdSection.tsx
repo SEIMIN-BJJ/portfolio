@@ -203,8 +203,8 @@ const ModalBackground = styled(motion.div)`
 
 const MonitorTitle = styled(motion.p)
 <{
-  soundnovel?: boolean;
-  rockfest?: boolean;
+  soundnovel : boolean;
+  rockfest : boolean;
 }>`
   width: 100%;
   height: 100%;
@@ -233,6 +233,7 @@ const MonitorTitle = styled(motion.p)
     props.rockfest &&
     css`
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 0.5rem;
 
     `}
 `;
@@ -399,6 +400,8 @@ const SoundNovelContent = styled.div`
 
 const SoundNovelTextContent = styled.p`
   font-family: "ChosunCentennial";
+
+
 `;
 
 const SoundNovelTextDescription = styled.p`
@@ -406,15 +409,24 @@ const SoundNovelTextDescription = styled.p`
 `;
 
 const RockFestaContent = styled.div`
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 `;
 
 const RockFestaTextContent = styled.p`
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Pretendard-Medium';
+    font-size: 0.9rem;
+    text-align: left;
+
+    @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: 1rem;
+      }
 `;
 
 const RockFestaTextDescription = styled.p`
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Pretendard-Medium';
+    font-size: 0.9rem;
+    text-align: left;
 `;
 
 const MonitorDiscriptions: Record<string, MonitorDescription>  = {
@@ -446,9 +458,11 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       content: (
       <RockFestaContent>
         <RockFestaTextContent>
-        락페티벌 컨셉으로 잡은 이번 프로젝트는 인천 펜타포트 페스티벌의 <br />컨셉을 가져와 제작을 하였다.
-        <br /> 제작자가 좋아하는 모일수가 없는 밴드들만을 모아서 제작하였으며 <br />밴드들의 정보 및 영상들을<br />
-        유튜브 API를 이용해서 axios를 통해 밴드들의 영상을 담았다. 
+        SEIMIN 락페스티벌은 인천 펜타포트 페스티벌의 컨셉을 가져와 제작을 하였으며<br />
+        본인이 좋아하는 현재 모일수가 없는 밴드들만을 모아서 제작하였다.<br /><br />밴드들의 정보 및 영상들을
+        유튜브 API를 axios를 통해 영상을 담았고 동적으로 변경되는 코드로 사용하였다.<br /><br />
+        여러나라의 좋은 음악들과 락페스티벌이라는 컨셉에 맞게 메탈, 락, 퓨전재즈 등 <br />한가지의 음악장르에 국한되어있지 않고
+        좋은 밴드들을 홍보하기 위해 또는 <br />흔히 말하는 덕질이라는 표현으로써 이번 프로젝트를 제작하게 되었다.
         </RockFestaTextContent>
       </RockFestaContent>
     ),
