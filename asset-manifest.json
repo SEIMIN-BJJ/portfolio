@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.f52aaed5.css",
-    "main.js": "/portfolio/static/js/main.6272129e.js",
+    "main.js": "/portfolio/static/js/main.43538b19.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/me.png": "/portfolio/static/media/me.5737e5c57605728d4e23.png",
     "static/media/ChosunCentennial_otf.otf": "/portfolio/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
-    "static/media/rock.png": "/portfolio/static/media/rock.8eb69a50b8afb902ee91.png",
+    "static/media/rock.png": "/portfolio/static/media/rock.ef0231fc008693288ab8.png",
     "static/media/Pretendard-Light.otf": "/portfolio/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
     "static/media/Pretendard-Medium.otf": "/portfolio/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
     "static/media/Pretendard-SemiBold.otf": "/portfolio/static/media/Pretendard-SemiBold.4b3283bc0e29a9c97c11.otf",
@@ -16,18 +16,18 @@
     "static/media/Pretendard-ExtraLight.otf": "/portfolio/static/media/Pretendard-ExtraLight.c1677723ce338097648f.otf",
     "static/media/Pretendard-Thin.otf": "/portfolio/static/media/Pretendard-Thin.e45abc28d4828e92dd10.otf",
     "static/media/desktop.png": "/portfolio/static/media/desktop.c848ab068e1786ec9210.png",
+    "static/media/novel-img-1.png": "/portfolio/static/media/novel-img-1.3ec4b622dffe3b7f6724.png",
     "static/media/SB 어그로OTF B.otf": "/portfolio/static/media/SB 어그로OTF B.fac7e68fc73cf64ea2fe.otf",
     "static/media/SB 어그로OTF M.otf": "/portfolio/static/media/SB 어그로OTF M.780ac39bb4c413cd8e16.otf",
     "static/media/SB 어그로OTF L.otf": "/portfolio/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
     "static/media/pngwing.com.png": "/portfolio/static/media/pngwing.com.4fa767c47cfd3a7645a2.png",
-    "static/media/novel-img-1.png": "/portfolio/static/media/novel-img-1.85848353ffb6406436eb.png",
     "index.html": "/portfolio/index.html",
     "main.f52aaed5.css.map": "/portfolio/static/css/main.f52aaed5.css.map",
-    "main.6272129e.js.map": "/portfolio/static/js/main.6272129e.js.map",
+    "main.43538b19.js.map": "/portfolio/static/js/main.43538b19.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f52aaed5.css",
-    "static/js/main.6272129e.js"
+    "static/js/main.43538b19.js"
   ]
 }
