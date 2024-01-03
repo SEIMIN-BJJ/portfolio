@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.f52aaed5.css",
-    "main.js": "/portfolio/static/js/main.a08e8aa0.js",
+    "main.js": "/portfolio/static/js/main.1f6d1be5.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/me.png": "/portfolio/static/media/me.5737e5c57605728d4e23.png",
     "static/media/ChosunCentennial_otf.otf": "/portfolio/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
+    "static/media/rock.png": "/portfolio/static/media/rock.8eb69a50b8afb902ee91.png",
     "static/media/Pretendard-Light.otf": "/portfolio/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
     "static/media/Pretendard-Medium.otf": "/portfolio/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
     "static/media/Pretendard-SemiBold.otf": "/portfolio/static/media/Pretendard-SemiBold.4b3283bc0e29a9c97c11.otf",
@@ -22,11 +23,11 @@
     "static/media/novel-img-1.png": "/portfolio/static/media/novel-img-1.85848353ffb6406436eb.png",
     "index.html": "/portfolio/index.html",
     "main.f52aaed5.css.map": "/portfolio/static/css/main.f52aaed5.css.map",
-    "main.a08e8aa0.js.map": "/portfolio/static/js/main.a08e8aa0.js.map",
+    "main.1f6d1be5.js.map": "/portfolio/static/js/main.1f6d1be5.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f52aaed5.css",
-    "static/js/main.a08e8aa0.js"
+    "static/js/main.1f6d1be5.js"
   ]
 }
