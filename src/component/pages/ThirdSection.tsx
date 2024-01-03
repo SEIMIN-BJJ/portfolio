@@ -289,28 +289,20 @@ const ModalContent = styled(motion.div)`
       .Monitor {
       width: 100%;
       height: 75%;
-      background-image: url(${ImacIMG});
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
 
       @media (max-width: 768px) {
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: 2rem auto;
+      margin: 1rem auto;
     }
 
       p {
 
-      width: 80%;
-      height: 62%;
+      width: 100%;
+      height: 100%;
       background-image: url(${NovelIMGFirst});
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: center top;
       margin: 1rem auto;
 
@@ -326,10 +318,8 @@ const ModalContent = styled(motion.div)`
         position: relative;
         margin: 0 auto;
 
-  }
+        }
       }
-
-      
     }
 
       .MonitorText {
