@@ -49,7 +49,7 @@ const Content = styled.div`
 
 const SecondBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 100vh;
+  height: 60rem;
   flex-direction: column;
   background-image: url(${TechIMG});
   background-size: cover;
@@ -61,7 +61,7 @@ const SecondBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 120vh;
     background-size: cover;
     background-position: center center;
     margin: 1rem auto;
@@ -392,8 +392,8 @@ const SecondSection = () => {
             <SiJavascript style={{marginRight:'1rem'}}/>
             <SiTypescript style={{marginRight:'1rem'}}/>
             <SiSass style={{marginRight:'1rem'}}/>
-            <SiGithub style={{marginRight:'1rem'}}/>
             <SiReact style={{marginRight:'1rem'}}/>
+            <SiGithub style={{marginRight:'1rem'}}/>
             </ul>
           </SecondBoxSub>
         </SecondBoxText>

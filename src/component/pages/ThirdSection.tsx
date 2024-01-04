@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import ImacIMG from "../assets/images/pngwing.com.png";
+// import ImacIMG from "../assets/images/pngwing.com.png";
+import iphoneIMG from "../assets/images/iphone.png";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
 import RockIMGFirst from "../assets/images/rock.png";
 import "../../App.scss";
@@ -129,12 +130,9 @@ const ThirdBoxSub = styled(motion.section)`
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: border 0.2s ease-in-out;
+      transition:  0.2s ease-in-out;
 
-      &:hover {
-        border: 3px solid #fff;
-        opacity: 1;
-      }
+
       
       @media (max-width: 768px) {
       width: 100%;
@@ -148,12 +146,23 @@ const ThirdBoxSub = styled(motion.section)`
       .Sn-Page {
       width: 100%;
       height: 100%;
-      color: #b2b2b2;
+      color: #000000;
       font-size: 2rem;
-      background-color: #191919;
+      background-color: #ffffff;
       font-family: "ChosunCentennial";
-      transition: 1s ease-in-out ;
       cursor: pointer;
+
+      &:hover {
+        background-color: #000000;
+        text-shadow:
+          0 0 30px #b23d39,
+          0 0 60px #b23d39,
+          0 0 70px #b23d39,
+          0 0 90px #b23d39;
+        opacity: 1;
+        color: #b2b2b2;
+        font-size: 1.5rem;
+      }
 
       @media (max-width: 768px) {
       width: 100%;
@@ -167,14 +176,19 @@ const ThirdBoxSub = styled(motion.section)`
       .Rock-Page {
       width: 100%;
       height: 100%;
-      color: #000000;
+      color: #000;
       font-size: 2rem;
-      background-color: #ffffff;
+      background-color: #fff;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      transition: 1s ease-in-out ;
       letter-spacing: 0.5rem;
       cursor: pointer;
 
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        opacity: 1;
+        font-size: 1.5rem;
+      }
       @media (max-width: 768px) {
       width: 100%;
       height: 10vh;
@@ -288,7 +302,8 @@ const ModalContent = styled(motion.div)`
 
       .Monitor {
       width: 100%;
-      height: 75%;
+      height: 100%;
+      padding: 2rem 2rem ;
 
       @media (max-width: 768px) {
       width: 100%;
@@ -305,7 +320,7 @@ const ModalContent = styled(motion.div)`
       background-size: contain;
       background-position: center top;
       margin: 1rem auto;
-
+      z-index: 0;
 
       @media (max-width: 768px) {
         width: 100%;
