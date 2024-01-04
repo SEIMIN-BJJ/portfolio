@@ -406,16 +406,22 @@ const ModalContent = styled(motion.div)`
           }
 
           a {
+          width: 5rem;
+          height: 2rem;
           color: #fff;
           font-weight: 900;
         }
           &:hover {
+          width: 5rem;
+          height: 2rem;
           color: #171717;
           background-color: #fff;
           opacity: 1;
 
           a {
-            color: #171717;
+          width: 5rem;
+          height: 2rem;
+          color: #171717;
           }
         }
           }
