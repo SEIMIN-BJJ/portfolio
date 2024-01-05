@@ -161,7 +161,7 @@ const ThirdBoxSub = styled(motion.section)`
           0 0 90px #b23d39;
         opacity: 1;
         color: #b2b2b2;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
 
       @media (max-width: 768px) {
@@ -187,7 +187,7 @@ const ThirdBoxSub = styled(motion.section)`
         background-color: #000;
         color: #fff;
         opacity: 1;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
       @media (max-width: 768px) {
       width: 100%;

@@ -50,7 +50,7 @@ const Content = styled.div`
 
 const SecondBoxPicture = styled(motion.div)`
   width: 100%;
-  height: 60rem;
+  height: 100vh;
   flex-direction: column;
   background-image: url(${TechSecondIMG});
   background-size: cover;
@@ -62,7 +62,7 @@ const SecondBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background-size: cover;
     background-position: center center;
     margin: 1rem auto;
@@ -99,7 +99,7 @@ const SecondBoxTitle = styled(motion.p)`
   align-items: flex-start;
   padding: 3.5rem 0;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-family: "SB 어그로OTF B";
   position: relative;
   color:#fff;
@@ -125,7 +125,7 @@ const SecondBoxSub = styled(motion.section)`
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "SB 어그로OTF M";
   color:#fff;
 
