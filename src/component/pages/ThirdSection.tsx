@@ -354,11 +354,13 @@ const ModalContent = styled(motion.div)`
         align-items: center;
         padding: 20px ;
         margin-bottom: 1rem;
-        overflow-y: auto;
         }
 
         @media (max-width: 768px) {
+        height: 1rem;
         margin-top: 7rem;
+        overflow-y: none;
+
       }
       }
 
@@ -434,8 +436,6 @@ const SoundNovelContent = styled.div`
 
 const SoundNovelTextContent = styled.p`
   font-family: "ChosunCentennial";
-
-
 `;
 
 const SoundNovelTextDescription = styled.p`
@@ -548,17 +548,17 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-  
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 1200 && scrollPosition < 10000) {
+      if (scrollPosition > 2200 && scrollPosition < 2800) {
         setAnimate(true);
       } else {
         setAnimate(false);
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition > 1300 && scrollPosition < 2000) {
+      if (scrollPosition > 2000 && scrollPosition < 4000) {
         setAnimate(true);
       } else {
         setAnimate(false);
