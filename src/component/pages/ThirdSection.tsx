@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 // import ImacIMG from "../assets/images/pngwing.com.png";
-import iphoneIMG from "../assets/images/iphone.png";
+// import iphoneIMG from "../assets/images/iphone.png";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
 import RockIMGFirst from "../assets/images/rock.png";
 import "../../App.scss";
@@ -22,7 +22,9 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  
 `;
+
 
 const Content = styled.div`
   width: 55rem;
@@ -206,13 +208,12 @@ const ModalBackground = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.26);
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   cursor: pointer; 
-
 `;
 
 const MonitorTitle = styled(motion.p)
@@ -221,12 +222,13 @@ const MonitorTitle = styled(motion.p)
   rockfest : boolean;
 }>`
   width: 100%;
-  height: 100%;
+  height: 15vh; 
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-
+  padding: 30px 30px;
+  
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
@@ -259,7 +261,6 @@ const ModalContent = styled(motion.div)`
   max-height: 80%;
   background-color: #000000e3;
   padding: 20px;
-  overflow-y: auto;
   color: #fff;
 
   @media (max-width: 768px) {
@@ -291,7 +292,7 @@ const ModalContent = styled(motion.div)`
     flex-direction: column;
   }
 
-    ul {
+  ul {
       width: 100%;
       height: 100%;
       display: flex;
@@ -311,7 +312,7 @@ const ModalContent = styled(motion.div)`
       margin: 1rem auto;
     }
 
-      p {
+    p {
 
       width: 100%;
       height: 100%;
@@ -321,7 +322,7 @@ const ModalContent = styled(motion.div)`
       background-position: center top;
       margin: 1rem auto;
       z-index: 0;
-
+          
       @media (max-width: 768px) {
         width: 100%;
         height: 100%;
@@ -332,14 +333,14 @@ const ModalContent = styled(motion.div)`
         background-size: contain;
         position: relative;
         margin: 0 auto;
-
+      
         }
       }
-    }
+      }
 
-      .MonitorText {
+    .MonitorText {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -347,12 +348,13 @@ const ModalContent = styled(motion.div)`
 
         p {
         width: 100%;
-        height: 2rem;
+        height: 21rem;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px ;
         margin-bottom: 1rem;
+        overflow-y: auto;
         }
 
         @media (max-width: 768px) {
@@ -399,6 +401,8 @@ const ModalContent = styled(motion.div)`
           z-index: 999;
           border-radius: 50px;
           transition: 0.3s ease-in-out;
+          color: #fff;
+          font-weight: 900;
 
           @media (max-width: 768px) {
           margin-top: 2rem;
@@ -406,23 +410,13 @@ const ModalContent = styled(motion.div)`
           }
 
           a {
-          width: 5rem;
-          height: 2rem;
-          color: #fff;
-          font-weight: 900;
+
         }
           &:hover {
-          width: 5rem;
-          height: 2rem;
           color: #171717;
           background-color: #fff;
           opacity: 1;
 
-          a {
-          width: 5rem;
-          height: 2rem;
-          color: #171717;
-          }
         }
           }
         }
@@ -477,7 +471,8 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
             또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
             모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
-            좀 더 재미있게 읽을 수 있도록 개발하였다.
+            좀 더 재미있게 읽을 수 있도록 제작하였다.  
+       
           </SoundNovelTextContent>
       </SoundNovelContent>
       ),
@@ -576,7 +571,6 @@ const ThirdSection = () => {
 
   const closeModal = () => {
     setShowModal(false);
-    setSelectedSection(null);
   };
 
   const handleSectionClick = (section: string) => {
@@ -587,6 +581,7 @@ const ThirdSection = () => {
       openModal();
     }
   };
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -599,7 +594,6 @@ const ThirdSection = () => {
   useEffect(() => {
     handleScroll();
   }, []);
-
 
   return (
     <Container>
@@ -644,8 +638,8 @@ const ThirdSection = () => {
             >
               <ModalContent
                 variants={animationUp}
-                initial="hidden"
-                animate={animate ? "visible" : "hidden"}
+                initial="visible"
+                animate={animate ? "visible" : "visible"}
                 transition={transition}
               >
                 <article>
@@ -668,26 +662,14 @@ const ThirdSection = () => {
                         <ul>
                           <li className="MonitorFooter">
                             <p>{MonitorDiscriptions[selectedSection].text}</p>
-                            <div>
-                              <button>
-                                <a
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  href={MonitorDiscriptions[selectedSection].githubLink}
-                                >
+                              <div>
+                                <button onClick={() => window.open(MonitorDiscriptions[selectedSection].githubLink, '_blank')}>
                                   Github
-                                </a>
-                              </button>
-                              <button>
-                                <a
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  href={MonitorDiscriptions[selectedSection].webLink}
-                                >
+                                </button>
+                                <button onClick={() => window.open(MonitorDiscriptions[selectedSection].webLink, '_blank')}>
                                   Web
-                                </a>
-                              </button>
-                            </div>
+                                </button>
+                              </div>
                           </li>
                         </ul>
                       </>

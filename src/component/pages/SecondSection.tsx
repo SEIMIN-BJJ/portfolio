@@ -97,7 +97,7 @@ const SecondBoxTitle = styled(motion.p)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   font-weight: bold;
   font-size: 1.7rem;
   font-family: "SB 어그로OTF B";
@@ -336,6 +336,7 @@ const SecondSection = () => {
             <p>#레이아웃의 배치 및 그리드를 명확하게 사용함으로써 사용자가 더 편하게 볼수 있도록 노력합니다.</p>
             <p>#photoshop / illustrator를 이용하여 디자인 및 편집이 가능합니다.</p>
             <p>#XD / Figma를 이용하여 UX / UI 프로토타이핑 설계 및 디자인이 가능합니다.</p>
+            <p>#영상편집도 공부중이며 브이로그 등을 제작하여 현재 유튜브를 운영하고 있습니다.</p>
           </SecondBoxHashTag>
 
           <SecondBoxSub          

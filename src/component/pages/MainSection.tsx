@@ -5,7 +5,6 @@ import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
-// import FouthSection from "./FouthSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -273,7 +272,6 @@ const MainSection = () => {
       </Content>
       <SecondSection />
       <ThirdSection /> 
-      {/* <FouthSection /> */}
     </Container>
   );
 };
