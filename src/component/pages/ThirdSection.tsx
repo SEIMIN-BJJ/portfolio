@@ -428,6 +428,8 @@ const ModalContent = styled(motion.div)`
 
 const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
+  text-align: left;
+  font-size: 0.9rem;
 `;
 
 const SoundNovelTextContent = styled.p`
@@ -471,8 +473,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
             또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
             모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
-            좀 더 재미있게 읽을 수 있도록 제작하였다.  
-       
+            좀 더 재미있게 읽을 수 있도록 제작하였다.
           </SoundNovelTextContent>
       </SoundNovelContent>
       ),
@@ -571,6 +572,7 @@ const ThirdSection = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    setSelectedSection(null);
   };
 
   const handleSectionClick = (section: string) => {

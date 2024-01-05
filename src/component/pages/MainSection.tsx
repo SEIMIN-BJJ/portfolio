@@ -169,7 +169,7 @@ const ContentBoxHashTag = styled(motion.p)`
 
 const MainSection = () => {
   const [animate, setAnimate] = useState(false);
-
+  
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
