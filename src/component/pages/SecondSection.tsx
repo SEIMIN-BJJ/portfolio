@@ -89,6 +89,12 @@ const SecondBoxText = styled(motion.li)`
     margin-top: 20rem;
   }
 
+  @media screen and (max-width: 360px) {
+
+    width: 100vw;
+    height: 100vh;
+  }
+
 `;
 
 const SecondBoxTitle = styled(motion.p)`
