@@ -77,7 +77,7 @@ const SecondBoxText = styled(motion.li)`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  z-index: 1;
+  z-index: 2;
   margin-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
@@ -86,13 +86,7 @@ const SecondBoxText = styled(motion.li)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20rem;
-  }
-
-  @media screen and (max-width: 360px) {
-
-    width: 100vw;
-    height: 100vh;
+    margin-top: 15rem;
   }
 
 `;
