@@ -42,7 +42,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     flex-direction: column;
   }
 
@@ -62,7 +62,7 @@ const SecondBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     background-size: cover;
     background-position: center center;
     margin: 1rem auto;
@@ -82,11 +82,10 @@ const SecondBoxText = styled(motion.li)`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: auto;
+    height: 130vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
   }
 
 `;
@@ -107,7 +106,7 @@ const SecondBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 5vh;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -312,25 +311,25 @@ const SecondSection = () => {
           animate={animate ? "visible" : "hidden"}
         ></SecondBoxPicture>
         <SecondBoxText
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transitionSecond}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionSecond}
         >
           <SecondBoxTitle       
-          // variants={animationLeft}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transition}
+          variants={animationLeft}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}
           >
             Graphic Design
           </SecondBoxTitle>
 
           <SecondBoxHashTag          
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transitionHashTag}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}
           >
             {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
             <p>#특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
@@ -342,10 +341,10 @@ const SecondSection = () => {
           </SecondBoxHashTag>
 
           <SecondBoxSub          
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transitionText}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionText}
           >
             <ul>
               <SiAdobephotoshop style={{marginRight:'1rem'}}/>
@@ -368,18 +367,18 @@ const SecondSection = () => {
 
 
           <SecondBoxTitle       
-          // variants={animationLeft}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transition}
+          variants={animationLeft}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}
           >
             Development</SecondBoxTitle>
 
         <SecondBoxHashTag          
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transitionHashTag}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}
           >
             <p>#SCSS 컴파일링을 통해 코드를 작성함으로써 효율적인 보수작업을 지향합니다.</p>
             <p>#styled-components를 활용하여 신속한 마크업 작업을 통해 프로젝트에 빠르게 결과물을 도출하고, <br />Router를 적극 활용하여 사용자 경험을 극대화합니다.</p>
@@ -390,10 +389,10 @@ const SecondSection = () => {
           </SecondBoxHashTag>
 
           <SecondBoxSub          
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transitionText}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionText}
           >
             <ul>
             <SiHtml5 style={{marginRight:'1rem'}}/> 
