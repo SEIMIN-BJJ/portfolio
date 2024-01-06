@@ -594,7 +594,7 @@ const ThirdSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition >1600 && scrollPosition < 4000) {
+      if (scrollPosition >0 && scrollPosition < 4000) {
         setAnimate(true);
       } else {
         setAnimate(false);
