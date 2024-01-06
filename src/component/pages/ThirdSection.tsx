@@ -481,7 +481,8 @@ const RockFestaTextContent = styled.p`
 `;
 
 const RockFestaTextDescription = styled.p`
-    font-family: 'Pretendard-Medium';
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 `;
 
 const MonitorDiscriptions: Record<string, MonitorDescription>  = {
