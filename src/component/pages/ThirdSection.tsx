@@ -231,12 +231,13 @@ const MonitorTitle = styled(motion.p)
   
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1rem;
+    position: relative;
+    margin: 1rem auto;
   }
 
   ${props =>
@@ -284,13 +285,29 @@ const ModalContent = styled(motion.div)`
     @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-    max-width: 100vw;
-    max-height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+
+    @media (max-width: 390px) {
+
+      height: auto;
+      margin-bottom: -8rem;
+
+    }
+
+    @media (max-width: 430px) {
+
+      height: 70%;
+    }
+
+    @media (max-width: 375px) {
+
+      height: 35%;
+      margin-bottom: -14rem;
+    }
 
   ul {
       width: 100%;
@@ -308,7 +325,7 @@ const ModalContent = styled(motion.div)`
 
       @media (max-width: 768px) {
       width: 100%;
-      height: 100%;
+      height: 50%;
       margin: 1rem auto;
     }
 
@@ -324,16 +341,18 @@ const ModalContent = styled(motion.div)`
       z-index: 0;
           
       @media (max-width: 768px) {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         background-size: contain;
-        position: relative;
-        margin: 0 auto;
-      
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 5rem;
         }
       }
       }
@@ -348,20 +367,13 @@ const ModalContent = styled(motion.div)`
 
         p {
         width: 100%;
-        height: 21rem;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px ;
+        padding: 20px;
         margin-bottom: 1rem;
         }
-
-        @media (max-width: 768px) {
-        height: 1rem;
-        margin-top: 7rem;
-        overflow-y: none;
-
-      }
       }
 
       .MonitorFooter {
@@ -373,6 +385,12 @@ const ModalContent = styled(motion.div)`
         font-size: 1.2rem;
         flex-direction: column;
 
+        @media (max-width: 768px) {
+        height: 0;
+        margin: 4rem auto;
+
+      }
+
         p {
         width: 100%;
         height: 2rem;
@@ -382,8 +400,8 @@ const ModalContent = styled(motion.div)`
         padding: 20px 20px;
 
         @media (max-width: 768px) {
-        margin-top: 5rem;
-      }
+        margin:1rem auto;
+          }
         }
 
         div {
@@ -394,6 +412,8 @@ const ModalContent = styled(motion.div)`
           align-items: center;
           margin:1rem auto;
 
+          @media (max-width: 768px) {
+      }
         button {
           width: 5rem;
           height: 2rem;
@@ -407,8 +427,10 @@ const ModalContent = styled(motion.div)`
           font-weight: 900;
 
           @media (max-width: 768px) {
-          margin-top: 2rem;
           font-size: 0.9rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           }
 
           a {
@@ -427,19 +449,22 @@ const ModalContent = styled(motion.div)`
     }
 `;
 
-
 const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
   text-align: left;
   font-size: 0.9rem;
+  height: 21rem;
+  overflow-y: auto;
 `;
 
 const SoundNovelTextContent = styled.p`
   font-family: "ChosunCentennial";
+
 `;
 
 const SoundNovelTextDescription = styled.p`
   font-family: "ChosunCentennial";
+
 `;
 
 const RockFestaContent = styled.div`
@@ -473,7 +498,23 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             내용의 분위기를 글로만 읽는 것과 다르게 긴장감을 극대화 한다. <br /><br />
             또한, 말그대로 노벨이기 때문에 기술적인 것을 줄이고 글의 내용과 사운드에 집중을 하였다. <br /><br />
             모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
-            좀 더 재미있게 읽을 수 있도록 제작하였다.
+            좀 더 재미있게 읽을 수 있도록 제작하였다.<br /><br />
+            지인의 삶의 내용을 전반적으로 담았고 서로 얘기하면서 책으로 낼 수는 없어도
+            웹으로 만들 수 있지는 않을까 생각하면서 지인과 서로 얘기하면서 글을 썼다.<br />
+            혼자 제작을 한 것이 아닌 지인과 서로 얘기하면서 울고 웃으면서 재밌게 제작을 하였고<br />
+            이런 것이 순기능이 아닐까 하는 생각을 많이 하면서 임하였다.<br /><br />
+            처음의 제작의도는 밀리의 서재 등 책플랫폼을 컨셉으로 하여 제작을 할까 하였지만<br />
+            내용이 워낙 무겁고 그러다보니 글로만 읽기에는 너무 심심한 면이 있다 싶어<br />
+            생소한 사운드 노벨이라는 장르를 채택하였다.<br /><br />
+            내용의 전개는 이러하다.<br /><br />
+            지인의 유년기 시절부터 현재에 이르기까지의 삶의 전반을 내용에 담았고<br />
+            요청사항 중에는 세상에는 믿을 수 없는 일이 많이 일어나고 있고<br />
+            그것이 누군가가 정해져있는 것이 아닌 어느 누구도 이런일이 일어날 수도 있고<br />
+            선한마음을 가지고 살고 지내다보면 나쁜 것들은 올 수 없으며<br />
+            인간이라는 존재는 마음먹기에 달리기 때문에 세상에 없는 존재들은 범접 할 수 없는 힘을
+            가지고 있다는 것을 알리고 싶었다고 한다.<br /><br />
+            또한, 각박한 세상을 살아가면서 보이지 않는 존재들이 도와주고 있다라는 것을<br />
+            필시 강조함이 있었다.
           </SoundNovelTextContent>
       </SoundNovelContent>
       ),

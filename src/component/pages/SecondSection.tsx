@@ -78,7 +78,7 @@ const SecondBoxText = styled(motion.li)`
   align-items: flex-start;
   flex-direction: column;
   z-index: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
     width: 100%;
