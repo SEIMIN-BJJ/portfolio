@@ -468,24 +468,20 @@ const SoundNovelTextDescription = styled.p`
 `;
 
 const RockFestaContent = styled.div`
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+  font-size: 0.9rem;
+  height: 21rem;
+  overflow-y: auto;
 `;
 
 const RockFestaTextContent = styled.p`
     font-family: 'Pretendard-Medium';
-    font-size: 0.9rem;
-    text-align: left;
 
-    @media (max-width: 768px) {
-    font-size: 1rem;
-    margin-top: 1rem;
-      }
 `;
 
 const RockFestaTextDescription = styled.p`
     font-family: 'Pretendard-Medium';
-    font-size: 0.9rem;
-    text-align: left;
 `;
 
 const MonitorDiscriptions: Record<string, MonitorDescription>  = {
