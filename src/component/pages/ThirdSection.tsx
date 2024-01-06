@@ -589,7 +589,6 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 2200 && scrollPosition < 2800) {
