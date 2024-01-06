@@ -308,28 +308,30 @@ const SecondSection = () => {
     <Container>
       <Content>
         <SecondBoxPicture
-          variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}
         ></SecondBoxPicture>
         <SecondBoxText
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionSecond}
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transitionSecond}
         >
           <SecondBoxTitle       
-          variants={animationLeft}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transition}>Graphic Design</SecondBoxTitle>
+          // variants={animationLeft}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transition}
+          >
+            Graphic Design
+          </SecondBoxTitle>
 
           <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transitionHashTag}
+          >
             {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
             <p>#특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
             <p>#팀원들과의 순조로운 협동 및 의견을 반영해 더 나은 결과물을 도출하기 위해 논의하며 수긍할 줄 압니다.</p>
@@ -340,10 +342,11 @@ const SecondSection = () => {
           </SecondBoxHashTag>
 
           <SecondBoxSub          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionText}>
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transitionText}
+          >
             <ul>
               <SiAdobephotoshop style={{marginRight:'1rem'}}/>
               <SiAdobeillustrator style={{marginRight:'1rem'}} />
@@ -365,16 +368,19 @@ const SecondSection = () => {
 
 
           <SecondBoxTitle       
-          variants={animationLeft}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transition}>Development</SecondBoxTitle>
+          // variants={animationLeft}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transition}
+          >
+            Development</SecondBoxTitle>
 
         <SecondBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transitionHashTag}
+          >
             <p>#SCSS 컴파일링을 통해 코드를 작성함으로써 효율적인 보수작업을 지향합니다.</p>
             <p>#styled-components를 활용하여 신속한 마크업 작업을 통해 프로젝트에 빠르게 결과물을 도출하고, <br />Router를 적극 활용하여 사용자 경험을 극대화합니다.</p>
             <p>#RESTful API 호출에는 axios를 활용하여 데이터 획득 및 전송 작업을 신속하게 처리합니다. </p>
@@ -384,10 +390,11 @@ const SecondSection = () => {
           </SecondBoxHashTag>
 
           <SecondBoxSub          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionText}>
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transitionText}
+          >
             <ul>
             <SiHtml5 style={{marginRight:'1rem'}}/> 
             <SiCss3 style={{marginRight:'1rem'}}/>
