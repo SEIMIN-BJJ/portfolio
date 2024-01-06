@@ -412,8 +412,6 @@ const ModalContent = styled(motion.div)`
           align-items: center;
           margin:1rem auto;
 
-          @media (max-width: 768px) {
-      }
         button {
           width: 5rem;
           height: 2rem;
@@ -586,6 +584,7 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 2200 && scrollPosition < 2800) {
@@ -595,7 +594,7 @@ const ThirdSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition > 2000 && scrollPosition < 4000) {
+      if (scrollPosition > 1900 && scrollPosition < 4000) {
         setAnimate(true);
       } else {
         setAnimate(false);
@@ -635,6 +634,7 @@ const ThirdSection = () => {
   }, []);
 
   return (
+    <>
     <Container>
       <Content>
         <ThirdBoxText
@@ -721,6 +721,7 @@ const ThirdSection = () => {
         </AnimatePresence>
       </Content>
     </Container>
+    </>
   );
 };
 
