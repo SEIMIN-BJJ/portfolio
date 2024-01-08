@@ -251,11 +251,11 @@ const SecondSection = () => {
   };
   const transitionSecond = {
     duration: 1,
-    delay: 0.9,
+    delay: 0.4,
   };
   const transitionHashTag = {
     duration: 1,
-    delay: 1.5,
+    delay: 0.6,
   };
 
   const transitionText = {

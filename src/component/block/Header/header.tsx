@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FaYoutube } from "react-icons/fa";
+import { BsArrowUpSquare } from "react-icons/bs";
 
 const Header = styled.header`
   width: 55rem;
@@ -141,6 +142,22 @@ const HeaderDiv = styled.div`
   }
 `;
 
+const ScrollToTopIcon = styled(BsArrowUpSquare)`
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem 3rem 4rem 4rem;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #000;
+  }
+`;
+
 const HeaderComp = () => {
   const [hidden, setHidden] = useState(false);
   const headerRef = useRef(null); 
@@ -170,7 +187,7 @@ const HeaderComp = () => {
   return (
     <Header>
       <HeaderDiv ref={headerRef} className={hidden ? "hidden" : ""}>
-        <Logo onClick={scrollToTop}>SEIMIN</Logo>
+        <Logo>SEIMIN</Logo>
         <Nav>
           <Ul>
           <Li>
@@ -199,6 +216,7 @@ const HeaderComp = () => {
             </Li>
           </Ul>
         </Nav>
+        <ScrollToTopIcon onClick={scrollToTop} />
       </HeaderDiv>
     </Header>
   );

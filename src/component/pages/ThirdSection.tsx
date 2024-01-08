@@ -128,14 +128,12 @@ const ThirdBoxSub = styled(motion.section)`
     li {
       width: 100%;
       height: 100%;
-      border: 1px solid #ccc;
+      border: 1px solid #767676;
       display: flex;
       justify-content: center;
       align-items: center;
       transition:  0.2s ease-in-out;
 
-
-      
       @media (max-width: 768px) {
       width: 100%;
       height: 15vh;
@@ -164,6 +162,7 @@ const ThirdBoxSub = styled(motion.section)`
         opacity: 1;
         color: #b2b2b2;
         font-size: 1.8rem;
+        z-index: 2;
       }
 
       @media (max-width: 768px) {

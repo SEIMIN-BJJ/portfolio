@@ -132,7 +132,6 @@ const ContentBoxHashTag = styled(motion.p)`
   flex-wrap: wrap;
   gap: 0.5rem;
   color: #171717a7;
-  /* border: 1px solid black; */
 
   p {
     border: 1px solid #ccc;
@@ -148,12 +147,6 @@ const ContentBoxHashTag = styled(motion.p)`
     font-family: 'SB 어그로OTF L';
     font-weight: bold;
     cursor: pointer;
-
-    &:hover {
-      background-color: #ccc;
-      color:#fff;
-      opacity: 1;
-    }
 
   }
 
