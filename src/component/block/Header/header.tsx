@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
@@ -28,6 +28,7 @@ const Logo = styled.h4`
   color: #000;
   font-family: 'Pretendard-Medium';
   padding: 0 19rem;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -102,12 +103,8 @@ const HeaderDiv = styled.div`
   }
 
   &:hover {
-    background-color: #000;
-    backdrop-filter: blur(10px);
-    transition: 0.21s ease-in-out;
 
     ${Logo} {
-      color: #fff;
       opacity: 1;
 
     }
@@ -115,16 +112,21 @@ const HeaderDiv = styled.div`
     ${Li} {
       
       a{
-      color: #ffffff; 
 
       .github:hover {
         color: #ccc;
+        transition: 0.21s ease-in-out;
+
       }
       .mail:hover {
         color: #76adfb;
+        transition: 0.21s ease-in-out;
+
       }
       .youtube:hover {
         color: #FF0000;
+        transition: 0.21s ease-in-out;
+
       }
     }
   }
@@ -141,11 +143,11 @@ const HeaderDiv = styled.div`
 
 const HeaderComp = () => {
   const [hidden, setHidden] = useState(false);
+  const headerRef = useRef(null); 
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setHidden(scrollPosition > 500);
-    // setHidden(scrollPosition > 0 && scrollPosition < 1000);
+    setHidden(scrollPosition > 700 && scrollPosition < 1200);
   };
 
   useEffect(() => {
@@ -156,10 +158,19 @@ const HeaderComp = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    if (headerRef.current) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Header>
-      <HeaderDiv className={hidden ? "hidden" : ""}>
-        <Logo>SEIMIN</Logo>
+      <HeaderDiv ref={headerRef} className={hidden ? "hidden" : ""}>
+        <Logo onClick={scrollToTop}>SEIMIN</Logo>
         <Nav>
           <Ul>
           <Li>

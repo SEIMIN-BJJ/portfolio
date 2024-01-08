@@ -128,7 +128,7 @@ const ThirdBoxSub = styled(motion.section)`
     li {
       width: 100%;
       height: 100%;
-      border: 1px solid #000;
+      border: 1px solid #ccc;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -584,10 +584,10 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
+    console.log(scrollPosition)
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 2200 && scrollPosition < 2800) {
+      if (scrollPosition > 2200 && scrollPosition < 4000) {
         setAnimate(true);
       } else {
         setAnimate(false);
