@@ -167,7 +167,7 @@ const ThirdBoxSub = styled(motion.section)`
 
       @media (max-width: 768px) {
       width: 100%;
-      height: 10vh;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -214,7 +214,26 @@ const ThirdBoxSub = styled(motion.section)`
 
       @media (max-width: 768px) {
       width: 100%;
-      height: 10vh;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    }
+
+    .another {
+
+      width: 100%;
+      height: 100%;
+      color: #000000;
+      font-size: 2rem;
+      background-color: #ffffff;
+      font-family: "ChosunCentennial";
+      cursor: pointer;
+      
+      @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -694,7 +713,7 @@ const ThirdSection = () => {
                   </video>
                 )}
               </li>
-                <li></li>
+                <li className="another"></li>
               </ul>
             </ThirdBoxSub>
         </ThirdBoxText>

@@ -258,9 +258,9 @@ const SecondSection = () => {
     delay: 0.6,
   };
 
-  const transitionText = {
+  const transitionIcons = {
     duration: 1,
-    delay: 2,
+    delay: 1,
   };
   
   const handleScroll = () => {
@@ -343,7 +343,7 @@ const SecondSection = () => {
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transitionText}
+          transition={transitionIcons}
           >
             <ul>
               <SiAdobephotoshop style={{marginRight:'1rem'}}/>
@@ -391,7 +391,7 @@ const SecondSection = () => {
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transitionText}
+          transition={transitionIcons}
           >
             <ul>
             <SiHtml5 style={{marginRight:'1rem'}}/> 
