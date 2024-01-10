@@ -183,13 +183,35 @@ const ThirdBoxSub = styled(motion.section)`
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       letter-spacing: 0.5rem;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+
+      .RockFestaText {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      .Rock-Page video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+      }
 
       &:hover {
         background-color: #000;
         color: #fff;
         opacity: 1;
         font-size: 1.8rem;
-      }
+
+  }
+
       @media (max-width: 768px) {
       width: 100%;
       height: 10vh;
@@ -197,8 +219,8 @@ const ThirdBoxSub = styled(motion.section)`
       justify-content: center;
       align-items: center;
       }
-      }
-}
+    }
+  }
 `;
 
 const ModalBackground = styled(motion.div)`
@@ -553,6 +575,7 @@ const ThirdSection = () => {
   const [animate, setAnimate] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [hovered, setHovered] = useState(false);
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -658,8 +681,18 @@ const ThirdSection = () => {
               <li className="Sn-Page" onClick={() => handleSectionClick("soundnovel")}>
                 <p>SOUND NOVEL</p>
               </li>
-              <li className="Rock-Page" onClick={() => handleSectionClick("rockfest")}>
-                <p>ROCK FESTA</p>
+              <li
+                className="Rock-Page"
+                onClick={() => handleSectionClick("rockfest")}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+              >
+                <p className="RockFestaText">ROCK FESTA</p>
+                {hovered && (
+                  <video autoPlay loop muted playsInline >
+                    <source src={process.env.PUBLIC_URL + "/videos/fire.mp4"} type="video/mp4" />
+                  </video>
+                )}
               </li>
                 <li></li>
               </ul>
