@@ -11,7 +11,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #000;
 
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
@@ -25,7 +25,7 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 1px solid #000;
+  border: 1px solid #fff;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -33,6 +33,8 @@ const Content = styled.div`
     flex-direction: column;
   }
 `;
+
+
 
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -99,7 +101,6 @@ const FourthSection = () => {
 
   return (
     <Container>
-      <Header />
       <Content>
       </Content>
     </Container>
