@@ -34,6 +34,26 @@ const Content = styled.div`
   }
 `;
 
+const ContentBoxText = styled(motion.li)`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #fff;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+`;
+
 
 
 const FourthSection = () => {
@@ -102,6 +122,7 @@ const FourthSection = () => {
   return (
     <Container>
       <Content>
+        <ContentBoxText></ContentBoxText>
       </Content>
     </Container>
   );

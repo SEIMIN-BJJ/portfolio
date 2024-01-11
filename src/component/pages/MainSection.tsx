@@ -37,25 +37,6 @@ const Content = styled.div`
   }
 `;
 
-const ContentBoxText = styled(motion.li)`
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-top: -20vh;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
-  }
-`;
-
 const ContentBoxPicture = styled(motion.div)`
   width: 24rem;
   height: 40vh;
@@ -75,6 +56,24 @@ const ContentBoxPicture = styled(motion.div)`
   }
 `;
 
+const ContentBoxText = styled(motion.li)`
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: -20vh;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+`;
 
 const ContentBoxTitle = styled(motion.p)`
   width: 100%;
@@ -265,8 +264,8 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <FourthSection />
       <ThirdSection /> 
+      <FourthSection />
     </Container>
   );
 };
