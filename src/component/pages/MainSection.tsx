@@ -5,7 +5,6 @@ import MeIMG from "../assets/images/me.png";
 import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
-import FourthSection from "./FourthSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -133,14 +132,14 @@ const ContentBoxHashTag = styled(motion.li)`
   color: #171717a7;
 
   p {
-    border: 1px solid #00000031;
+    border: 1px solid #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10rem;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #0000005c;
+    color: #ccc;
     padding: 0.1rem 1.2rem; 
     transition: 0.15s ease-in-out;
     font-family: 'SB 어그로OTF L';
