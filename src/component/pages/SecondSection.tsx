@@ -134,7 +134,7 @@ const SecondBoxSub = styled(motion.section)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color:#fff;
+    color: #fff;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -144,8 +144,8 @@ const SecondBoxSub = styled(motion.section)`
     justify-content: center;
     align-items: center;
   }
+}
 
-  }
 `;
 
 const SecondBoxHashTag = styled(motion.div)`

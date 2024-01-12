@@ -164,7 +164,7 @@ const HeaderComp = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setHidden(scrollPosition > 700 && scrollPosition < 1200);
+    setHidden(scrollPosition > 700 && scrollPosition < 1500);
   };
 
   useEffect(() => {

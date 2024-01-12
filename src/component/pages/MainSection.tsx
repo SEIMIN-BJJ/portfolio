@@ -133,19 +133,18 @@ const ContentBoxHashTag = styled(motion.li)`
   color: #171717a7;
 
   p {
-    border: 1px solid #ccc;
+    border: 1px solid #00000031;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10rem;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #ccc;
+    color: #0000005c;
     padding: 0.1rem 1.2rem; 
     transition: 0.15s ease-in-out;
     font-family: 'SB 어그로OTF L';
     font-weight: bold;
-    cursor: pointer;
 
   }
 
@@ -264,7 +263,6 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <FourthSection />
       <ThirdSection /> 
     </Container>
   );

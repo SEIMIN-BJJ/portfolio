@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Header from "component/block/Header/header";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -54,11 +53,32 @@ const ContentBoxText = styled(motion.li)`
   }
 `;
 
+const Slide = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+`;
+
+const SlideContants = styled.div`
+  
+  width: 100%;
+  height: 100%;
+  background-color: salmon;
+`;
+
+const SlideText = styled.div`
+  
+  width: 100%;
+  height: 100%;
+  background-color: #1f0f0d;
+`;
 
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
-  
+
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -89,16 +109,14 @@ const FourthSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-  
+
     if (window.innerWidth >= 768) {
-      // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 300 && scrollPosition < 600) {
         setAnimate(false);
       } else {
         setAnimate(true);
       }
     } else {
-      // 모바일에서의 스크롤 범위
       if (scrollPosition > 600) {
         setAnimate(false);
       } else {
@@ -117,12 +135,17 @@ const FourthSection = () => {
 
   useEffect(() => {
     handleScroll();
-  }, []); 
+  }, []);
 
   return (
     <Container>
       <Content>
-        <ContentBoxText></ContentBoxText>
+        <ContentBoxText>
+          <Slide>
+          <SlideContants />
+          <SlideText />
+          </Slide>
+        </ContentBoxText>
       </Content>
     </Container>
   );

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-// import ImacIMG from "../assets/images/pngwing.com.png";
-// import iphoneIMG from "../assets/images/iphone.png";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
 import RockIMGFirst from "../assets/images/rock.png";
+import { Link } from "react-router-dom";
+
 import "../../App.scss";
 
 interface MonitorDescription {
@@ -40,20 +40,6 @@ const Content = styled.div`
     flex-direction: column;
   }
 `;
-
-// const ThirdBoxPicture = styled(motion.div)`
-//   width: 100%;
-//   height: 100vh;
-//   flex-direction: column;
-//   /* background-image: url(${DeskTopIMG}); */
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   position: absolute;
-//   text-align: center;
-//   z-index: 0;
-
-// `;
 
 const ThirdBoxText = styled(motion.div)`
   width: 100%;
@@ -206,7 +192,7 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       &:hover {
-        color: #fef;
+        color: #fff;
         opacity: 1;
         font-size: 1.8rem;
 
@@ -654,9 +640,10 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 2200 && scrollPosition < 4000) {
+      if (scrollPosition > 1500 && scrollPosition < 3000) {
         setAnimate(true);
       } else {
         setAnimate(false);
@@ -788,6 +775,11 @@ const ThirdSection = () => {
                                 <button onClick={() => window.open(MonitorDiscriptions[selectedSection].webLink, '_blank')}>
                                   Web
                                 </button>
+                                  <Link to="/develop">
+                                <button>
+                                  Develop Guide
+                                </button>
+                                  </Link>
                               </div>
                           </li>
                         </ul>

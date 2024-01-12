@@ -12,7 +12,7 @@ const MenuRoutes = () => {
       <Route path="/" element={<MainSection />}></Route>
       <Route path="/" element={<SecondSection />}></Route>
       <Route path="/" element={<ThirdSection />}></Route>
-      <Route path="/" element={<FourthSection />}></Route>
+      <Route path="/develop" element={<FourthSection />}></Route>
     </Routes>
   );
 };
