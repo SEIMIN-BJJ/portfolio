@@ -264,8 +264,8 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <ThirdSection /> 
       <FourthSection />
+      <ThirdSection /> 
     </Container>
   );
 };
