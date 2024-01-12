@@ -235,11 +235,6 @@ const SecondSection = () => {
   const [animate, setAnimate] = useState(false);
   // const [modalOpen, setModalOpen] = useState(false);
 
-  const animationLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
     visible: { opacity: 1, x: 0 },
@@ -317,7 +312,7 @@ const SecondSection = () => {
           transition={transitionSecond}
         >
           <SecondBoxTitle       
-          variants={animationLeft}
+          variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
@@ -366,7 +361,7 @@ const SecondSection = () => {
 
 
           <SecondBoxTitle       
-          variants={animationLeft}
+          variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}

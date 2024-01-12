@@ -146,7 +146,7 @@ const ThirdBoxSub = styled(motion.section)`
           0 0 70px #b23d39,
           0 0 90px #b23d39;
         opacity: 1;
-        color: #b2b2b2;
+        color: #ccc;
         font-size: 1.8rem;
         z-index: 2;
       }
@@ -437,6 +437,11 @@ const ModalContent = styled(motion.div)`
           justify-content: center;
           align-items: center;
           margin:1rem auto;
+
+          .developBtn {
+
+          font-size: 0.7rem;
+          }
 
         button {
           width: 5rem;
@@ -767,7 +772,7 @@ const ThirdSection = () => {
                                   Web
                                 </button>
                                   <Link to="/develop">
-                                <button>
+                                <button className="developBtn">
                                   Develop Guide
                                 </button>
                                   </Link>
