@@ -196,14 +196,6 @@ const ThirdBoxSub = styled(motion.section)`
         opacity: 1;
         font-size: 1.8rem;
 
-      @media (max-width: 768px) {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-
   }
 
       @media (max-width: 768px) {
@@ -640,7 +632,6 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 1500 && scrollPosition < 3000) {
