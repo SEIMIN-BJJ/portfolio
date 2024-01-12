@@ -202,6 +202,14 @@ const ThirdBoxSub = styled(motion.section)`
         object-fit: cover;
         position: absolute;
         z-index: 1;
+
+        @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
       }
 
       &:hover {
@@ -215,7 +223,6 @@ const ThirdBoxSub = styled(motion.section)`
         display: flex;
         justify-content: center;
         align-items: center;
-        
         }
 
   }
