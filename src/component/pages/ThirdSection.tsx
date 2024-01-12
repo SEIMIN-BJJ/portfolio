@@ -55,7 +55,7 @@ const Content = styled.div`
 
 // `;
 
-const ThirdBoxText = styled(motion.li)`
+const ThirdBoxText = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -203,13 +203,6 @@ const ThirdBoxSub = styled(motion.section)`
         position: absolute;
         z-index: 1;
 
-        @media (max-width: 768px) {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
       }
 
       &:hover {

@@ -70,7 +70,7 @@ const SecondBoxPicture = styled(motion.div)`
 
 `;
 
-const SecondBoxText = styled(motion.li)`
+const SecondBoxText = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -148,7 +148,7 @@ const SecondBoxSub = styled(motion.section)`
   }
 `;
 
-const SecondBoxHashTag = styled(motion.p)`
+const SecondBoxHashTag = styled(motion.div)`
   width: 100%;
   height: auto;
   font-family: "SB 어그로OTF L";

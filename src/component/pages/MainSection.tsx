@@ -56,7 +56,7 @@ const ContentBoxPicture = styled(motion.div)`
   }
 `;
 
-const ContentBoxText = styled(motion.li)`
+const ContentBoxText = styled(motion.div)`
   width: 100%;
   height: 40vh;
   display: flex;
@@ -123,7 +123,7 @@ const ContentBoxSub = styled(motion.p)`
   }
 `;
 
-const ContentBoxHashTag = styled(motion.p)`
+const ContentBoxHashTag = styled(motion.li)`
   width: 100%;
   padding: 0px 60px;
   font-family: "SB 어그로OTF M";
