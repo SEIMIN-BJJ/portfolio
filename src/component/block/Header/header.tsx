@@ -216,7 +216,7 @@ const HeaderComp = () => {
             </Li>
           </Ul>
         </Nav>
-        <ScrollToTopIcon onClick={scrollToTop} />
+          <ScrollToTopIcon onClick={scrollToTop} />
       </HeaderDiv>
     </Header>
   );
