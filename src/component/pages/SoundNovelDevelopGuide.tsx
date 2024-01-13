@@ -10,7 +10,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
 
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
@@ -24,7 +24,7 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 1px solid #fff;
+  border: 1px solid #000;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -33,14 +33,22 @@ const Content = styled.div`
   }
 `;
 
-const ContentBoxText = styled(motion.li)`
+const ContentBoxText = styled(motion.ul)`
   width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  border: 1px solid #fff;
+  height: 100%;
+  border: 1px solid #000;
+  flex-direction: column;
+
+  li {
+    width: 100%;
+    height: 10%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    
+  }
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -53,30 +61,7 @@ const ContentBoxText = styled(motion.li)`
   }
 `;
 
-const Slide = styled(motion.div)`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-`;
-
-const SlideContants = styled.div`
-  
-  width: 100%;
-  height: 100%;
-  background-color: salmon;
-`;
-
-const SlideText = styled.div`
-  
-  width: 100%;
-  height: 100%;
-  background-color: #1f0f0d;
-`;
-
-const FourthSection = () => {
+const SoundNovelDevelopGuide = () => {
   const [animate, setAnimate] = useState(false);
 
   const animationLeft = {
@@ -141,14 +126,15 @@ const FourthSection = () => {
     <Container>
       <Content>
         <ContentBoxText>
-          <Slide>
-          <SlideContants />
-          <SlideText />
-          </Slide>
+            <li>Sound Novel Develop</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ContentBoxText>
       </Content>
     </Container>
   );
 };
 
-export default FourthSection;
+export default SoundNovelDevelopGuide;

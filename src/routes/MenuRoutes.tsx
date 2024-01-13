@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import MainSection from "component/pages/MainSection";
 import SecondSection from "component/pages/SecondSection";
 import ThirdSection from "component/pages/ThirdSection";
-import FourthSection from "component/pages/FourthSection";
+import SoundNovelDevelopGuide from "component/pages/SoundNovelDevelopGuide";
 
 const MenuRoutes = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const MenuRoutes = () => {
       <Route path="/" element={<MainSection />}></Route>
       <Route path="/" element={<SecondSection />}></Route>
       <Route path="/" element={<ThirdSection />}></Route>
-      <Route path="/develop" element={<FourthSection />}></Route>
+      <Route path="/sn-develop" element={<SoundNovelDevelopGuide />}></Route>
     </Routes>
   );
 };

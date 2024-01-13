@@ -771,7 +771,7 @@ const ThirdSection = () => {
                                 <button onClick={() => window.open(MonitorDiscriptions[selectedSection].webLink, '_blank')}>
                                   Web
                                 </button>
-                                  <Link to="/develop">
+                                  <Link to="/sn-develop">
                                 <button className="developBtn">
                                   Develop Guide
                                 </button>
