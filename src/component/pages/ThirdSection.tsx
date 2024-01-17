@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
 import RockIMGFirst from "../assets/images/rock.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import "../../App.scss";
 
@@ -12,6 +12,7 @@ interface MonitorDescription {
   text: React.ReactNode;
   githubLink: string;
   webLink: string;
+  route: string;
 }
 
 const Container = styled.section`
@@ -548,7 +549,6 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             더군다나 본인이 직접 겪었다보니 무조건적으로 무시할 수는 없겠다라는 생각을 많이 하게 되었다.<br /><br />
             미지의 세계를 알려주기 위해서 라고 하기보단 지독하게 힘들게 살았던 친구의 자서전이라도 만들면 어떨까라는 생각에
             제작한 것이 더 크다라고 할 수 있겠다.
-            
           </SoundNovelTextContent>
       </SoundNovelContent>
       ),
@@ -561,6 +561,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       ),
       githubLink: "https://github.com/SEIMIN-BJJ/Sound-Novel-react",
       webLink: "https://seimin-bjj.github.io/Sound-Novel-react/",
+      route: '/sn-develop',
     },
 
     rockfest: {
@@ -597,7 +598,8 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     
     ),
     githubLink: "https://github.com/SEIMIN-BJJ/Rock-Festa-react",
-    webLink: "https://seimin-bjj.github.io/Rock-Festa-react/"
+    webLink: "https://seimin-bjj.github.io/Rock-Festa-react/",
+    route: '/rock-develop',
   },
   }
 
@@ -607,6 +609,7 @@ const ThirdSection = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
   const animationLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -771,11 +774,13 @@ const ThirdSection = () => {
                                 <button onClick={() => window.open(MonitorDiscriptions[selectedSection].webLink, '_blank')}>
                                   Web
                                 </button>
-                                  <Link to="/sn-develop">
-                                <button className="developBtn">
+                                <button
+                                  className="developBtn"
+                                  onClick={() => {
+                                  navigate(MonitorDiscriptions[selectedSection].route);
+                                  }} >
                                   Develop Guide
                                 </button>
-                                  </Link>
                               </div>
                           </li>
                         </ul>

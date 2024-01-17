@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import "../../App.scss";
+import "../../../App.scss"
 
 const Container = styled.section`
   width: 100%;
