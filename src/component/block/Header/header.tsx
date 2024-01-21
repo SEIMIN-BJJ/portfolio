@@ -29,7 +29,6 @@ const Logo = styled.h4`
   color: #000;
   font-family: 'Pretendard-Medium';
   padding: 0 19rem;
-  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 100%;
