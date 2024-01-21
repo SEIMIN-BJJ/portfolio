@@ -555,7 +555,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       text: (
         <SoundNovelContent>
           <SoundNovelTextDescription>
-          제작기간 : 2일 / 기여도: 100% 
+          제작기간 : 3일 / 기여도: 100% 
           </SoundNovelTextDescription>
         </SoundNovelContent>
       ),
@@ -592,7 +592,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     text: (
       <RockFestaContent>
         <RockFestaTextDescription>
-        제작기간 : 3일 / 기여도: 100%
+        제작기간 : 5일 / 기여도: 100%
         </RockFestaTextDescription> 
       </RockFestaContent>
     
