@@ -519,7 +519,7 @@ const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
   font-size: 1rem;
-  height: 15rem;
+  height: 25rem;
   overflow-y: auto;
 
   @media (max-width: 768px) {
