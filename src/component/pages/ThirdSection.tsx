@@ -432,7 +432,7 @@ const ModalContent = styled(motion.div)`
 
         div {
           width: 100%;
-          height: 10vh;
+          height: 5vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -482,7 +482,7 @@ const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
   text-align: left;
   font-size: 0.9rem;
-  height: 21rem;
+  height: 25rem;
   overflow-y: auto;
 `;
 
@@ -500,7 +500,7 @@ const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
   font-size: 0.9rem;
-  height: 21rem;
+  height: 25rem;
   overflow-y: auto;
 `;
 

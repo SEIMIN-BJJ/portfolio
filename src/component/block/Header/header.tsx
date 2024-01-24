@@ -95,7 +95,7 @@ const HeaderDiv = styled.div`
   top: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 100;
+  z-index: 1;
   transition: background-color 0.5s, opacity 0.5s, transform 0.3s ease-in-out;
 
   &.hidden {
