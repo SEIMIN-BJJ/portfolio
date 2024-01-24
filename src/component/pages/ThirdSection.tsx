@@ -397,7 +397,7 @@ const ModalContent = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 13px;
         margin-bottom: 1rem;
         }
       }
