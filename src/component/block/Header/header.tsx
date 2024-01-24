@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FaYoutube } from "react-icons/fa";
 import { BsArrowUpSquare } from "react-icons/bs";
+import { SiVelog } from "react-icons/si";
 
 const Header = styled.header`
   width: 55rem;
@@ -36,7 +37,6 @@ const Logo = styled.h4`
     color: #000;
     padding: 0px 30px;
     position: relative;
-
   }
 `;
 
@@ -49,15 +49,27 @@ const Nav = styled.nav`
   color: #000;
   font-family: "Pretendard-Bold";
   position: relative;
-  padding: 0;
+  padding: 0 15rem ;
+  }
+
+  @media (max-width: 414px) {
+  padding: 0 18rem ;
+  }
+
+  @media (max-width: 390px) {
+  padding: 0 16rem ;
+  }
+
+  @media (max-width: 430px) {
+  padding: 0 13rem ;
   }
 `;
 
 const Ul = styled.ul`
-  width: 8rem;
+  width: 10rem;
   display: flex;
   align-items: center;
-
+  position: relative;
 `;
 
 const Li = styled.li`
@@ -125,6 +137,12 @@ const HeaderDiv = styled.div`
       }
       .youtube:hover {
         color: #FF0000;
+        transition: 0.21s ease-in-out;
+
+      }
+
+      .velog:hover {
+        color: #1EC997;
         transition: 0.21s ease-in-out;
 
       }
@@ -211,6 +229,14 @@ const HeaderComp = () => {
               target="_blank"
               rel="noopener noreferrer">
                 <FaYoutube className="youtube"/>
+              </a>
+            </Li>
+            <Li>
+              <a                       
+              href="https://velog.io/@interkp12/posts"
+              target="_blank"
+              rel="noopener noreferrer">
+                <SiVelog className="velog"/>
               </a>
             </Li>
           </Ul>
