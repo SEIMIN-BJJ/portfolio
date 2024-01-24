@@ -13,6 +13,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 999;
 
   @media (max-width: 768px) {
     width: auto;

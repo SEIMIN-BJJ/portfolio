@@ -263,7 +263,7 @@ const MonitorTitle = styled(motion.p)
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin: 1rem auto;
+    margin: 1rem;
   }
 
   ${props =>
@@ -426,13 +426,12 @@ const ModalContent = styled(motion.div)`
         padding: 20px 20px;
 
         @media (max-width: 768px) {
-        margin:1rem auto;
+        height: 2rem;
           }
         }
 
         div {
           width: 100%;
-          height: 5vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -481,9 +480,29 @@ const ModalContent = styled(motion.div)`
 const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 1rem;
   height: 25rem;
   overflow-y: auto;
+
+  @media (max-width: 768px) {
+
+    height: 19rem;
+  }
+
+  @media (max-width: 414px) {
+
+    height: 25rem;
+  }
+
+  @media (max-width: 430px) {
+
+    height: 28rem;
+  }
+
+  @media (max-width: 430px) {
+
+    height: 18rem;
+  }
 `;
 
 const SoundNovelTextContent = styled.p`
@@ -499,9 +518,29 @@ const SoundNovelTextDescription = styled.p`
 const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
-  font-size: 0.9rem;
-  height: 25rem;
+  font-size: 1rem;
+  height: 15rem;
   overflow-y: auto;
+
+  @media (max-width: 768px) {
+
+height: 19rem;
+}
+
+@media (max-width: 414px) {
+
+height: 25rem;
+}
+
+@media (max-width: 430px) {
+
+height: 28rem;
+}
+
+@media (max-width: 430px) {
+
+height: 18rem;
+}
 `;
 
 const RockFestaTextContent = styled.p`
