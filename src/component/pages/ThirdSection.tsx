@@ -432,6 +432,7 @@ const ModalContent = styled(motion.div)`
 
         div {
           width: 100%;
+          height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -491,7 +492,7 @@ const SoundNovelContent = styled.div`
 
   @media (max-width: 414px) {
 
-    height: 25rem;
+    height: 20rem;
   }
 
   @media (max-width: 430px) {
@@ -499,7 +500,7 @@ const SoundNovelContent = styled.div`
     height: 28rem;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 375px) {
 
     height: 18rem;
   }
