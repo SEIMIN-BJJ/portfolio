@@ -530,7 +530,7 @@ height: 19rem;
 
 @media (max-width: 414px) {
 
-height: 25rem;
+height: 20rem;
 }
 
 @media (max-width: 430px) {
@@ -538,7 +538,7 @@ height: 25rem;
 height: 28rem;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 375px) {
 
 height: 18rem;
 }
