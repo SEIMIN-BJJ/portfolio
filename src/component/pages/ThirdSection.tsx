@@ -254,7 +254,6 @@ const MonitorTitle = styled(motion.p)
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  padding: 30px 30px;
   
   @media (max-width: 768px) {
     width: 100%;
