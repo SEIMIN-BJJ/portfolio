@@ -10,7 +10,8 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
 
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
@@ -19,12 +20,11 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 55rem;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 1px solid #000;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -35,20 +35,11 @@ const Content = styled.div`
 
 const ContentBoxText = styled(motion.ul)`
   width: 100%;
-  height: 100%;
-  border: 1px solid #000;
+  height: auto;
   flex-direction: column;
-
-  li {
-    width: 100%;
-    height: 10%;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem;
-    
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -61,13 +52,57 @@ const ContentBoxText = styled(motion.ul)`
   }
 `;
 
+const ContentTitle = styled.h4`
+  width: 100%;
+  height: 10rem;
+  font-size: 2rem;
+  font-family: "ChosunCentennial";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+
+`;
+
+const ContetInfo = styled.div`
+  width: 100%;
+  height: 100rem;
+  font-family: "ChosunCentennial";
+
+`;
+
+const ContentText = styled.ul`
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+  }
+`;
+const ContentMov = styled.video`
+  width: 55rem;
+  height: auto;
+  object-fit: cover;
+  margin-top: 3rem;
+`;
+
 const SoundNovelDevelopGuide = () => {
   const [animate, setAnimate] = useState(false);
 
-  const animationLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
+  // const animationLeft = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: { opacity: 1, x: 0 },
+  // };
 
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
@@ -78,19 +113,19 @@ const SoundNovelDevelopGuide = () => {
     duration: 1,
     delay: 0.2,
   };
-  const transitionSecond = {
-    duration: 1,
-    delay: 0.9,
-  };
-  const transitionText = {
-    duration: 1,
-    delay: 1.5,
-  };
+  // const transitionSecond = {
+  //   duration: 1,
+  //   delay: 0.9,
+  // };
+  // const transitionText = {
+  //   duration: 1,
+  //   delay: 1.5,
+  // };
 
-  const transitionHashTag = {
-    duration: 1,
-    delay: 2,
-  };
+  // const transitionHashTag = {
+  //   duration: 1,
+  //   delay: 2,
+  // };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -125,12 +160,25 @@ const SoundNovelDevelopGuide = () => {
   return (
     <Container>
       <Content>
-        <ContentBoxText>
-            <li>Sound Novel Develop</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ContentBoxText
+          // variants={animationRight}
+          // initial="hidden"
+          // animate={animate ? "visible" : "hidden"}
+          // transition={transition}
+        >
+        <ContentTitle>Sound Novel Toy Project <br />Develop</ContentTitle>
+        <ContetInfo>
+          <ContentText>
+            <li>React</li>
+            <li>Style-Components</li>
+            <li>TypeScript</li>
+            <li>TypeIt</li>
+            <li>Framer-Motion</li>
+          </ContentText>
+          <ContentMov autoPlay loop muted playsInline>
+              <source src={process.env.PUBLIC_URL + "/videos/SoundMov.mp4"} type="video/mp4" />
+            </ContentMov>
+        </ContetInfo>
         </ContentBoxText>
       </Content>
     </Container>

@@ -417,7 +417,7 @@ const ModalContent = styled(motion.div)`
 
       }
 
-        p {
+        /* p {
         width: 100%;
         height: 2rem;
         display: flex;
@@ -428,7 +428,7 @@ const ModalContent = styled(motion.div)`
         @media (max-width: 768px) {
         height: 2rem;
           }
-        }
+        } */
 
         div {
           width: 100%;
@@ -481,13 +481,13 @@ const ModalContent = styled(motion.div)`
 const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
   text-align: left;
-  font-size: 1.2rem;
-  height: 25rem;
+  font-size: 1rem;
+  height: 29rem;
   overflow-y: auto;
 
   @media (max-width: 768px) {
 
-    height: 19rem;
+    height: 25rem;
   }
 
   @media (max-width: 414px) {
@@ -502,7 +502,8 @@ const SoundNovelContent = styled.div`
 
   @media (max-width: 375px) {
 
-    height: 18rem;
+    height: 21rem;
+    margin-top: 3rem;
   }
 `;
 
@@ -519,13 +520,13 @@ const SoundNovelTextDescription = styled.p`
 const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
-  font-size: 1.2rem;
-  height: 25rem;
+  font-size: 1rem;
+  height: 29rem;
   overflow-y: auto;
 
   @media (max-width: 768px) {
 
-height: 19rem;
+height: 25rem;
 }
 
 @media (max-width: 414px) {
@@ -540,7 +541,8 @@ height: 28rem;
 
 @media (max-width: 375px) {
 
-height: 18rem;
+height: 21rem;
+margin-top: 3rem;
 }
 `;
 
@@ -566,18 +568,18 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             모티브가 된 장르의 게임은 카마이타치의 밤과 제절초라는 춘소프트에서 개발한 사운드노벨의 게임을 채택하여
             좀 더 재미있게 읽을 수 있도록 제작하였다.<br /><br />
             지인의 삶의 내용을 전반적으로 담았고 서로 얘기하면서 책으로 낼 수는 없어도
-            웹으로 만들 수 있지는 않을까 생각하면서 얘기하면서 글을 썼다.<br />
-            혼자 제작을 한 것이 아닌 지인과 서로 울고 웃으면서 재밌게 제작을 하였고<br />
+            웹으로 만들 수 있지는 않을까 생각하면서 얘기하면서 글을 썼다.<br /><br />
+            혼자 제작을 한 것이 아닌 지인과 서로 울고 웃으면서 재밌게 제작을 하였고
             이런 것이 순기능이 아닐까 하는 생각을 많이 하며 임하였다.<br /><br />
-            처음의 제작의도는 밀리의 서재 등 책플랫폼을 컨셉으로 하여 제작을 할까 하였지만<br />
-            내용이 무겁고 더군다나 책플랫폼은 혼자의 힘으로 하기도 힘들고 또한 반복적인 부분이 많다보니
+            처음의 제작의도는 밀리의 서재 등 책플랫폼을 컨셉으로 하여 제작을 할까 하였지만
+            내용이 무겁고 더군다나 책플랫폼은 혼자의 힘으로 하기도 힘들고<br />또한 반복적인 부분이 많다보니
             글로만 읽기에는 너무 심심한 면이 있다 싶어 생소한 사운드 노벨이라는 장르를 채택하였다.<br /><br />
             내용의 전개는 이러하다.<br /><br />
             지인의 유년기 시절부터 현재에 이르기까지의 삶의 전반을 내용에 담았고<br />
             해당 내용의 당사자의 요청사항 중에는 세상엔 눈으로 보고도 믿을 수 없는 일이<br />많이 일어나고 있고 
             그것이 누군가가 정해져있는 것이 아닌 남녀노소 불문하여 누구도 이런일이 일어날 수도 있으며<br /><br />
-            선한마음을 가지고 살고 지내다보면 나쁜 것들은 올 수 없으며<br />
-            인간이라는 존재는 마음먹기에 달리고 결과도 마음먹기에 달라진다라는 말과 함께<br />
+            선한마음을 가지고 살고 지내다보면 나쁜 것들은 올 수 없으며
+            인간이라는 존재는 마음먹기에 달리고 결과도 마음먹기에 달라진다라는 말과 함께
             세상에 없는 존재들은 범접 할 수 없는 힘을 가지고 있다는 것을 알리고 싶었다고 한다.<br /><br />
             또한, 각박한 세상을 살아가면서 보이지 않는 존재들이 도와주고 있다라는 것을<br />
             필시 강조함이 있었다.<br /><br />
@@ -593,9 +595,9 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       ),
       text: (
         <SoundNovelContent>
-          <SoundNovelTextDescription>
-          제작기간 : 3일 / 기여도: 100% 
-          </SoundNovelTextDescription>
+          {/* <SoundNovelTextDescription>
+          제작기간 : 23.12.1 ~ 12.3 / 기여도: 100% 
+          </SoundNovelTextDescription> */}
         </SoundNovelContent>
       ),
       githubLink: "https://github.com/SEIMIN-BJJ/Sound-Novel-react",
@@ -630,9 +632,9 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     ),
     text: (
       <RockFestaContent>
-        <RockFestaTextDescription>
-        제작기간 : 5일 / 기여도: 100%
-        </RockFestaTextDescription> 
+        {/* <RockFestaTextDescription>
+        제작기간 : 2024.1 ~ 1. / 기여도: 100%
+        </RockFestaTextDescription>  */}
       </RockFestaContent>
     
     ),
@@ -820,7 +822,7 @@ const ThirdSection = () => {
                         </ul>
                         <ul>
                           <li className="MonitorFooter">
-                            <p>{MonitorDiscriptions[selectedSection].text}</p>
+                            {/* <p>{MonitorDiscriptions[selectedSection].text}</p> */}
                               <div>
                                 <button onClick={() => window.open(MonitorDiscriptions[selectedSection].githubLink, '_blank')}>
                                   Github
