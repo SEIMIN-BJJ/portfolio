@@ -54,13 +54,13 @@ const ContentBoxText = styled(motion.ul)`
 
 const ContentTitle = styled.h4`
   width: 100%;
-  height: 10rem;
+  height: 5rem;
   font-size: 2rem;
   font-family: "ChosunCentennial";
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin-top: 5rem;
 
 `;
 
@@ -73,9 +73,9 @@ const ContetInfo = styled.div`
 
 const ContentText = styled.ul`
   width: 100%;
-  height: 3rem;
+  height: 5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   li {
@@ -93,16 +93,12 @@ const ContentMov = styled.video`
   width: 55rem;
   height: auto;
   object-fit: cover;
-  margin-top: 3rem;
 `;
 
 const SoundNovelDevelopGuide = () => {
   const [animate, setAnimate] = useState(false);
 
-  // const animationLeft = {
-  //   hidden: { opacity: 0, x: -50 },
-  //   visible: { opacity: 1, x: 0 },
-  // };
+
 
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
@@ -113,19 +109,6 @@ const SoundNovelDevelopGuide = () => {
     duration: 1,
     delay: 0.2,
   };
-  // const transitionSecond = {
-  //   duration: 1,
-  //   delay: 0.9,
-  // };
-  // const transitionText = {
-  //   duration: 1,
-  //   delay: 1.5,
-  // };
-
-  // const transitionHashTag = {
-  //   duration: 1,
-  //   delay: 2,
-  // };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -161,10 +144,10 @@ const SoundNovelDevelopGuide = () => {
     <Container>
       <Content>
         <ContentBoxText
-          // variants={animationRight}
-          // initial="hidden"
-          // animate={animate ? "visible" : "hidden"}
-          // transition={transition}
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transition}
         >
         <ContentTitle>Sound Novel Toy Project <br />Develop</ContentTitle>
         <ContetInfo>
