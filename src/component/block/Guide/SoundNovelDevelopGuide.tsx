@@ -129,17 +129,17 @@ const ContentCapture = styled.img`
 `;
 
 const ContentBtn = styled.button`
-  width: 5rem;
+  width: 5.5rem;
   height: 2rem;
   border: 1px solid #fff;
   border-radius: 30px;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem 3rem auto;
+  margin: 2rem 3rem auto;
   color: #fff;
   transition: 0.21s ease-in-out;
-  padding: 2px;
+  padding: 3px;
   font-weight: 900;
 
   &:hover {

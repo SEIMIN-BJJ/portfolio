@@ -508,10 +508,6 @@ const SoundNovelTextContent = styled.p`
 
 `;
 
-const SoundNovelTextDescription = styled.p`
-  font-family: "ChosunCentennial";
-
-`;
 
 const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -544,11 +540,6 @@ margin-top: 3rem;
 
 const RockFestaTextContent = styled.p`
     font-family: 'Pretendard-Medium';
-
-`;
-
-const RockFestaTextDescription = styled.p`
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 `;
 
