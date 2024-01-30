@@ -410,7 +410,6 @@ const ModalContent = styled(motion.div)`
         align-items: center;
         font-size: 1.2rem;
         flex-direction: column;
-
         @media (max-width: 768px) {
         height: 0;
         margin: 4rem auto;
@@ -436,10 +435,8 @@ const ModalContent = styled(motion.div)`
           display: flex;
           justify-content: center;
           align-items: center;
-          margin:1rem auto;
 
           .developBtn {
-
           font-size: 0.7rem;
           }
 
@@ -454,7 +451,6 @@ const ModalContent = styled(motion.div)`
           transition: 0.3s ease-in-out;
           color: #fff;
           font-weight: 900;
-
           @media (max-width: 768px) {
           font-size: 0.9rem;
           display: flex;
@@ -576,11 +572,11 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
             글로만 읽기에는 너무 심심한 면이 있다 싶어 생소한 사운드 노벨이라는 장르를 채택하였다.<br /><br />
             내용의 전개는 이러하다.<br /><br />
             지인의 유년기 시절부터 현재에 이르기까지의 삶의 전반을 내용에 담았고<br />
-            해당 내용의 당사자의 요청사항 중에는 세상엔 눈으로 보고도 믿을 수 없는 일이<br />많이 일어나고 있고 
+            해당 내용의 당사자 요청사항 중에는 세상엔 눈으로 보고도 믿을 수 없는 일이<br />많이 일어나고 있고 
             그것이 누군가가 정해져있는 것이 아닌 남녀노소 불문하여 누구도 이런일이 일어날 수도 있으며<br /><br />
             선한마음을 가지고 살고 지내다보면 나쁜 것들은 올 수 없으며
             인간이라는 존재는 마음먹기에 달리고 결과도 마음먹기에 달라진다라는 말과 함께
-            세상에 없는 존재들은 범접 할 수 없는 힘을 가지고 있다는 것을 알리고 싶었다고 한다.<br /><br />
+            세상에 없는 존재들이 악영향을 끼칠 수 없는 힘을 가지고 있다는 것을 알리고 싶었다고 한다.<br /><br />
             또한, 각박한 세상을 살아가면서 보이지 않는 존재들이 도와주고 있다라는 것을<br />
             필시 강조함이 있었다.<br /><br />
             본인도 지인과 같이 놀고 친구로써 지내보면서 여러 현상들을 직접 눈으로 보고 몸소 체험하면서
