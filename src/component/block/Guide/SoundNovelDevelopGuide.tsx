@@ -66,7 +66,7 @@ const ContentTitle = styled.h4`
 
 const ContetInfo = styled.div`
   width: 100%;
-  height: 100rem;
+  height: auto;
   font-family: "ChosunCentennial";
 
 `;
