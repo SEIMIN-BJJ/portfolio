@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import DevCapture from "../../assets/images/SoundCature.png";
-import "../../../App.scss"
 import { Link } from "react-router-dom";
+import "../../../App.scss"
 
 const Container = styled.section`
   width: 100%;
@@ -206,7 +206,7 @@ const SoundNovelDevelopGuide = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}
         >
-        <ContentTitle>Sound Novel Toy Project <br />Develop</ContentTitle>
+        <ContentTitle>Sound Novel Project <br />Develop</ContentTitle>
         <ContetInfo>
           <ContentText>
             <li>React</li>
@@ -221,10 +221,10 @@ const SoundNovelDevelopGuide = () => {
             말그대로 사운드 노벨인 장르이기 때문에 React Hook을 사용하여 배경화면 켜기 / 끄기의 간단한 기능을 넣었습니다.<br />
             그 외의 스타일적인 부분들은 Style-Components으로 처리하였습니다.
           </ContentExplanation>
-          <ContentCapture />
           <ContentMov autoPlay loop muted playsInline>
               <source src={process.env.PUBLIC_URL + "/videos/SoundExplan.mp4"} type="video/mp4" />
             </ContentMov>
+          <ContentCapture />
         </ContetInfo>
         </ContentBoxText>
       </Content>
