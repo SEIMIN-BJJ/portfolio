@@ -66,7 +66,7 @@ const ThirdBoxTitle = styled(motion.p)`
   padding: 0 0 1rem;
   font-weight: bold;
   font-size: 2.5rem;
-  font-family: "SB 어그로OTF B";
+  font-family: 'Pretendard-ExtraBold';
   position: relative;
   color: #212020;
 
@@ -89,7 +89,7 @@ const ThirdBoxSub = styled(motion.section)`
   align-items: center;
   text-align: left;
   font-size: 2rem;
-  font-family: "SB 어그로OTF M";
+  font-family: 'Pretendard-Bold';
   color: #fff;
 
   @media (max-width: 768px) {
@@ -185,7 +185,7 @@ const ThirdBoxSub = styled(motion.section)`
 
       .Rock-Page video {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         position: absolute;
         z-index: 1;
@@ -196,6 +196,7 @@ const ThirdBoxSub = styled(motion.section)`
         color: #fff;
         opacity: 1;
         font-size: 1.8rem;
+        background-color: #000;
 
   }
 
