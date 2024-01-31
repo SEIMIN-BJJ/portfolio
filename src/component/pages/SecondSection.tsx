@@ -99,7 +99,7 @@ const SecondBoxTitle = styled(motion.p)`
   padding: 3rem 0;
   font-weight: bold;
   font-size: 1.7rem;
-  font-family: "SB 어그로OTF B";
+  font-family: 'Pretendard-ExtraBold';
   position: relative;
   color:#fff;
 
@@ -125,7 +125,7 @@ const SecondBoxSub = styled(motion.section)`
   align-items: center;
   text-align: left;
   font-size: 1.5rem;
-  font-family: "SB 어그로OTF M";
+  font-family: 'Pretendard-Light';
   color:#fff;
 
   ul {
@@ -151,8 +151,7 @@ const SecondBoxSub = styled(motion.section)`
 const SecondBoxHashTag = styled(motion.div)`
   width: 100%;
   height: auto;
-  font-family: "SB 어그로OTF L";
-  font-weight: bold;
+  font-family: 'Pretendard-Medium';
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

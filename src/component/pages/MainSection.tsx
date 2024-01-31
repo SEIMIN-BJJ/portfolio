@@ -84,7 +84,7 @@ const ContentBoxTitle = styled(motion.p)`
   padding-top: 0;
   font-weight: bold;
   font-size: 2.5rem;
-  font-family: "SB 어그로OTF B";
+  font-family: 'Pretendard-Bold';
   position: relative;
   color: #212020;
 
@@ -107,7 +107,7 @@ const ContentBoxSub = styled(motion.p)`
   align-items: center;
   text-align: left;
   font-size: 0.89rem;
-  font-family: "SB 어그로OTF M";
+  font-family: 'Pretendard-Bold';
   color: #171717a7;
   /* border: 1px solid black; */
 

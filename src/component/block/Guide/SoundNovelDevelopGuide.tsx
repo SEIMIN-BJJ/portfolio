@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import DevCapture from "../../assets/images/SoundCature.png";
 import { Link } from "react-router-dom";
 import "../../../App.scss"
 
@@ -26,16 +25,14 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
+  width: 100vw;
+  height: auto;
   }
 `;
 
-const ContentBoxText = styled(motion.ul)`
+const ContentBoxText = styled(motion.div)`
   width: 100%;
   height: auto;
   flex-direction: column;
@@ -44,13 +41,7 @@ const ContentBoxText = styled(motion.ul)`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
     height: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
   }
 `;
 
@@ -62,15 +53,14 @@ const ContentTitle = styled.h4`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 
-`;
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 3rem 0 1rem 0;
+  }
 
-const ContetInfo = styled.div`
-  width: 100%;
-  height: auto;
-  font-family: "ChosunCentennial";
-  margin: 3rem auto;
 `;
 
 const ContentText = styled.ul`
@@ -80,7 +70,12 @@ const ContentText = styled.ul`
   justify-content: flex-start;
   align-items: center;
 
-  li {
+  @media screen and (max-width: 768px) {
+  margin: 1rem 0 1rem 0;
+  justify-content: center;
+}
+
+li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,39 +88,67 @@ const ContentText = styled.ul`
   }
 `;
 
-const ContentExplanation = styled.p`
+const ContentExplanation = styled.h1`
   width: 100%;
-  height: 5rem;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
 
-`;
-const ContentMov = styled.video`
-  width: 55rem;
+  @media screen and (max-width: 768px) {
+  width: 100vw;
   height: auto;
-  object-fit: cover;
-  margin: 1rem auto;
-  border: 1px solid #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  padding: 20px;
+}
 `;
 
-const ContentCapture = styled.img`
+const ContentWebExplan = styled.video`
   width: 55rem;
-  height: 23.7rem;
-  margin: 1rem auto;
+  height: 30rem;
+  object-fit: contain;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(${DevCapture});
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 1px solid #fff;
-  background-position: center center;
+  margin: 1rem 0 1rem 0;
+  border: 1px solid #252525;
+  border-radius: 4px;
+
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding: 20px;
+  border: 0;
+}
+`;
+
+const ContentMobileExplan = styled.video`
+  width: 55rem;
+  height: 30rem;
+  object-fit: contain;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.7rem 0 1rem 0;
+  border: 1px solid #252525;
+  border-radius: 4px;
+
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  border: 0;
+  padding: 20px;
+
+}
 `;
 
 const ContentBtn = styled.button`
@@ -136,7 +159,7 @@ const ContentBtn = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  margin: 2rem 3rem auto;
+  margin: 2rem 3rem;
   color: #fff;
   transition: 0.21s ease-in-out;
   padding: 3px;
@@ -148,11 +171,18 @@ const ContentBtn = styled.button`
     color: #000;
     opacity: 1;
   }
-`
+
+  @media screen and (max-width: 768px) {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin: 1rem 2rem;
+  }
+
+`;
+
 const SoundNovelDevelopGuide = () => {
   const [animate, setAnimate] = useState(false);
-
-
 
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
@@ -166,7 +196,6 @@ const SoundNovelDevelopGuide = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition)
     if (window.innerWidth >= 768) {
       if (scrollPosition > 3000 && scrollPosition < 5000) {
         setAnimate(false);
@@ -196,9 +225,6 @@ const SoundNovelDevelopGuide = () => {
 
   return (
     <Container>
-      <Link to={"/"}>
-         <ContentBtn>PORTFOLIO</ContentBtn>
-      </Link>
       <Content>
         <ContentBoxText
           variants={animationRight}
@@ -206,8 +232,10 @@ const SoundNovelDevelopGuide = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}
         >
+      <Link to={"/"}>
+        <ContentBtn>PORTFOLIO</ContentBtn>
+      </Link>
         <ContentTitle>Sound Novel Project <br />Develop</ContentTitle>
-        <ContetInfo>
           <ContentText>
             <li>React</li>
             <li>Style-Components</li>
@@ -216,16 +244,17 @@ const SoundNovelDevelopGuide = () => {
             <li>Framer-Motion</li>
           </ContentText>
           <ContentExplanation>
-            사운드노벨 장르의 웹북 토이프로젝트로 제작하였습니다.<br />
-            Router를 활용하여 한장한장의 글을 썼고 Framer-Motion을 이용한 애니메이션을 추가하여 책장이 넘어가는 효과를 주었으며<br />
-            말그대로 사운드 노벨인 장르이기 때문에 React Hook을 사용하여 배경화면 켜기 / 끄기의 간단한 기능을 넣었습니다.<br />
-            그 외의 스타일적인 부분들은 Style-Components으로 처리하였습니다.
+          Sound Novel 장르의 웹북 토이 프로젝트로 구현하였습니다. <br />프로젝트의 핵심은 Router를 통한 네비게이션, Framer-Motion을 활용한 애니메이션 효과 및 Hook을 활용한 간단하게 기능 구현이 있습니다.
+          각 페이지를 독립적으로 구성하고, Framer-Motion을 이용하여 책장이 넘어가는 애니메이션을 구현하였습니다. <br />그리고 Hook을 활용하여 배경음악을 켜고 끄는 기능을 간편하게 구현했습니다.
+          <br />프로젝트의 스타일링은 Style-Components를 사용하여 일관된 디자인을 유지하였습니다. 특히, 반복되는 구성 요소들을 최소화하고 글의 내용 및 배경 음악에 더 많은 주력을 기울여 제작했습니다. 이를 통해 사용자가 내용에 더욱 집중할 수 있도록 하였습니다.
+          <br /> Sound Novel만의 독특한 특성을 살려 시각적 및 청각적 경험을 제공하는 데 중점을 두었습니다.
           </ContentExplanation>
-          <ContentMov autoPlay loop muted playsInline>
-              <source src={process.env.PUBLIC_URL + "/videos/SoundExplan.mp4"} type="video/mp4" />
-            </ContentMov>
-          <ContentCapture />
-        </ContetInfo>
+          <ContentWebExplan autoPlay muted playsInline>
+            <source src={process.env.PUBLIC_URL + "/videos/SoundExplan.mp4"} type="video/mp4" />
+          </ContentWebExplan>
+          <ContentMobileExplan autoPlay muted playsInline>
+            <source src={process.env.PUBLIC_URL + "/videos/SoundMobileExplan.mp4"} type="video/mp4" />
+          </ContentMobileExplan>
         </ContentBoxText>
       </Content>
     </Container>
@@ -233,3 +262,5 @@ const SoundNovelDevelopGuide = () => {
 };
 
 export default SoundNovelDevelopGuide;
+
+

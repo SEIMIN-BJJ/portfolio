@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import DevCapture from "../../assets/images/SoundCature.png";
 import { Link } from "react-router-dom";
 import "../../../App.scss"
 
@@ -26,16 +25,14 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
+  width: 100vw;
+  height: auto;
   }
 `;
 
-const ContentBoxText = styled(motion.ul)`
+const ContentBoxText = styled(motion.div)`
   width: 100%;
   height: auto;
   flex-direction: column;
@@ -44,13 +41,7 @@ const ContentBoxText = styled(motion.ul)`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
     height: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
   }
 `;
 
@@ -62,16 +53,15 @@ const ContentTitle = styled.h4`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   letter-spacing: 5px;
 
-`;
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 3rem 0 1rem 0;
+  }
 
-const ContetInfo = styled.div`
-  width: 100%;
-  height: auto;
-  font-family: 'Pretendard-Medium';
-  margin: 3rem auto;
 `;
 
 const ContentText = styled.ul`
@@ -81,7 +71,12 @@ const ContentText = styled.ul`
   justify-content: flex-start;
   align-items: center;
 
-  li {
+  @media screen and (max-width: 768px) {
+  margin: 1rem 0 1rem 0;
+  justify-content: center;
+}
+
+li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,66 +89,96 @@ const ContentText = styled.ul`
   }
 `;
 
-const ContentExplanation = styled.p`
+const ContentExplanation = styled.h1`
   width: 100%;
-  height: 5rem;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   font-size: 0.9rem;
+  line-height: 1.5rem;
 
-`;
-const ContentMov = styled.video`
-  width: 55rem;
+  @media screen and (max-width: 768px) {
+  width: 100vw;
   height: auto;
-  object-fit: cover;
-  margin: 1rem auto;
-  border: 1px solid #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  padding: 20px;
+
+}
 `;
 
-const ContentCapture = styled.img`
+const ContentWebExplan = styled.video`
   width: 55rem;
-  height: 23.7rem;
-  margin: 1rem auto;
+  height: 30rem;
+  object-fit: contain;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(${DevCapture});
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 1px solid #fff;
-  background-position: center center;
+  margin: 1rem 0 1rem 0;
+
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding: 20px;
+  border: 0;
+}
+`;
+
+const ContentMobileExplan = styled.video`
+  width: 55rem;
+  height: 30rem;
+  object-fit: contain;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.7rem 0 1rem 0;
+
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  height: 30rem;
+  justify-content: center;
+  border: 0;
+  padding: 20px;
+
+}
 `;
 
 const ContentBtn = styled.button`
   width: 5.5rem;
   height: 2rem;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 30px;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 2rem 3rem auto;
-  color: #fff;
+  margin: 2rem 3rem;
+  color: #000;
   transition: 0.21s ease-in-out;
   padding: 3px;
   font-weight: 900;
 
   &:hover {
 
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     opacity: 1;
   }
-`
+
+  @media screen and (max-width: 768px) {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin: 1rem 2rem;
+  }
+
+`;
 const RockFestaDevelopGuide = () => {
   const [animate, setAnimate] = useState(false);
-
-
 
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
@@ -167,7 +192,6 @@ const RockFestaDevelopGuide = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition)
     if (window.innerWidth >= 768) {
       if (scrollPosition > 3000 && scrollPosition < 5000) {
         setAnimate(false);
@@ -208,25 +232,24 @@ const RockFestaDevelopGuide = () => {
           transition={transition}
         >
         <ContentTitle>Rock Festival Project <br />Develop</ContentTitle>
-        <ContetInfo>
           <ContentText>
             <li>React</li>
             <li>Style-Components</li>
             <li>TypeScript</li>
-            <li>TypeIt</li>
+            <li>Axios</li>
             <li>Framer-Motion</li>
           </ContentText>
           <ContentExplanation>
-            사운드노벨 장르의 웹북 토이프로젝트로 제작하였습니다.<br />
-            Router를 활용하여 한장한장의 글을 썼고 Framer-Motion을 이용한 애니메이션을 추가하여 책장이 넘어가는 효과를 주었으며<br />
-            말그대로 사운드 노벨인 장르이기 때문에 React Hook을 사용하여 배경화면 켜기 / 끄기의 간단한 기능을 넣었습니다.<br />
-            그 외의 스타일적인 부분들은 Style-Components으로 처리하였습니다.
+          락 페스티벌 컨셉의 웹사이트를 제작하였습니다.<br />프로젝트는 랜딩 페이지 형태로 구성하였으며 YouTube API 및 Unsplash API를 axios를 활용하여 영상 및 이미지를 동적으로 제작하였습니다.<br />API키는 보안상 env로 안전하게 관리하였습니다.
+          <br />특히 특정 밴드들에 중점을 두어 자세한 설명과 관련 영상을 모달 창을 활용하여 효과적으로 볼 수 있게 하였고. 이를 통해 밴드들에 대한 다양한 정보를 쉽게 볼 수 있습니다.
+          또한 동일한 아티스트를 클릭할 경우 랜덤으로 영상이 재생되도록 구현하여 사용자가 여러 영상을 볼 수 있는 것에 주력하였습니다. <br />웹사이트를 통해 다양한 아티스트의 정보와 음악을 자연스럽게 경험할 수 있게 하였습니다.
           </ContentExplanation>
-          <ContentCapture />
-          <ContentMov autoPlay loop muted playsInline>
-              <source src={process.env.PUBLIC_URL + "/videos/SoundExplan.mp4"} type="video/mp4" />
-            </ContentMov>
-        </ContetInfo>
+          <ContentWebExplan autoPlay muted playsInline>
+            <source src={process.env.PUBLIC_URL + "/videos/RockExplan.mp4"} type="video/mp4" />
+          </ContentWebExplan>
+          <ContentMobileExplan autoPlay muted playsInline>
+            <source src={process.env.PUBLIC_URL + "/videos/RockMobileExplan.mp4"} type="video/mp4" />
+          </ContentMobileExplan>
         </ContentBoxText>
       </Content>
     </Container>
