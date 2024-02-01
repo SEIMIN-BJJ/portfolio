@@ -125,8 +125,6 @@ const SecondBoxSub = styled(motion.section)`
   align-items: center;
   text-align: left;
   font-size: 1.5rem;
-  font-family: 'Pretendard-Light';
-  color:#fff;
 
   ul {
     width: 100%;
@@ -134,7 +132,7 @@ const SecondBoxSub = styled(motion.section)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #fff;
+    color: #fef;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -151,7 +149,7 @@ const SecondBoxSub = styled(motion.section)`
 const SecondBoxHashTag = styled(motion.div)`
   width: 100%;
   height: auto;
-  font-family: 'Pretendard-Medium';
+  font-family: 'Pretendard-ExtraBold';
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

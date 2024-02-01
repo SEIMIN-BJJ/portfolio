@@ -107,7 +107,7 @@ const ContentBoxSub = styled(motion.p)`
   align-items: center;
   text-align: left;
   font-size: 0.89rem;
-  font-family: 'Pretendard-Bold';
+  font-family: 'Pretendard-ExtraBold';
   color: #171717a7;
   /* border: 1px solid black; */
 
