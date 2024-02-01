@@ -183,9 +183,9 @@ const ThirdBoxSub = styled(motion.section)`
       align-items: center;
     }
 
-      .Rock-Page video {
+      video {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         position: absolute;
         z-index: 1;
@@ -196,8 +196,6 @@ const ThirdBoxSub = styled(motion.section)`
         color: #fff;
         opacity: 1;
         font-size: 1.8rem;
-        background-color: #000;
-
   }
 
       @media (max-width: 768px) {
