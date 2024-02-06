@@ -715,7 +715,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     content: (
     <GameInfoContent>
       <GameInfoTextContent>
-        제작자는 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
+        본인은 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
         그러다보니 레트로 게임들 및 기기들이 집에 즐비해 있으며<br />
         예전 게임 패키지들도 그대로 있는 상태이다.머리를 쉴 때 마저 게임으로 머리를 쉬니 얼마나 게임을 좋아하는지 집이 게임방이 되버렸다.<br />
         생각해보면 어릴 적 영향이 큰 듯한데 집이 그렇게 부유한편이 <br />아니다 보니 컴퓨터는 커녕 8비트 게임기만 있고 
