@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7d969710.css",
-    "main.js": "/portfolio/static/js/main.c0ce8387.js",
+    "main.css": "/portfolio/static/css/main.95338017.css",
+    "main.js": "/portfolio/static/js/main.49e01c53.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/me.png": "/portfolio/static/media/me.5737e5c57605728d4e23.png",
     "static/media/ChosunCentennial_otf.otf": "/portfolio/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
     "static/media/rock.png": "/portfolio/static/media/rock.93a82d8661bddc29a19c.png",
+    "static/media/game.png": "/portfolio/static/media/game.709712c97698e4007b3a.png",
     "static/media/Pretendard-Light.otf": "/portfolio/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
     "static/media/Pretendard-Medium.otf": "/portfolio/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
     "static/media/Pretendard-SemiBold.otf": "/portfolio/static/media/Pretendard-SemiBold.4b3283bc0e29a9c97c11.otf",
@@ -17,13 +18,14 @@
     "static/media/Pretendard-Thin.otf": "/portfolio/static/media/Pretendard-Thin.e45abc28d4828e92dd10.otf",
     "static/media/novel-img-1.png": "/portfolio/static/media/novel-img-1.d152668931a50363e3be.png",
     "static/media/desktopTwo.jpg": "/portfolio/static/media/desktopTwo.ccd99dfa0870033c35e5.jpg",
+    "static/media/PressStart2P-Regular.ttf": "/portfolio/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
     "index.html": "/portfolio/index.html",
-    "main.7d969710.css.map": "/portfolio/static/css/main.7d969710.css.map",
-    "main.c0ce8387.js.map": "/portfolio/static/js/main.c0ce8387.js.map",
+    "main.95338017.css.map": "/portfolio/static/css/main.95338017.css.map",
+    "main.49e01c53.js.map": "/portfolio/static/js/main.49e01c53.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d969710.css",
-    "static/js/main.c0ce8387.js"
+    "static/css/main.95338017.css",
+    "static/js/main.49e01c53.js"
   ]
 }
