@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import CloudAniMation from "../../Animation/CloudAniMation";
 import "../../../App.scss"
 
 const Container = styled.section`
@@ -11,11 +12,22 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #689cf8;
   color: #fff;
 
   @media screen and (max-width: 768px) {
-    overflow-x: hidden;
+  height: 100vh;
+  overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 375px) {
+  height: 130vh;
+  overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 360px) {
+  height: 110vh;
+  overflow-x: hidden;
   }
 `;
 
@@ -25,6 +37,7 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   @media screen and (max-width: 768px) {
   width: 100vw;
@@ -49,16 +62,17 @@ const ContentTitle = styled.h4`
   width: 100%;
   height: 3rem;
   font-size: 2rem;
-  font-family: "ChosunCentennial";
+  font-family: "PressStart2P-Regular";
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
+  color: yellow;
 
   @media screen and (max-width: 768px) {
     font-size: 1.2rem;
-    margin: 3rem 0 1rem 0;
+    margin: 5rem 0 1rem 0;
   }
 
 `;
@@ -79,12 +93,14 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: yellow;
     border: 1px solid #fff;
+    font-family: "PressStart2P-Regular";
     border-radius: 4px;
-    padding: 3px;
+    padding: 5px;
     margin: 2px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+
   }
 `;
 
@@ -98,6 +114,7 @@ const ContentExplanation = styled.h1`
   font-size: 0.9rem;
   letter-spacing: 1px;
   line-height: 1.5rem;
+  color: yellow;
 
   @media screen and (max-width: 768px) {
   width: 100vw;
@@ -118,7 +135,6 @@ const ContentWebExplan = styled.video`
   justify-content: flex-start;
   align-items: center;
   margin: 1rem 0 1rem 0;
-  border: 1px solid #252525;
   border-radius: 4px;
 
   @media screen and (max-width: 768px) {
@@ -138,7 +154,6 @@ const ContentMobileExplan = styled.video`
   justify-content: flex-start;
   align-items: center;
   margin: 0.7rem 0 1rem 0;
-  border: 1px solid #252525;
   border-radius: 4px;
 
   @media screen and (max-width: 768px) {
@@ -226,6 +241,7 @@ const GameInfoDevelopGuid = () => {
   return (
     <Container>
       <Content>
+      <CloudAniMation />
         <ContentBoxText
           variants={animationRight}
           initial="hidden"
@@ -235,25 +251,26 @@ const GameInfoDevelopGuid = () => {
       <Link to={"/"}>
         <ContentBtn>PORTFOLIO</ContentBtn>
       </Link>
-        <ContentTitle>Sound Novel Project <br />Develop</ContentTitle>
+        <ContentTitle>Sound Novel Project <br /><br />Develop</ContentTitle>
           <ContentText>
             <li>React</li>
             <li>Style-Components</li>
             <li>TypeScript</li>
-            <li>TypeIt</li>
+            <li>axios</li>
             <li>Framer-Motion</li>
           </ContentText>
           <ContentExplanation>
-          Sound Novel 장르의 웹북 토이 프로젝트로 구현하였습니다. <br />프로젝트의 핵심은 Router를 통한 네비게이션, Framer-Motion을 활용한 애니메이션 효과 및 Hook을 활용한 간단하게 기능 구현이 있습니다.
-          각 페이지를 독립적으로 구성하고, Framer-Motion을 이용하여 책장이 넘어가는 애니메이션을 구현하였습니다. <br />그리고 Hook을 활용하여 배경음악을 켜고 끄는 기능을 간편하게 구현했습니다.
-          <br />프로젝트의 스타일링은 Style-Components를 사용하여 일관된 디자인을 유지하였습니다. 특히, 반복되는 구성 요소들을 최소화하고 글의 내용 및 배경 음악에 더 많은 주력을 기울여 제작했습니다. 이를 통해 사용자가 내용에 더욱 집중할 수 있도록 하였습니다.
-          <br /> Sound Novel만의 독특한 특성을 살려 시각적 및 청각적 경험을 제공하는 데 중점을 두었습니다.
+            간단한 GameInfomation을 구축한 웹사이트입니다.<br />
+            api는 Rawg에서 사용한 오픈 API이며 axios를 이용해 구축하였습니다.
+            스크롤이 끝나면 다른 정보를 가져오게 하였고 쓰로틀링을 넣어 시간을 두고 정보를 가져오게 했습니다.
+            무한 스크롤에 갇힐수도 있고 리소스 사용이 워낙 많다보니 대처법으로 진행하였습니다.<br />
+            트레일러까지 구현하려 했으나 데이터를 가져오려다 보니 양이 많아 무제한 서비스를 이용해야 하는 상황이라 플랫폼 장르까지가 한계였습니다.
           </ContentExplanation>
           <ContentWebExplan autoPlay muted playsInline>
-            <source src={process.env.PUBLIC_URL + "/videos/SoundExplan.mp4"} type="video/mp4" />
+            <source src={process.env.PUBLIC_URL + "/videos/GameInfoExplan.mp4"} type="video/mp4" />
           </ContentWebExplan>
           <ContentMobileExplan autoPlay muted playsInline>
-            <source src={process.env.PUBLIC_URL + "/videos/SoundMobileExplan.mp4"} type="video/mp4" />
+            <source src={process.env.PUBLIC_URL + "/videos/GameMobileExplan.mp4"} type="video/mp4" />
           </ContentMobileExplan>
         </ContentBoxText>
       </Content>
