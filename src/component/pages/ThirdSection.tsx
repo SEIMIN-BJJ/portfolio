@@ -174,9 +174,8 @@ const ThirdBoxSub = styled(motion.section)`
       .Rock-Page {
       width: 100%;
       height: 100%;
-      color: #000;
+      color: #fff;
       font-size: 2rem;
-      background-color: #fff;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       letter-spacing: 0.5rem;
       cursor: pointer;
@@ -191,6 +190,7 @@ const ThirdBoxSub = styled(motion.section)`
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
 
       video {
@@ -203,7 +203,7 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       &:hover {
-        color: #fff;
+        color: #ccc;
         opacity: 1;
         font-size: 1.8rem;
     }
@@ -221,9 +221,8 @@ const ThirdBoxSub = styled(motion.section)`
     .Game-Page {
       width: 100%;
       height: 100%;
-      color: #000;
+      color: yellow;
       font-size: 1.2rem;
-      background-color: #fff;
       font-family: "PressStart2P-Regular";
       letter-spacing: 0.5rem;
       cursor: pointer;
@@ -252,7 +251,7 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       &:hover {
-        color: #fff;
+        color: #ff1024;
         opacity: 1;
         font-size: 1.1rem;
     }
@@ -265,8 +264,8 @@ const ThirdBoxSub = styled(motion.section)`
       align-items: center;
       border-radius: 10px;
       }
+      }
     }
-  }
 `;
 
 const ModalBackground = styled(motion.div)`
@@ -756,8 +755,8 @@ const ThirdSection = () => {
   const [animate, setAnimate] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
-  const [hovered, setHovered] = useState(false);
-  const [gameHovered, setGameHovered] = useState(false);
+  // const [hovered, setHovered] = useState(false);
+  // const [gameHovered, setGameHovered] = useState(false);
   const navigate = useNavigate();
 
   const animationLeft = {
@@ -881,17 +880,33 @@ const ThirdSection = () => {
               <li
                 className="Rock-Page"
                 onClick={() => handleSectionClick("rockfest")}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
+                // onMouseEnter={() => setHovered(true)}
+                // onMouseLeave={() => setHovered(false)}
               >
                 <p className="RockFestaText">ROCK FESTA</p>
+                  <video autoPlay loop muted playsInline >
+                    <source src={process.env.PUBLIC_URL + "/videos/fire.mp4"} type="video/mp4" />
+                  </video>
+              </li>
+                {/* <p className="RockFestaText">ROCK FESTA</p>
                 {hovered && (
                   <video autoPlay loop muted playsInline >
                     <source src={process.env.PUBLIC_URL + "/videos/fire.mp4"} type="video/mp4" />
                   </video>
                 )}
+              </li> */}
+                <li
+                className="Game-Page"
+                onClick={() => handleSectionClick("gameinfo")}
+                // onMouseEnter={() => setGameHovered(true)}
+                // onMouseLeave={() => setGameHovered(false)}
+              >
+                <p className="GameInfoText">Console Game</p>
+                  <video autoPlay loop muted playsInline >
+                    <source src={process.env.PUBLIC_URL + "/videos/game.mp4"} type="video/mp4" />
+                  </video>
               </li>
-              <li
+              {/* <li
                 className="Game-Page"
                 onClick={() => handleSectionClick("gameinfo")}
                 onMouseEnter={() => setGameHovered(true)}
@@ -903,7 +918,7 @@ const ThirdSection = () => {
                     <source src={process.env.PUBLIC_URL + "/videos/game.mp4"} type="video/mp4" />
                   </video>
                 )}
-              </li>
+              </li> */}
               </ul>
             </ThirdBoxSub>
         </ThirdBoxText>
