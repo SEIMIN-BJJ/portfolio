@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import NovelIMGFirst from "../assets/images/novel-img-1.png";
 import RockIMGFirst from "../assets/images/rock.png";
+import GameIMGFirst from "../assets/images/game.png";
 import { useNavigate } from 'react-router-dom';
-
 import "../../App.scss";
 
 interface MonitorDescription {
@@ -123,10 +123,11 @@ const ThirdBoxSub = styled(motion.section)`
 
       @media (max-width: 768px) {
       width: 100%;
-      height: 15vh;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 1rem;
       }
     }
 
@@ -153,11 +154,20 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       @media (max-width: 768px) {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 18rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
+      background-color: #000000;
+        text-shadow:
+          0 0 30px #b23d39,
+          0 0 60px #b23d39,
+          0 0 70px #b23d39,
+          0 0 90px #b23d39;
+        opacity: 1;
+        color: #ccc;
       }
   }
 
@@ -174,8 +184,8 @@ const ThirdBoxSub = styled(motion.section)`
       overflow: hidden;
 
       .RockFestaText {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 20rem;
       position: absolute;
       z-index: 2;
       display: flex;
@@ -196,33 +206,63 @@ const ThirdBoxSub = styled(motion.section)`
         color: #fff;
         opacity: 1;
         font-size: 1.8rem;
-  }
+    }
 
       @media (max-width: 768px) {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 18rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
       }
     }
 
-    .another {
-
+    .Game-Page {
       width: 100%;
       height: 100%;
-      color: #000000;
-      font-size: 2rem;
-      background-color: #ffffff;
-      font-family: "ChosunCentennial";
+      color: #000;
+      font-size: 1.2rem;
+      background-color: #fff;
+      font-family: "PressStart2P-Regular";
+      letter-spacing: 0.5rem;
       cursor: pointer;
-      
-      @media (max-width: 768px) {
-      width: 100%;
-      height: 100%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+
+      .GameInfoText {
+      width: 80%;
+      height: 20rem;
+      position: absolute;
+      z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+
+      }
+
+      &:hover {
+        color: #fff;
+        opacity: 1;
+        font-size: 1.1rem;
+    }
+
+      @media (max-width: 768px) {
+      width: 90%;
+      height: 18rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
       }
     }
   }
@@ -246,6 +286,7 @@ const MonitorTitle = styled(motion.p)
 <{
   soundnovel : boolean;
   rockfest : boolean;
+  gameinfo : boolean;
 }>`
   width: 100%;
   height: 15vh; 
@@ -276,7 +317,13 @@ const MonitorTitle = styled(motion.p)
     css`
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       letter-spacing: 0.5rem;
+    `}
 
+    ${props =>
+    props.gameinfo &&
+    css`
+      font-family: 'Pretendard-Bold';
+      letter-spacing: 0.5rem;
     `}
 `;
 
@@ -341,7 +388,6 @@ const ModalContent = styled(motion.div)`
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: "ChosunCentennial";
 
       .Monitor {
       width: 100%;
@@ -542,6 +588,40 @@ const RockFestaTextContent = styled.p`
 
 `;
 
+const GameInfoContent = styled.div`
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+  font-size: 1rem;
+  height: 29rem;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+
+height: 25rem;
+}
+
+@media (max-width: 414px) {
+
+height: 20rem;
+}
+
+@media (max-width: 430px) {
+
+height: 28rem;
+}
+
+@media (max-width: 375px) {
+
+height: 21rem;
+margin-top: 3rem;
+}
+`;
+
+const GameInfoTextContent = styled.p`
+    font-family: 'Pretendard-Medium';
+
+`;
+
 const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     soundnovel: {
       content: (
@@ -628,6 +708,40 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     webLink: "https://seimin-bjj.github.io/Rock-Festa-react/",
     route: '/rock-develop',
   },
+
+  gameinfo: {
+    content: (
+    <GameInfoContent>
+      <GameInfoTextContent>
+        제작자는 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
+        그러다보니 레트로 게임들 및 기기들이 집에 즐비해 있으며<br />
+        예전 게임 패키지들도 그대로 있는 상태이다.머리를 쉴 때 마저 게임으로 머리를 쉬니 얼마나 게임을 좋아하는지 집이 게임방이 되버렸다.<br />
+        생각해보면 어릴 적 영향이 큰 듯한데 집이 그렇게 부유한편이 <br />아니다 보니 컴퓨터는 커녕 8비트 게임기만 있고 
+        어쩌다가 게임보이를 갖게되서 너무 좋아했던 기억이 있다.<br />
+        그런 파동으로 인해서 나이먹고 게임에 집착하게 됐는지도 모른다.<br />
+        요새는 플스, 엑스박스, 스위치 등등 많은 게임들이 쏟아져나오고 콘솔들이 나왔지만
+        그래도 가끔 레트로 게임이 생각나서 할 때가 종종 있다.<br />그만큼 생각안하기 좋은게 레트로게임만 한것도 없다.<br />
+        아,물론 현세대기도 전부 보유중이긴 하다.<br />
+        요새는 많은 게임들이 있다보니 나오면 전부 해보고 괜찮은 AAA게임들만 모아놓고 있기도 하다.<br />
+        이 토이 프로젝트도 많은 게임들을 소개하려다보니 API양이 너무 많다.<br />
+        그래서 플랫폼과 장르만을 소개하는 것으로 토이 프로젝트를 만들었다.<br />
+        한달에 한번씩만 사용할 수 있는 한정 소스만 있다보니 구현하려면 돈이 꽤 들어가는 부분이다.<br />그래서 트레일러 구현까지는 무리여서 소개까지만 하는 작은 웹사이트를 구현했다.
+        <br />게임 정보들이 많이 있는 API이다 보니 모르는 게임들을 알게 된 것도 나름 좋은 부분이 있었다.
+      </GameInfoTextContent>
+    </GameInfoContent>
+  ),
+  text: (
+    <GameInfoContent>
+      {/* <RockFestaTextDescription>
+      제작기간 : 2024.1 ~ 1. / 기여도: 100%
+      </RockFestaTextDescription>  */}
+    </GameInfoContent>
+  
+  ),
+  githubLink: "https://github.com/SEIMIN-BJJ/Game_Info_react",
+  webLink: "https://seimin-bjj.github.io/Game_Info_react/",
+  route: '/gameinfo-develop',
+},
   }
 
 const ThirdSection = () => {
@@ -636,6 +750,7 @@ const ThirdSection = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [hovered, setHovered] = useState(false);
+  const [gameHovered, setGameHovered] = useState(false);
   const navigate = useNavigate();
 
   const animationLeft = {
@@ -769,7 +884,19 @@ const ThirdSection = () => {
                   </video>
                 )}
               </li>
-                <li className="another"></li>
+              <li
+                className="Game-Page"
+                onClick={() => handleSectionClick("gameinfo")}
+                onMouseEnter={() => setGameHovered(true)}
+                onMouseLeave={() => setGameHovered(false)}
+              >
+                <p className="GameInfoText">Console Game</p>
+                {gameHovered && (
+                  <video autoPlay loop muted playsInline >
+                    <source src={process.env.PUBLIC_URL + "/videos/game.mp4"} type="video/mp4" />
+                  </video>
+                )}
+              </li>
               </ul>
             </ThirdBoxSub>
         </ThirdBoxText>
@@ -791,13 +918,14 @@ const ThirdSection = () => {
                 <article>
                   <ul>
                     <div className="Monitor">
-                    <p style={{ backgroundImage: `url(${selectedSection === "soundnovel" ? NovelIMGFirst : RockIMGFirst})` }}></p>
+                    <p style={{ backgroundImage: `url(${selectedSection === "soundnovel" ? NovelIMGFirst : selectedSection === "rockfest" ? RockIMGFirst : GameIMGFirst})` }}></p>
                     </div>
                   </ul>
                   <ul>
-                  <MonitorTitle soundnovel={selectedSection === "soundnovel"} rockfest={selectedSection === "rockfest"}>
+                  <MonitorTitle soundnovel={selectedSection === "soundnovel"} rockfest={selectedSection === "rockfest"} gameinfo={selectedSection === "gameInfo"}>
                     {selectedSection === "soundnovel" && "SOUND NOVEL"}
                     {selectedSection === "rockfest" && "ROCK FESTIVAL"}
+                    {selectedSection === "gameinfo" && "Game InfoMation"}
                   </MonitorTitle>
                     {selectedSection && MonitorDiscriptions[selectedSection] && (
                       <>

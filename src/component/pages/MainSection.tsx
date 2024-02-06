@@ -38,7 +38,7 @@ const Content = styled.div`
 
 const ContentBoxPicture = styled(motion.div)`
   width: 24rem;
-  height: 40vh;
+  height: 20rem;
   display: flex;
   justify-content: space-between;
   background-size: cover;
