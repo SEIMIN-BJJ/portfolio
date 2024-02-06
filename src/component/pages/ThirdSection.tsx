@@ -791,16 +791,17 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 1500 && scrollPosition < 3000) {
+      if (scrollPosition > 1500 && scrollPosition < 2500) {
         setAnimate(true);
       } else {
         setAnimate(false);
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition >0 && scrollPosition < 4000) {
+      if (scrollPosition >0 && scrollPosition < 2200) {
         setAnimate(true);
       } else {
         setAnimate(false);
