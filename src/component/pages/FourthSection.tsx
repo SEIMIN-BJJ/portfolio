@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import MeIMG from "../assets/images/me.png";
-import Header from "component/block/Header/header";
-import SecondSection from "./SecondSection";
-import ThirdSection from "./ThirdSection";
-import FourthSection from "./FourthSection";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -159,7 +155,7 @@ const ContentBoxHashTag = styled(motion.li)`
   }
 `;
 
-const MainSection = () => {
+const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
   
   const animationLeft = {
@@ -192,20 +188,20 @@ const MainSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-  
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 300 && scrollPosition < 600) {
-        setAnimate(false);
-      } else {
+      if (scrollPosition > 2200 && scrollPosition < 4000) {
         setAnimate(true);
+      } else {
+        setAnimate(false);
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition > 600) {
-        setAnimate(false);
-      } else {
+      if (scrollPosition >2100 && scrollPosition < 4000) {
         setAnimate(true);
+      } else {
+        setAnimate(false);
       }
     }
   };
@@ -224,7 +220,6 @@ const MainSection = () => {
 
   return (
     <Container>
-      <Header />
       <Content>
         <ContentBoxPicture
           variants={animationLeft}
@@ -262,11 +257,8 @@ const MainSection = () => {
           </ContentBoxHashTag>
         </ContentBoxText>
       </Content>
-      <SecondSection />
-      <ThirdSection /> 
-      <FourthSection />
     </Container>
   );
 };
 
-export default MainSection;
+export default FourthSection;

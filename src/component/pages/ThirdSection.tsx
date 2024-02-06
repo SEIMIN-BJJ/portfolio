@@ -551,7 +551,7 @@ const SoundNovelContent = styled.div`
 
 const SoundNovelTextContent = styled.p`
   font-family: "ChosunCentennial";
-
+  line-height: 1.5rem;
 `;
 
 
@@ -586,7 +586,7 @@ margin-top: 3rem;
 
 const RockFestaTextContent = styled.p`
     font-family: 'Pretendard-Medium';
-
+    line-height: 1rem;
 `;
 
 const GameInfoContent = styled.div`
@@ -620,6 +620,7 @@ margin-top: 3rem;
 
 const GameInfoTextContent = styled.p`
     font-family: 'Pretendard-Medium';
+    line-height: 2rem;
 
 `;
 
@@ -714,7 +715,7 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
     content: (
     <GameInfoContent>
       <GameInfoTextContent>
-        제작자는 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
+        본인은 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
         그러다보니 레트로 게임들 및 기기들이 집에 즐비해 있으며<br />
         예전 게임 패키지들도 그대로 있는 상태이다.머리를 쉴 때 마저 게임으로 머리를 쉬니 얼마나 게임을 좋아하는지 집이 게임방이 되버렸다.<br />
         생각해보면 어릴 적 영향이 큰 듯한데 집이 그렇게 부유한편이 <br />아니다 보니 컴퓨터는 커녕 8비트 게임기만 있고 
@@ -731,7 +732,9 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
         하지만 어느 부분에서는 아무리 현존하는 현세대기 게임을 하고 레트로 게임을 하고 있어도 어릴적 감성을 느끼기는 많이 어렵다.<br />
         어릴 때만 해도 게임이 영어든 일어든 무슨 소린지도 모르면서 끝판왕까지 깼던걸 보면 참 어지간히도 좋아했고 순수했구나라는 생각이 들었다.<br />
         하지만 지금은 공략집을 보기도 힘들고 영어를 읽든 일어를 읽든 어떻게든 읽을 수는 있겠지만 이제는 한글이 아니면 귀찮고 힘들다.<br />
-        지금의 게임들도 참 좋고 편해졌지만 예전에 감성을 가질 수 있는 게임기들도 더 들여놓고 싶다는 마음이 크다.
+        지금의 게임들도 참 좋고 편해졌지만 예전의 감성을 가질 수 있는 게임기들도 더 들여놓고 싶다는 마음이 크다.<br />
+        하지만 그런 기기를 들여놓는다고 해서 어릴적 느껴봤을 그 두근거림이 과연 있을까 싶기도 하다.<br />
+        여러모로 욕심도 나지만 허탈하기도 하고 그립기도 한 그런 프로젝트이다.
 
       </GameInfoTextContent>
     </GameInfoContent>
@@ -788,16 +791,17 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
-      if (scrollPosition > 1500 && scrollPosition < 3000) {
+      if (scrollPosition > 1500 && scrollPosition < 2500) {
         setAnimate(true);
       } else {
         setAnimate(false);
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition >0 && scrollPosition < 4000) {
+      if (scrollPosition >0 && scrollPosition < 2200) {
         setAnimate(true);
       } else {
         setAnimate(false);
