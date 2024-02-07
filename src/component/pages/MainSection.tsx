@@ -49,10 +49,10 @@ const ContentBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 30%;
+    height: 35%;
     background-size: contain;
     background-position: center center;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
 `;
 
@@ -71,7 +71,7 @@ const ContentBoxText = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 `;
 
@@ -95,7 +95,7 @@ const ContentBoxTitle = styled(motion.p)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 3rem;
+    padding: 1rem;
   }
 `;
 
@@ -119,7 +119,7 @@ const ContentBoxSub = styled(motion.p)`
     align-items: center;
     text-align: center;
     font-size: 1rem;
-    padding: 1rem auto;
+    padding: 1rem;
   }
 `;
 
