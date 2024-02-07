@@ -251,9 +251,14 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       &:hover {
-        color: #E60013;
+        color: yellow;
         opacity: 1;
         font-size: 1.1rem;
+        text-shadow: 
+          -1px 0px #bababa, 
+            0px 1px #bababa, 
+            1px 0px #bababa, 
+            0px -1px #bababa;
     }
 
       @media (max-width: 768px) {
@@ -263,6 +268,11 @@ const ThirdBoxSub = styled(motion.section)`
       justify-content: center;
       align-items: center;
       border-radius: 10px;
+      text-shadow: 
+          -1px 0px #bababa, 
+            0px 1px #bababa, 
+            1px 0px #bababa, 
+            0px -1px #bababa;
       }
       }
     }
@@ -791,7 +801,6 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 1500 && scrollPosition < 2500) {
