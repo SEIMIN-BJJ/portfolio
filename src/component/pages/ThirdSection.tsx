@@ -102,7 +102,6 @@ const ThirdBoxSub = styled(motion.section)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-
     @media (max-width: 768px) {
     width: 100%;
     height: 100%;

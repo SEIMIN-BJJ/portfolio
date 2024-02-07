@@ -33,7 +33,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    max-height: 100vh;
+    max-height: auto;
     flex-direction: column;
   }
 `;
@@ -52,11 +52,12 @@ const ContentBoxPicture = styled(motion.div)`
   margin-top: -20vh;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 35%;
-    background-size: contain;
+    width: 90%;
+    height: 40%;
+    background-size: cover;
     background-position: center center;
-    margin: 0 auto;
+    margin: 0.5rem auto;
+    border-radius: 10px;
   }
 `;
 
@@ -96,11 +97,14 @@ const ContentBoxTitle = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 1.5rem;
+    height: auto;
+    font-size: 2.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1rem;
+    padding: 0 20px;
+    margin: 1rem auto;
+
   }
 `;
 
@@ -119,20 +123,18 @@ const ContentBoxSub = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
+    font-size: 1.2rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    padding: 20px 20px;
-    font-size: 0.9rem;
+    padding: 0 20px;
+    margin: 1rem auto;
   }
 `;
 
 const ContentBoxHashTag = styled(motion.li)`
   width: 100%;
   padding: 0px 60px;
-  font-family: "SB 어그로OTF M";
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -144,25 +146,24 @@ const ContentBoxHashTag = styled(motion.li)`
     justify-content: center;
     align-items: center;
     border-radius: 10rem;
+    font-family: 'Pretendard-ExtraBold';
     font-size: 0.8rem;
     font-weight: bold;
     color: #ccc;
     padding: 0.1rem 1.2rem; 
-    transition: 0.15s ease-in-out;
-    font-family: 'SB 어그로OTF L';
-    font-weight: bold;
 
   }
 
   @media (max-width: 768px) {
     width: 100%;
+    font-size: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
+    padding: 0 20px;
+    margin: 1rem auto;
+}
 
-  }
 `;
 
 const MainSection = () => {
@@ -254,7 +255,7 @@ const MainSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. 프론트엔드 개발자 임성민입니다.<br />
+            안녕하세요. 웹퍼블리셔, 프론트엔드 개발자 임성민입니다.<br />
             저는 개발과 디자인은 어느 것 하나 쉽지없다 라는 생각을 가지고 작업을 하고 있습니다.<br />
             눈에 보이는 시각적인 요소는 매우 중요하며, 사용자들의 기대 수준도 높습니다.<br />
             그래서 어떻게 하면 사람들이 더 편안하게 보고 사용할 수 있을지, <br />
