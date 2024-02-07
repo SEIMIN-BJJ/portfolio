@@ -183,12 +183,13 @@ const SecondBoxHashTag = styled(motion.div)`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 20px; 
     line-height: 2rem;
+    margin: 0.5rem auto;
 
     &:hover {
-    font-size: 1rem;
+    font-size: 1.2rem;
     }
   }
 }
