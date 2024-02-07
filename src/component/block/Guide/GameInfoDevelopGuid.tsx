@@ -13,10 +13,10 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #689cf8;
-  color: #fff;
+  color: yellow;
 
   @media screen and (max-width: 768px) {
-  height: 100vh;
+  height: 110vh;
   overflow-x: hidden;
   }
 
@@ -100,7 +100,11 @@ li {
     padding: 5px;
     margin: 2px;
     font-size: 0.5rem;
-
+    text-shadow: 
+    -1px 0px #bababa, 
+     0px 1px #bababa, 
+     1px 0px #bababa, 
+     0px -1px #bababa;
   }
 `;
 
@@ -114,7 +118,12 @@ const ContentExplanation = styled.h1`
   font-size: 0.9rem;
   letter-spacing: 1px;
   line-height: 1.5rem;
-  color: yellow;
+  color: #ffff36;
+  text-shadow: 
+    -1px 0px #bababa, 
+      0px 1px #bababa, 
+      1px 0px #bababa, 
+      0px -1px #bababa;
 
   @media screen and (max-width: 768px) {
   width: 100vw;
