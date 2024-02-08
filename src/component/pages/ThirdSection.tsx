@@ -452,7 +452,7 @@ const ModalContent = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 13px;
+        padding: 5px;
         margin-bottom: 1rem;
         }
       }
@@ -532,7 +532,7 @@ const ModalContent = styled(motion.div)`
 const SoundNovelContent = styled.div`
   font-family: "ChosunCentennial";
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
   height: 29rem;
   overflow-y: auto;
 
@@ -560,14 +560,14 @@ const SoundNovelContent = styled.div`
 
 const SoundNovelTextContent = styled.p`
   font-family: "ChosunCentennial";
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 `;
 
 
 const RockFestaContent = styled.div`
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
   height: 29rem;
   overflow-y: auto;
 
@@ -595,13 +595,13 @@ margin-top: 3rem;
 
 const RockFestaTextContent = styled.p`
     font-family: 'Pretendard-Medium';
-    line-height: 1rem;
+    line-height: 1.7rem;
 `;
 
 const GameInfoContent = styled.div`
   font-family: "PressStart2P-Regular";
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
   height: 29rem;
   overflow-y: auto;
 
@@ -686,11 +686,11 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       content: (
       <RockFestaContent>
         <RockFestaTextContent>
-        SEIMIN 락페스티벌은 인천 펜타포트 페스티벌의 컨셉을 가져와 제작을 하였으며<br />
+        SEIMIN 락페스티벌은 인천 펜타포트 페스티벌의 컨셉을 가져와 제작을 하였으며
         본인이 좋아하는 현재 모일수가 없는 밴드들만을 모아서 제작하였다.<br /><br />
-        현재 제작된 음악의 장르는 트랜스코어, 뉴메탈, 재즈, 하드코어 재즈, FunkRock 등등의 장르로 발탁하였으며<br /><br />
-        여러나라의 좋은 음악들과 락페스티벌이라는 컨셉에 맞게 메탈, 락, 퓨전재즈 등 <br />한가지의 음악장르에 국한되어있지 않고
-        좋은 밴드들을 홍보하기 위해 또는 <br />흔히 말하는 덕질이라는 표현으로써 이번 프로젝트를 제작하게 되었다.<br /><br />
+        현재 제작된 음악의 장르는 트랜스코어, 뉴메탈, 재즈, 하드코어 재즈, FunkRock 등등의 장르로 발탁하였으며<br />
+        여러나라의 좋은 음악들과 락페스티벌이라는 컨셉에 맞게 메탈, 락, 퓨전재즈 등 한가지의 음악장르에 국한되어있지 않고
+        좋은 밴드들을 홍보하기 위해 또는 흔히 말하는 덕질이라는 표현으로써 이번 프로젝트를 제작하게 되었다.<br /><br />
         본인은 음악을 매우 좋아하다보니 매년 락페스티벌을 갔었으나 현재는 갈 수가 없는 현실에 매우 절망을 한 적이 많았다.<br /><br />
         예전에 락이 성황하던 시절인 2006년부터 2010년까지의 그 좋았던 시절을 잊지 못하여 예전에 듣는 음악들을 주로 듣는 편이다.<br />
         사실 요새 나오는 락이나 음악들은 잘 알지 못하여 예전 음악만 듣는 이유도 있긴하다.<br />한가지 더 이유가 있다면 무언가가 빠진 느낌이 많다.<br /><br />
@@ -726,23 +726,23 @@ const MonitorDiscriptions: Record<string, MonitorDescription>  = {
       <GameInfoTextContent>
         본인은 PC게임보다는 콘솔게임을 너무 좋아한다.<br />
         그러다보니 레트로 게임들 및 기기들이 집에 즐비해 있으며<br />
-        예전 게임 패키지들도 그대로 있는 상태이다.머리를 쉴 때 마저 게임으로 머리를 쉬니 얼마나 게임을 좋아하는지 집이 게임방이 되버렸다.<br />
+        예전 게임 패키지들도 그대로 있는 상태이다.머리를 쉴 때 마저 게임으로 머리를 쉬니 얼마나 게임을 좋아하는지 집이 게임방이 되버렸다.<br /><br />
         생각해보면 어릴 적 영향이 큰 듯한데 집이 그렇게 부유한편이 <br />아니다 보니 컴퓨터는 커녕 8비트 게임기만 있고 
         어쩌다가 게임보이를 갖게되서 너무 좋아했던 기억이 있다.<br />
-        그런 파동으로 인해서 나이먹고 게임에 집착하게 됐는지도 모른다.<br />
+        그런 파동으로 인해서 나이먹고 게임에 집착하게 됐는지도 모른다.<br /><br />
         요새는 플스, 엑스박스, 스위치 등등 많은 게임들이 쏟아져나오고 콘솔들이 나왔지만
-        그래도 가끔 레트로 게임이 생각나서 할 때가 종종 있다.<br />그만큼 생각안하기 좋은게 레트로게임만 한것도 없다.<br />
-        아, 물론 현세대기도 전부 보유중이긴 하다.<br />
+        그래도 가끔 레트로 게임이 생각나서 할 때가 종종 있다.<br />그만큼 생각안하기 좋은게 레트로게임만 한것도 없다.<br /><br />
+        아, 물론 현세대기도 전부 보유중이긴 하다.<br /><br />
         요새는 많은 게임들이 있다보니 나오면 전부 해보고 괜찮은 AAA게임들만 모아놓고 있기도 하다.<br />
-        이 토이 프로젝트도 많은 게임들을 소개하려다보니 API양이 너무 많다.<br />
+        이 토이 프로젝트도 많은 게임들을 소개하려다보니 API양이 너무 많다.<br /><br />
         그래서 플랫폼과 장르만을 소개하는 것으로 토이 프로젝트를 만들었다.<br />
         한달에 한번씩만 사용할 수 있는 한정 소스만 있다보니 구현하려면 돈이 꽤 들어가는 부분이다.<br />그래서 트레일러 구현까지는 무리여서 소개까지만 하는 작은 웹사이트를 구현했다.
-        <br />게임 정보들이 많이 있는 API이다 보니 모르는 게임들을 알게 된 것도 나름 좋은 부분이 있었다.<br />
-        하지만 어느 부분에서는 아무리 현존하는 현세대기 게임을 하고 레트로 게임을 하고 있어도 어릴적 감성을 느끼기는 많이 어렵다.<br />
+        <br /><br />게임 정보들이 많이 있는 API이다 보니 모르는 게임들을 알게 된 것도 나름 좋은 부분이 있었다.<br />
+        하지만 어느 부분에서는 아무리 현존하는 현세대기 게임을 하고 레트로 게임을 하고 있어도 어릴적 감성을 느끼기는 많이 어렵다.<br /><br />
         어릴 때만 해도 게임이 영어든 일어든 무슨 소린지도 모르면서 끝판왕까지 깼던걸 보면 참 어지간히도 좋아했고 순수했구나라는 생각이 들었다.<br />
-        하지만 지금은 공략집을 보기도 힘들고 영어를 읽든 일어를 읽든 어떻게든 읽을 수는 있겠지만 이제는 한글이 아니면 귀찮고 힘들다.<br />
+        하지만 지금은 공략집을 보기도 힘들고 영어를 읽든 일어를 읽든 어떻게든 읽을 수는 있겠지만 이제는 한글이 아니면 귀찮고 힘들다.<br /><br />
         지금의 게임들도 참 좋고 편해졌지만 예전의 감성을 가질 수 있는 게임기들도 더 들여놓고 싶다는 마음이 크다.<br />
-        하지만 그런 기기를 들여놓는다고 해서 어릴적 느껴봤을 그 두근거림이 과연 있을까 싶기도 하다.<br />
+        하지만 그런 기기를 들여놓는다고 해서 어릴적 느껴봤을 그 두근거림이 과연 있을까 싶기도 하다.<br /><br />
         여러모로 욕심도 나지만 허탈하기도 하고 그립기도 한 그런 프로젝트이다.
 
       </GameInfoTextContent>
