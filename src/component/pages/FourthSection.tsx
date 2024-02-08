@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import MeIMG from "../assets/images/me.png";
+import FourthMeIMG from "../assets/images/FourthMe.png";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -24,31 +24,34 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     flex-direction: column;
   }
 `;
 
 const ContentBoxPicture = styled(motion.div)`
   width: 24rem;
-  height: 20rem;
+  height: 26rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -20vh;
-  background-image: url(${MeIMG});
+  background-position: center center;
+  background-image: url(${FourthMeIMG});
+  position: relative;
+  margin-top: -5vh;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 30%;
-    background-size: contain;
+    width: 90%;
+    height: 50%;
+    background-size: cover;
     background-position: center center;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
+    border-radius: 5px;
   }
 `;
 
@@ -67,31 +70,36 @@ const ContentBoxText = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin: 1rem auto;
+
   }
 `;
 
 const ContentBoxTitle = styled(motion.p)`
   width: 100%;
-  height: 4rem;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px 60px;
+  padding: 0px 60px;
   padding-top: 0;
   font-weight: bold;
-  font-size: 2.5rem;
-  font-family: 'Pretendard-Bold';
+  font-size: 1.5rem;
+  font-family: 'Pretendard-ExtraBold';
   position: relative;
   color: #212020;
+  text-align: right;
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 1.5rem;
+    height: auto;
+    font-size: 2.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 3rem 3rem;
+    padding: 0 20px;
+    margin: 1rem auto;
+
   }
 `;
 
@@ -100,68 +108,33 @@ const ContentBoxSub = styled(motion.p)`
   height: auto;
   padding: 20px 60px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  text-align: left;
-  font-size: 0.89rem;
-  font-family: 'Pretendard-ExtraBold';
+  text-align: right;
+  font-size: 0.8rem;
+  font-family: 'Pretendard-Bold';
   color: #171717a7;
-  /* border: 1px solid black; */
+  line-height: 2rem;
 
   @media (max-width: 768px) {
     width: 100%;
+    font-size: 1.2rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    padding: 1rem auto;
-  }
-`;
-
-const ContentBoxHashTag = styled(motion.li)`
-  width: 100%;
-  padding: 0px 60px;
-  font-family: "SB 어그로OTF M";
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  color: #171717a7;
-
-  p {
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #ccc;
-    padding: 0.1rem 1.2rem; 
-    transition: 0.15s ease-in-out;
-    font-family: 'SB 어그로OTF L';
-    font-weight: bold;
-
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
-
+    padding: 0 20px;
+    margin: 1rem auto;
+    line-height: 2.3rem;
   }
 `;
 
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
   
-  const animationLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
+  // const animationLeft = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: { opacity: 1, x: 0 },
+  // };
 
   const animationRight = {
     hidden: { opacity: 0, x: 50 },
@@ -179,11 +152,6 @@ const FourthSection = () => {
   const transitionText = {
     duration: 1,
     delay: 1.5,
-  };
-
-  const transitionHashTag = {
-    duration: 1,
-    delay: 2,
   };
 
   const handleScroll = () => {
@@ -220,41 +188,43 @@ const FourthSection = () => {
   return (
     <Container>
       <Content>
-        <ContentBoxPicture
-          variants={animationLeft}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transition}
-        ></ContentBoxPicture>
         <ContentBoxText
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transitionSecond}
+          transition={transition}
         >
           <ContentBoxTitle       
-          variants={animationLeft}
+          variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>My Developer Life</ContentBoxTitle>
+          transition={transition}>Collaboration is more important than development.</ContentBoxTitle>
           <ContentBoxSub          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transitionText}>
-            안녕하세요. UI / UX 디자이너, 퍼블리셔 임성민입니다.<br /><br /> 개발과 디자인은 어느것 하나 쉽지없다 라는 생각을 가지고 작업을 하고 있습니다. <br /> <br /> 사람들은 눈에 들어오는 것을 중요시 여깁니다. 그리고 보는 수준이 높습니다.<br /> <br /> 그래서 어떻게 해야 더 편하게 볼 수 있을까. 어떻게 하면 더 편하게 사용할 수 있을까.<br /> <br />어떻게 하면 더 좋을 수 있을까를 궁극적인 목표로 공부하고 있습니다.<br /><br />CSS와 Javascript 등으로 동적화면을 구축하는 것에 관심이 많고 
-            <br /><br /> 인터랙티브 웹에 관심이 많아 현재도 꾸준히 노력 및 공부중입니다.
+          transition={transitionSecond}>
+            개발보다 중요한건 협업이다.<br />
+            같이 일하던 부장님이 계셨는데 항상 저 문구를 강조하셨습니다.<br />
+            개발보다 더 중요한건 협업이다.<br />
+            기술이란 것은 배우면 그만이다.
+            기술이란 내가 쓰는 도구에 지나지 않는다.<br />
+            한가지 스택을 무서울 정도로 파보고 또 파봐라.
+            한가지를 오롯이 내것으로 만드는 것도 어려운데<br />
+            새로운게 나왔다고 전부 다 가지려는 건 욕심이다.<br />
+            진짜로 잘하는 사람은 소통을 잘하는 사람이다.<br />
+            너무나 당연한 얘기이고 세상이치에 전부 대입 할 수 있는 말이지만<br />
+            너무나 쉽기도 어렵기도 한 이 이야기를 명심하라고 얘기하셨습니다.<br />
+            그 말씀들을 항상 마음에 새기고 일이든 어디서든 적용 하려 노력합니다.<br />
+            소통할 수 있는 사람, 노력하는 사람, 임성민입니다.
           </ContentBoxSub>
-          <ContentBoxHashTag          
+        </ContentBoxText>
+        <ContentBoxPicture
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            <p>#노력</p>
-            <p>#끈기</p>
-            <p>#편의성</p>
-          </ContentBoxHashTag>
-        </ContentBoxText>
+          transition={transitionText}
+        ></ContentBoxPicture>
       </Content>
     </Container>
   );

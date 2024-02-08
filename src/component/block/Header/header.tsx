@@ -36,7 +36,7 @@ const Logo = styled.h4`
     width: 100%;
     font-size: 1.5rem;
     color: #000;
-    padding: 0px 30px;
+    padding: 0 2rem;
     position: relative;
   }
 `;
@@ -50,20 +50,9 @@ const Nav = styled.nav`
   color: #000;
   font-family: "Pretendard-Bold";
   position: relative;
-  padding: 0 15rem ;
+  padding: 0 1.5rem;
   }
 
-  @media (max-width: 414px) {
-  padding: 0 18rem ;
-  }
-
-  @media (max-width: 390px) {
-  padding: 0 16rem ;
-  }
-
-  @media (max-width: 430px) {
-  padding: 0 13rem ;
-  }
 `;
 
 const Ul = styled.ul`
@@ -71,6 +60,7 @@ const Ul = styled.ul`
   display: flex;
   align-items: center;
   position: relative;
+
 `;
 
 const Li = styled.li`

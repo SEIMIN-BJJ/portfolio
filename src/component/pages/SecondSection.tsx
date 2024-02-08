@@ -260,7 +260,6 @@ const SecondSection = () => {
   
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-  
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 650 && scrollPosition < 1500) {
@@ -270,7 +269,7 @@ const SecondSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition > 450 && scrollPosition < 1200) {
+      if (scrollPosition > 450 && scrollPosition < 1700) {
         setAnimate(true);
       } else {
         setAnimate(false);

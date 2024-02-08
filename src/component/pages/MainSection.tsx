@@ -104,7 +104,6 @@ const ContentBoxTitle = styled(motion.p)`
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
-    color: #292929;
 
   }
 `;
@@ -124,15 +123,12 @@ const ContentBoxSub = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
-    font-family: 'Pretendard-Regular';
-    color: #202020;
-    font-weight: 900;
     line-height: 2.3rem;
   }
 `;
@@ -143,10 +139,9 @@ const ContentBoxHashTag = styled(motion.li)`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  color: #171717a7;
 
   p {
-    border: 1px solid #646464;
+    border: 1px solid #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,8 +149,12 @@ const ContentBoxHashTag = styled(motion.li)`
     font-family: 'Pretendard-Medium';
     font-size: 0.8rem;
     font-weight: bold;
-    color: #646464;
+    color: #ccc;
     padding: 0.1rem 1.2rem; 
+
+    @media (max-width: 768px) {
+      display: none;
+}
 
   }
 
@@ -179,10 +178,10 @@ const MainSection = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const animationRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 },
-  };
+  // const animationRight = {
+  //   hidden: { opacity: 0, x: 50 },
+  //   visible: { opacity: 1, x: 0 },
+  // };
 
   const transition = {
     duration: 1,
@@ -245,7 +244,7 @@ const MainSection = () => {
           transition={transition}
         ></ContentBoxPicture>
         <ContentBoxText
-          variants={animationRight}
+          variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}
@@ -256,7 +255,7 @@ const MainSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transition}>My Developer Life</ContentBoxTitle>
           <ContentBoxSub          
-          variants={animationRight}
+          variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
@@ -271,7 +270,7 @@ const MainSection = () => {
             저의 열정과 노력을 통해 사용자들에게 더 나은 웹 경험을 제공하기 위해 노력하고 있습니다.
           </ContentBoxSub>
           <ContentBoxHashTag          
-          variants={animationRight}
+          variants={animationLeft}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}>
