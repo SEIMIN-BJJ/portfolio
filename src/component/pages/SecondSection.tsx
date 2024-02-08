@@ -186,6 +186,7 @@ const SecondBoxHashTag = styled(motion.div)`
     padding: 0 20px; 
     line-height: 2.1rem;
     font-family: 'Pretendard-Medium';
+    color: #a7a7a7;
 
     &:hover {
     font-size: 1.2rem;

@@ -33,7 +33,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    max-height: auto;
+    height: 130vh;
     flex-direction: column;
   }
 `;
@@ -53,11 +53,11 @@ const ContentBoxPicture = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 90%;
-    height: 40%;
+    height: 100%;
     background-size: cover;
     background-position: center center;
     margin: 0.5rem auto;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 `;
 
@@ -124,14 +124,16 @@ const ContentBoxSub = styled(motion.p)`
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
-    font-family: 'Pretendard-Bold';
-    color: #161616;
+    font-family: 'Pretendard-Regular';
+    color: #202020;
+    font-weight: 900;
+    line-height: 2.3rem;
   }
 `;
 
@@ -144,7 +146,7 @@ const ContentBoxHashTag = styled(motion.li)`
   color: #171717a7;
 
   p {
-    border: 1px solid #ccc;
+    border: 1px solid #646464;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +154,7 @@ const ContentBoxHashTag = styled(motion.li)`
     font-family: 'Pretendard-Medium';
     font-size: 0.8rem;
     font-weight: bold;
-    color: #ccc;
+    color: #646464;
     padding: 0.1rem 1.2rem; 
 
   }
