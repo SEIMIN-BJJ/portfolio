@@ -222,7 +222,7 @@ const SecondBoxHashTag = styled(motion.div)`
 
 // const ModalCloseButton = styled.button`
 //   margin-top: 1rem;
-//   background-color: #ccc;
+//   background-color: #cce;
 //   color: #fff;
 //   border: none;
 //   padding: 10px;
