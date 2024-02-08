@@ -116,7 +116,7 @@ const ContentBoxSub = styled(motion.p)`
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-family: 'Pretendard-Bold';
   color: #171717a7;
   line-height: 2rem;
@@ -266,7 +266,7 @@ const MainSection = () => {
             어떻게 하면 더 사용자 친화적으로 만들 수 있을지에 대한 고민을 끊임없이 하고 있습니다.<br />
             저의 궁극적인 목표는 사용자들이 웹사이트나 앱을 더 편안하게 사용할 수 있도록 하는 것입니다. <br />
             그러기 위해서 다양한 기술을 사용하여 동적인 화면을 구축하고, <br />사용자와의 상호작용을 강화하는데 집중하고 있습니다.<br /> 
-            인터랙티브한 웹에 큰 관심을 가지고 있으며, 이를 위해 꾸준히 노력하고 공부하고 있습니다.<br />
+            인터랙티브 웹에 큰 관심을 가지고 있으며, 이를 위해 꾸준히 노력하고 공부하고 있습니다.<br />
             저의 열정과 노력을 통해 사용자들에게 더 나은 웹 경험을 제공하기 위해 노력하고 있습니다.
           </ContentBoxSub>
           <ContentBoxHashTag          

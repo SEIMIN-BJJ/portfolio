@@ -114,7 +114,7 @@ const ContentBoxSub = styled(motion.p)`
   justify-content: flex-end;
   align-items: center;
   text-align: right;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: 'Pretendard-Bold';
   color: #171717a7;
   line-height: 2rem;
