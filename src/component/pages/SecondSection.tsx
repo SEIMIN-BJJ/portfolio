@@ -184,13 +184,8 @@ const SecondBoxHashTag = styled(motion.div)`
     flex-direction: column;
     font-size: 1.2rem;
     padding: 0 20px; 
-<<<<<<< HEAD
-    line-height: 2rem;
-    margin: 0.5rem auto;
-=======
     line-height: 2.1rem;
     font-family: 'Pretendard-Medium';
->>>>>>> fullPageTest
 
     &:hover {
     font-size: 1.2rem;
