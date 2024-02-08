@@ -78,13 +78,15 @@ const SecondBoxText = styled(motion.div)`
   align-items: flex-start;
   flex-direction: column;
   z-index: 2;
-
+  margin-bottom: 3rem;
+  
   @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
   }
 
 `;

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import FourthMeIMG from "../assets/images/FourthMe.png";
+import { FaGithub } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { FaPhone } from "react-icons/fa";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -61,7 +64,7 @@ const ContentBoxText = styled(motion.div)`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: -20vh;
+  margin-top: -41vh;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -128,6 +131,71 @@ const ContentBoxSub = styled(motion.p)`
   }
 `;
 
+const ContentBoxHashTag = styled(motion.li)`
+  width: 100%;
+  padding: 0px 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    font-family: 'Pretendard-Medium';
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.1rem 0.5rem; 
+
+  a {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border: 0;
+
+    .github:hover {
+        color: #ccc;
+        transition: 0.21s ease-in-out;
+
+      }
+      .mail:hover {
+        color: #76adfb;
+        transition: 0.21s ease-in-out;
+
+      }
+      .phone:hover {
+        color: #17b92c;
+        transition: 0.21s ease-in-out;
+
+      }
+
+    @media (max-width: 768px) {
+    padding: 0 0.8rem; 
+    font-size: 2rem;
+
+}
+  }
+
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    margin: 1rem auto;
+}
+
+`;
+
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
   
@@ -150,6 +218,11 @@ const FourthSection = () => {
     delay: 0.9,
   };
   const transitionText = {
+    duration: 1,
+    delay: 2,
+  };
+
+  const transitionHashTag = {
     duration: 1,
     delay: 1.5,
   };
@@ -218,6 +291,36 @@ const FourthSection = () => {
             그 말씀들을 항상 마음에 새기고 일이든 어디서든 적용 하려 노력합니다.<br />
             소통할 수 있는 사람, 노력하는 사람, 임성민입니다.
           </ContentBoxSub>
+          <ContentBoxHashTag          
+          variants={animationRight}
+          initial="hidden"
+          animate={animate ? "visible" : "hidden"}
+          transition={transitionHashTag}>
+            <p>              
+              <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/SEIMIN-BJJ">
+                <FaGithub className="github" />
+              </a>
+            </p>
+            <p>              
+              <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:interkp12@gmail.com">
+                <FiMail className="mail" />
+              </a>
+            </p>
+            <p>
+            <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href="tel:010-6418-5624">
+                <FaPhone className="phone" />
+              </a>
+            </p>
+          </ContentBoxHashTag>
         </ContentBoxText>
         <ContentBoxPicture
           variants={animationRight}
