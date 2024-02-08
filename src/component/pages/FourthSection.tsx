@@ -271,7 +271,7 @@ const FourthSection = () => {
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Collaboration is more important than development.</ContentBoxTitle>
+          transition={transition}>Collaboration is More Important Than Development</ContentBoxTitle>
           <ContentBoxSub          
           variants={animationRight}
           initial="hidden"
