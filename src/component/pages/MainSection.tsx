@@ -117,7 +117,7 @@ const ContentBoxSub = styled(motion.p)`
   align-items: center;
   text-align: left;
   font-size: 0.8rem;
-  font-family: 'Pretendard-ExtraBold';
+  font-family: 'Pretendard-Bold';
   color: #171717a7;
   line-height: 2rem;
 
@@ -129,6 +129,8 @@ const ContentBoxSub = styled(motion.p)`
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
+    font-family: 'Pretendard-Medium';
+
   }
 `;
 
@@ -146,7 +148,7 @@ const ContentBoxHashTag = styled(motion.li)`
     justify-content: center;
     align-items: center;
     border-radius: 10rem;
-    font-family: 'Pretendard-ExtraBold';
+    font-family: 'Pretendard-Medium';
     font-size: 0.8rem;
     font-weight: bold;
     color: #ccc;
@@ -156,7 +158,7 @@ const ContentBoxHashTag = styled(motion.li)`
 
   @media (max-width: 768px) {
     width: 100%;
-    font-size: 1rem;
+    font-size: 3rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
