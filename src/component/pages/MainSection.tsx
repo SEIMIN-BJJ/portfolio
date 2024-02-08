@@ -104,6 +104,7 @@ const ContentBoxTitle = styled(motion.p)`
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
+    color: #292929;
 
   }
 `;
@@ -129,8 +130,8 @@ const ContentBoxSub = styled(motion.p)`
     align-items: center;
     padding: 0 20px;
     margin: 1rem auto;
-    font-family: 'Pretendard-Medium';
-
+    font-family: 'Pretendard-Bold';
+    color: #161616;
   }
 `;
 
