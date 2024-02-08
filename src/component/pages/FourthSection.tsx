@@ -36,8 +36,8 @@ const Content = styled.div`
 `;
 
 const ContentBoxPicture = styled(motion.div)`
-  width: 24rem;
-  height: 26rem;
+  width: 25rem;
+  height: 25rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -46,7 +46,7 @@ const ContentBoxPicture = styled(motion.div)`
   background-position: center center;
   background-image: url(${FourthMeIMG});
   position: relative;
-  margin-top: -5vh;
+  margin-top: -7vh;
 
   @media (max-width: 768px) {
     width: 90%;
