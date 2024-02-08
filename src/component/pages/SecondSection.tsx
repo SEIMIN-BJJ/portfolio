@@ -78,7 +78,6 @@ const SecondBoxText = styled(motion.div)`
   align-items: flex-start;
   flex-direction: column;
   z-index: 2;
-  margin-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -150,7 +149,7 @@ const SecondBoxSub = styled(motion.section)`
 const SecondBoxHashTag = styled(motion.div)`
   width: 100%;
   height: auto;
-  font-family: 'Pretendard-ExtraBold';
+  font-family: 'Pretendard-Bold';
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -183,12 +182,13 @@ const SecondBoxHashTag = styled(motion.div)`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 20px; 
-    line-height: 2rem;
+    line-height: 2.1rem;
+    font-family: 'Pretendard-Medium';
 
     &:hover {
-    font-size: 1rem;
+    font-size: 1.2rem;
     }
   }
 }
