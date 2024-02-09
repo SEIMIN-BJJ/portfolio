@@ -244,7 +244,7 @@ const SoundNovelDevelopGuide = () => {
             <li>Framer-Motion</li>
           </ContentText>
           <ContentExplanation>
-          Sound Novel 장르의 웹북 토이 프로젝트로 구현하였습니다. <br />프로젝트의 핵심은 Router를 통한 네비게이션, Framer-Motion을 활용한 애니메이션 효과 및 Hook을 활용한 간단하게 기능 구현이 있습니다.
+          Sound Novel 장르의 웹북 프로젝트로 구현하였습니다. <br />프로젝트의 핵심은 Router를 통한 네비게이션, Framer-Motion을 활용한 애니메이션 효과 및 Hook을 활용한 간단하게 기능 구현이 있습니다.
           각 페이지를 독립적으로 구성하고, Framer-Motion을 이용하여 책장이 넘어가는 애니메이션을 구현하였습니다. <br />그리고 Hook을 활용하여 배경음악을 켜고 끄는 기능을 간편하게 구현했습니다.
           <br />프로젝트의 스타일링은 Style-Components를 사용하여 일관된 디자인을 유지하였습니다. 특히, 반복되는 구성 요소들을 최소화하고 글의 내용 및 배경 음악에 더 많은 주력을 기울여 제작했습니다. 이를 통해 사용자가 내용에 더욱 집중할 수 있도록 하였습니다.
           <br /> Sound Novel만의 독특한 특성을 살려 시각적 및 청각적 경험을 제공하는 데 중점을 두었습니다.

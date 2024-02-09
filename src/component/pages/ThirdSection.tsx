@@ -772,17 +772,17 @@ const ThirdSection = () => {
   const navigate = useNavigate();
 
   const animationLeft = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: -30 },
     visible: { opacity: 1, x: 0 },
   };
 
   const animationRight = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 30 },
     visible: { opacity: 1, x: 0 },
   };
 
   const animationUp = {
-    hidden: { opacity: 0, y: -50 },
+    hidden: { opacity: 0, y: -30 },
     visible: { opacity: 1, y: 0 },
   };
   const transition = {

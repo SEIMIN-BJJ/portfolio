@@ -270,10 +270,10 @@ const GameInfoDevelopGuid = () => {
           </ContentText>
           <ContentExplanation>
             간단한 GameInfomation을 구축한 웹사이트입니다.<br />
-            api는 Rawg에서 사용한 오픈 API이며 axios를 이용해 구축하였습니다.
+            API는 Rawg에서 사용한 오픈 API이며 axios를 이용해 구축하였습니다.
             스크롤이 끝나면 다른 정보를 가져오게 하였고 쓰로틀링을 넣어 시간을 두고 정보를 가져오게 했습니다.
-            무한 스크롤에 갇힐수도 있고 리소스 사용이 워낙 많다보니 대처법으로 진행하였습니다.<br />
-            트레일러까지 구현하려 했으나 데이터를 가져오려다 보니 양이 많아 무제한 서비스를 이용해야 하는 상황이라 플랫폼 장르까지가 한계였습니다.
+            리소스 사용이 워낙 많다보니 대처법으로 진행하였습니다.<br />
+            트레일러까지 구현하려 했으나 데이터 양이 많아 무제한 서비스를 이용해야 하는 상황이라 플랫폼 장르까지가 한계였습니다.
           </ContentExplanation>
           <ContentWebExplan autoPlay muted playsInline>
             <source src={process.env.PUBLIC_URL + "/videos/GameInfoExplan.mp4"} type="video/mp4" />
