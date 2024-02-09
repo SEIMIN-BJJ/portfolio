@@ -772,17 +772,17 @@ const ThirdSection = () => {
   const navigate = useNavigate();
 
   const animationLeft = {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 },
   };
 
   const animationRight = {
-    hidden: { opacity: 0, x: 30 },
+    hidden: { opacity: 0, x: 20 },
     visible: { opacity: 1, x: 0 },
   };
 
   const animationUp = {
-    hidden: { opacity: 0, y: -30 },
+    hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 },
   };
   const transition = {
@@ -800,6 +800,7 @@ const ThirdSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    console.log(scrollPosition)
     if (window.innerWidth >= 768) {
       // 웹페이지에서의 스크롤 범위
       if (scrollPosition > 1500 && scrollPosition < 2500) {
@@ -809,7 +810,7 @@ const ThirdSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition >0 && scrollPosition < 2500) {
+      if (scrollPosition >1500 && scrollPosition < 3000) {
         setAnimate(true);
       } else {
         setAnimate(false);
