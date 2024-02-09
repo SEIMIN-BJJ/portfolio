@@ -260,7 +260,7 @@ const GameInfoDevelopGuid = () => {
       <Link to={"/"}>
         <ContentBtn>PORTFOLIO</ContentBtn>
       </Link>
-        <ContentTitle>Sound Novel Project <br /><br />Develop</ContentTitle>
+        <ContentTitle>Game InfoMation Project <br /><br />Develop</ContentTitle>
           <ContentText>
             <li>React</li>
             <li>Style-Components</li>
@@ -269,7 +269,7 @@ const GameInfoDevelopGuid = () => {
             <li>Framer-Motion</li>
           </ContentText>
           <ContentExplanation>
-            간단한 GameInfomation을 구축한 웹사이트입니다.<br />
+            간단한 Console Game Infomation을 구축한 웹사이트입니다.<br />
             API는 Rawg에서 사용한 오픈 API이며 axios를 이용해 구축하였습니다.
             스크롤이 끝나면 다른 정보를 가져오게 하였고 쓰로틀링을 넣어 시간을 두고 정보를 가져오게 했습니다.
             리소스 사용이 워낙 많다보니 대처법으로 진행하였습니다.<br />
