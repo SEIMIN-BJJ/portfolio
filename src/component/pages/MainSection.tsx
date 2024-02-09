@@ -259,7 +259,7 @@ const MainSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionText}>
-            안녕하세요. 웹퍼블리셔, 프론트엔드 개발자 임성민입니다.<br />
+            안녕하세요. 웹퍼블리셔, 프론트엔드 임성민입니다.<br />
             저는 개발과 디자인은 어느 것 하나 쉽지없다 라는 생각을 가지고 작업을 하고 있습니다.<br />
             눈에 보이는 시각적인 요소는 매우 중요하며, 사용자들의 기대 수준도 높습니다.<br />
             그래서 어떻게 하면 사람들이 더 편안하게 보고 사용할 수 있을지, <br />
