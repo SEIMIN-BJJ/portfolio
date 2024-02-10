@@ -87,7 +87,7 @@ const ContentBoxTitle = styled(motion.p)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 60px;
+  padding: 20px 40px;
   padding-top: 0;
   font-weight: bold;
   font-size: 2.5rem;
@@ -111,7 +111,7 @@ const ContentBoxTitle = styled(motion.p)`
 const ContentBoxSub = styled(motion.p)`
   width: 100%;
   height: auto;
-  padding: 20px 60px;
+  padding: 20px 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -135,7 +135,7 @@ const ContentBoxSub = styled(motion.p)`
 
 const ContentBoxHashTag = styled(motion.li)`
   width: 100%;
-  padding: 0px 60px;
+  padding: 0px 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -150,7 +150,7 @@ const ContentBoxHashTag = styled(motion.li)`
     font-size: 0.8rem;
     font-weight: bold;
     color: #ccc;
-    padding: 0.1rem 1.2rem; 
+    padding: 0.1rem 1rem; 
 
     @media (max-width: 768px) {
       display: none;
