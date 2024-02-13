@@ -6,6 +6,7 @@ import Header from "component/block/Header/header";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 import FourthSection from "./FourthSection";
+import Footer from "component/block/Footer/footer";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -283,6 +284,7 @@ const MainSection = () => {
       <SecondSection />
       <ThirdSection /> 
       <FourthSection />
+      <Footer />
     </Container>
   );
 };
