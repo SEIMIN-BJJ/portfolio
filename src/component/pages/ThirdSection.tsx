@@ -202,7 +202,6 @@ const ThirdBoxSub = styled(motion.section)`
       }
 
       &:hover {
-        color: #ccc;
         opacity: 1;
         font-size: 1.8rem;
     }
