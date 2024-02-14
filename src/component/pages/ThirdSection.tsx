@@ -194,9 +194,9 @@ const ThirdBoxSub = styled(motion.section)`
 
       video {
         width: 100%;
-        height: 100%;
+        height: 100% !important;
         object-fit: cover;
-        position: absolute;
+        position: relative;
         z-index: 1;
 
       }
