@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import CloudAniMation from "../../Animation/CloudAniMation";
 import "../../../App.scss"
 
@@ -247,6 +248,10 @@ const GameInfoDevelopGuid = () => {
     handleScroll();
   }, []);
 
+  const scrollToThirdSection = () => {
+    scroll.scrollTo(1800);
+  };
+
   return (
     <Container>
       <Content>
@@ -258,7 +263,7 @@ const GameInfoDevelopGuid = () => {
           transition={transition}
         >
       <Link to={"/"}>
-        <ContentBtn>PORTFOLIO</ContentBtn>
+        <ContentBtn onClick={scrollToThirdSection}>PORTFOLIO</ContentBtn>
       </Link>
         <ContentTitle>Game InfoMation Project <br /><br />Develop</ContentTitle>
           <ContentText>

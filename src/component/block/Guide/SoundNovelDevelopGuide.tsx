@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import "../../../App.scss"
 
 const Container = styled.section`
@@ -223,6 +224,10 @@ const SoundNovelDevelopGuide = () => {
     handleScroll();
   }, []);
 
+  const scrollToThirdSection = () => {
+    scroll.scrollTo(1800);
+  };
+
   return (
     <Container>
       <Content>
@@ -233,7 +238,7 @@ const SoundNovelDevelopGuide = () => {
           transition={transition}
         >
       <Link to={"/"}>
-        <ContentBtn>PORTFOLIO</ContentBtn>
+        <ContentBtn onClick={scrollToThirdSection}>PORTFOLIO</ContentBtn>
       </Link>
         <ContentTitle>Sound Novel Project <br />Develop</ContentTitle>
           <ContentText>
