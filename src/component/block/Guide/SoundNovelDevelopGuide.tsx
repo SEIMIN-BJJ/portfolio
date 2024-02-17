@@ -107,7 +107,7 @@ const ContentExplanation = styled.h1`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 20px;
+  padding: 10px 20px;
 }
 `;
 
@@ -225,8 +225,48 @@ const SoundNovelDevelopGuide = () => {
   }, []);
 
   const scrollToThirdSection = () => {
-    scroll.scrollTo(1800);
-  };
+    const iPhoneSE = window.innerWidth <= 375 && window.innerHeight <= 667;
+    const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
+    const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
+    const iPhone14Pro = window.innerWidth <= 430 && window.innerHeight <= 932;
+  
+    let scrollPosition;
+  
+    if (iPhoneSE) {
+      scrollPosition = 1800; 
+    } else if (iPhone12Pro) {
+      scrollPosition = 2300; 
+    } else if (iPhoneXR) {
+      scrollPosition = 2400; 
+    } else if (iPhone14Pro) {
+      scrollPosition = 2500;
+    } else {
+      scrollPosition = 1800; 
+    }
+  
+    scroll.scrollTo(scrollPosition);
+};
+  // const scrollToThirdSection = () => {
+  //   const iPhoneSE = window.innerWidth <= 375 && window.innerHeight <= 667;
+  //   const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
+  //   const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
+  
+  //   let scrollPosition;
+  
+  //   if (iPhoneSE) {
+  //     scrollPosition = 1800; // iPhone SE
+  //   } else if (iPhone12Pro) {
+  //     scrollPosition = 2300; // iPhone XR
+  //   } else if (iPhoneXR) {
+  //     scrollPosition = 2400; // iPhone 12 Pro
+  //   } else {
+  //     scrollPosition = 2500; // 그 이상의 큰 화면
+  //   }
+  
+  //   scroll.scrollTo(scrollPosition);
+  // };
+
+  // 1800 2300 2400 2500
 
   return (
     <Container>

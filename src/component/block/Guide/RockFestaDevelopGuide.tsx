@@ -107,7 +107,7 @@ const ContentExplanation = styled.h1`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 20px;
+  padding: 10px 20px;
 
 }
 `;
@@ -221,8 +221,27 @@ const RockFestaDevelopGuide = () => {
   }, []);
 
   const scrollToThirdSection = () => {
-    scroll.scrollTo(1800);
-  };
+    const iPhoneSE = window.innerWidth <= 375 && window.innerHeight <= 667;
+    const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
+    const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
+    const iPhone14Pro = window.innerWidth <= 430 && window.innerHeight <= 932;
+  
+    let scrollPosition;
+  
+    if (iPhoneSE) {
+      scrollPosition = 1800; 
+    } else if (iPhone12Pro) {
+      scrollPosition = 2300; 
+    } else if (iPhoneXR) {
+      scrollPosition = 2400; 
+    } else if (iPhone14Pro) {
+      scrollPosition = 2500;
+    } else {
+      scrollPosition = 1800; 
+    }
+  
+    scroll.scrollTo(scrollPosition);
+};
 
   return (
     <Container>
