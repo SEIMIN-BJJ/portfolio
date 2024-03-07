@@ -444,7 +444,7 @@ const ModalContent = styled(motion.div)`
         justify-content: center;
         align-items: center;
         font-size: 1rem;
-
+        
         p {
         width: 100%;
         height: auto;
@@ -453,6 +453,7 @@ const ModalContent = styled(motion.div)`
         align-items: center;
         padding: 5px;
         margin-bottom: 1rem;
+
         }
       }
 

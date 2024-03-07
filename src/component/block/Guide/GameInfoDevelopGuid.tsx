@@ -267,7 +267,7 @@ const GameInfoDevelopGuid = () => {
     } else {
       scrollPosition = 1800; 
     }
-  
+
     scroll.scrollTo(scrollPosition);
 };
 
