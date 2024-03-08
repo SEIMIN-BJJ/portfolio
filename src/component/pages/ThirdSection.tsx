@@ -133,9 +133,9 @@ const ThirdBoxSub = styled(motion.section)`
       .Sn-Page {
       width: 100%;
       height: 100%;
-      color: #000000;
+      color: #fff;
       font-size: 2rem;
-      background-color: #ffffff;
+      background-color: #000;
       font-family: "ChosunCentennial";
       cursor: pointer;
 
