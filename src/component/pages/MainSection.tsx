@@ -147,7 +147,7 @@ const ContentBoxHashTag = styled(motion.li)`
     justify-content: center;
     align-items: center;
     border-radius: 10rem;
-    font-family: 'Pretendard-Medium';
+    font-family: 'Pretendard-Regular';
     font-size: 0.8rem;
     font-weight: bold;
     color: #ccc;
