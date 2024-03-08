@@ -535,6 +535,10 @@ const SoundNovelContent = styled.div`
   font-size: 1.3rem;
   height: 29rem;
   overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 768px) {
 
@@ -571,6 +575,10 @@ const RockFestaContent = styled.div`
   height: 29rem;
   overflow-y: auto;
 
+    &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media (max-width: 768px) {
 
 height: 25rem;
@@ -604,6 +612,10 @@ const GameInfoContent = styled.div`
   font-size: 1.3rem;
   height: 29rem;
   overflow-y: auto;
+
+    &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 768px) {
 
