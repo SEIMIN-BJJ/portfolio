@@ -11,6 +11,10 @@ body {
     font-size: 1rem;
     margin: 0;
     padding: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 * {
@@ -102,15 +106,14 @@ section {
 }
 
 @font-face {
-    font-family: "ChosunCentennial";
-    src: url("./component/assets/fonts/ChosunCentennial_otf.otf")
-      format("truetype");
-  }
+    font-family: 'ChosunCentennial';
+    src: url('./component/assets/fonts/ChosunCentennial_otf.otf') format('truetype');
+}
 
-  @font-face {
-    font-family: "PressStart2P-Regular";
-    src: url("./component/assets/fonts/PressStart2P-Regular.ttf") format("truetype");
-  }
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('./component/assets/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
 /* ==========================     반응형 작업      ===================== */
 
 @media screen and (max-width: 1799px) {
