@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+// import { FiMail } from "react-icons/fi";
 import { FaYoutube } from "react-icons/fa";
 import { BsArrowUpSquare } from "react-icons/bs";
 import { SiVelog } from "react-icons/si";
@@ -121,11 +121,11 @@ const HeaderDiv = styled.div`
         transition: 0.21s ease-in-out;
 
       }
-      .mail:hover {
+      /* .mail:hover {
         color: #76adfb;
         transition: 0.21s ease-in-out;
 
-      }
+      } */
       .youtube:hover {
         color: #FF0000;
         transition: 0.21s ease-in-out;
@@ -206,14 +206,14 @@ const HeaderComp = () => {
                 <FaGithub className="github" />
               </a>
             </Li>
-            <Li>
+            {/* <Li>
               <a 
               target="_blank"
               rel="noopener noreferrer"
               href="mailto:interkp12@gmail.com">
                 <FiMail className="mail" />
               </a>
-            </Li>
+            </Li> */}
             <Li>
               <a                       
               href="https://www.youtube.com/@seimin00"
