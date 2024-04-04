@@ -877,7 +877,7 @@ const ThirdSection = () => {
 
   return (
     <>
-    <Container id="thirdSection">
+    <Container id="ThirdSection">
       <Content>
         <ThirdBoxText
           variants={animationRight}

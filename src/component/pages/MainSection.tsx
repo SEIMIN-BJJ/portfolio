@@ -282,7 +282,9 @@ const MainSection = () => {
         </ContentBoxText>
       </Content>
       <SecondSection />
-      <ThirdSection  /> 
+      <div id="ThirdSection">
+        <ThirdSection />
+      </div>
       <FourthSection />
       <Footer />
     </Container>

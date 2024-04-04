@@ -253,7 +253,8 @@ const GameInfoDevelopGuid = () => {
     const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
     const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
     const iPhone14Pro = window.innerWidth <= 430 && window.innerHeight <= 932;
-  
+    const WebScroll = window.innerWidth > 2000 || window.innerHeight > 2000;
+
     let scrollPosition;
   
     if (iPhoneSE) {
@@ -264,10 +265,12 @@ const GameInfoDevelopGuid = () => {
       scrollPosition = 2400; 
     } else if (iPhone14Pro) {
       scrollPosition = 2500;
+    } else if (WebScroll) {
+      scrollPosition = 3000;
     } else {
-      scrollPosition = 1800; 
+      scrollPosition = 2000; 
     }
-
+  
     scroll.scrollTo(scrollPosition);
 };
 

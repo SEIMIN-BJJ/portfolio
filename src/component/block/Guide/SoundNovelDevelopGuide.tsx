@@ -197,6 +197,7 @@ const SoundNovelDevelopGuide = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    
     if (window.innerWidth >= 768) {
       if (scrollPosition > 3000 && scrollPosition < 5000) {
         setAnimate(false);
@@ -229,7 +230,8 @@ const SoundNovelDevelopGuide = () => {
     const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
     const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
     const iPhone14Pro = window.innerWidth <= 430 && window.innerHeight <= 932;
-  
+    const WebScroll = window.innerWidth > 2000 || window.innerHeight > 2000;
+
     let scrollPosition;
   
     if (iPhoneSE) {
@@ -240,33 +242,15 @@ const SoundNovelDevelopGuide = () => {
       scrollPosition = 2400; 
     } else if (iPhone14Pro) {
       scrollPosition = 2500;
+    } else if (WebScroll) {
+      scrollPosition = 3000;
     } else {
-      scrollPosition = 1800; 
+      scrollPosition = 2000; 
     }
   
     scroll.scrollTo(scrollPosition);
 };
-  // const scrollToThirdSection = () => {
-  //   const iPhoneSE = window.innerWidth <= 375 && window.innerHeight <= 667;
-  //   const iPhoneXR = window.innerWidth <= 414 && window.innerHeight <= 896;
-  //   const iPhone12Pro = window.innerWidth <= 390 && window.innerHeight <= 844;
-  
-  //   let scrollPosition;
-  
-  //   if (iPhoneSE) {
-  //     scrollPosition = 1800; // iPhone SE
-  //   } else if (iPhone12Pro) {
-  //     scrollPosition = 2300; // iPhone XR
-  //   } else if (iPhoneXR) {
-  //     scrollPosition = 2400; // iPhone 12 Pro
-  //   } else {
-  //     scrollPosition = 2500; // 그 이상의 큰 화면
-  //   }
-  
-  //   scroll.scrollTo(scrollPosition);
-  // };
 
-  // 1800 2300 2400 2500
 
   return (
     <Container>
