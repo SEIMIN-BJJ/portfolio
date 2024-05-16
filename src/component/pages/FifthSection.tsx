@@ -239,7 +239,7 @@ const FifthSection = () => {
       }
     } else {
       // 모바일에서의 스크롤 범위
-      if (scrollPosition >3400 && scrollPosition < 5000) {
+      if (scrollPosition >3000 && scrollPosition < 5000) {
         setAnimate(true);
       } else {
         setAnimate(false);

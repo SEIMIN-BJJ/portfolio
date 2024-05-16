@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import FourthMeIMG from "../assets/images/FourthMe.png";
-import { FaGithub } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
-import { FaPhone } from "react-icons/fa";
 import "../../App.scss";
 
 const Container = styled.section`
@@ -27,40 +23,18 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     flex-direction: column;
   }
 `;
 
-const ContentBoxPicture = styled(motion.div)`
-  width: 25rem;
-  height: 25rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(${FourthMeIMG});
-  position: relative;
-  margin-top: -7vh;
-
-  @media (max-width: 768px) {
-    width: 90%;
-    height: 50%;
-    background-size: cover;
-    background-position: center center;
-    margin: 0.5rem auto;
-    border-radius: 5px;
-  }
-`;
-
-const ContentBoxText = styled(motion.div)`
+const FourthBoxText = styled(motion.div)`
   width: 100%;
-  height: 40vh;
+  height: 80vh;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -78,20 +52,18 @@ const ContentBoxText = styled(motion.div)`
   }
 `;
 
-const ContentBoxTitle = styled(motion.p)`
+const FourthBoxTitle = styled(motion.p)`
   width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 30px;
-  padding-top: 0;
+  padding: 0 0 1rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-family: 'Pretendard-ExtraBold';
   position: relative;
   color: #212020;
-  text-align: right;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -106,18 +78,56 @@ const ContentBoxTitle = styled(motion.p)`
   }
 `;
 
-const ContentBoxSub = styled(motion.p)`
+const FourthBoxSub = styled(motion.p)`
   width: 100%;
-  height: auto;
-  padding: 20px 30px;
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  text-align: right;
-  font-size: 0.9rem;
+  text-align: left;
+  font-size: 2rem;
   font-family: 'Pretendard-Bold';
-  color: #171717a7;
-  line-height: 2rem;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    height: 50%;
+  }
+
+  ul {
+    width:100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  li {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition:  0.2s ease-in-out;
+
+      @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -131,70 +141,7 @@ const ContentBoxSub = styled(motion.p)`
   }
 `;
 
-const ContentBoxHashTag = styled(motion.li)`
-  width: 100%;
-  padding: 0px 30px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rem;
-    font-family: 'Pretendard-Medium';
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 0.1rem 0.5rem; 
-
-  a {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3rem;
-    border: 0;
-
-    .github:hover {
-        color: #ccc;
-        transition: 0.21s ease-in-out;
-
-      }
-      .mail:hover {
-        color: #76adfb;
-        transition: 0.21s ease-in-out;
-
-      }
-      .phone:hover {
-        color: #17b92c;
-        transition: 0.21s ease-in-out;
-
-      }
-
-    @media (max-width: 768px) {
-    padding: 0 0.8rem; 
-    font-size: 2rem;
-
-}
-  }
-
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    font-size: 3rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-    margin: 1rem auto;
-}
-
-`;
 
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -217,15 +164,15 @@ const FourthSection = () => {
     duration: 1,
     delay: 0.9,
   };
-  const transitionText = {
-    duration: 1,
-    delay: 2,
-  };
+  // const transitionText = {
+  //   duration: 1,
+  //   delay: 2,
+  // };
 
-  const transitionHashTag = {
-    duration: 1,
-    delay: 1.5,
-  };
+  // const transitionHashTag = {
+  //   duration: 1,
+  //   delay: 1.5,
+  // };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -258,72 +205,34 @@ const FourthSection = () => {
     handleScroll();
   }, []); 
 
+  const listItems = [1, 2, 3, 4, 5, 6, 7, 8];
+
   return (
     <Container>
       <Content>
-        <ContentBoxText
+        <FourthBoxText
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
         >
-          <ContentBoxTitle       
+          <FourthBoxTitle       
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Collaboration is More Important Than Development</ContentBoxTitle>
-          <ContentBoxSub          
+          transition={transition}>Design</FourthBoxTitle>
+          <FourthBoxSub          
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}>
-            개발보다 중요한건 협업이다.<br />
-            같이 일하던 분께서 항상 저 문구를 강조하셨습니다.<br />
-            기술이란 것은 배우면 그만이다.<br />
-            기술이란 내가 쓰는 도구에 지나지 않는다.<br />
-            진짜로 잘하는 사람은 소통을 잘하는 사람이다.<br />
-            너무나 당연한 얘기이고 세상이치에 전부 대입 할 수 있는 말이지만<br />
-            너무나 쉽기도 어렵기도 한 이 이야기를 명심하라고 얘기하셨습니다.<br />
-            그 말씀들을 항상 마음에 새기고 일이든 어디서든 적용 하려 노력합니다.<br />
-            소통할 수 있는 사람, 노력하는 사람, 임성민입니다.
-          </ContentBoxSub>
-          <ContentBoxHashTag          
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionHashTag}>
-            <p>              
-              <a 
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/SEIMIN-BJJ">
-                <FaGithub className="github" />
-              </a>
-            </p>
-            <p>              
-              <a 
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:interkp12@gmail.com">
-                <FiMail className="mail" />
-              </a>
-            </p>
-            <p>
-            <a 
-              target="_blank"
-              rel="noopener noreferrer"
-              href="tel:010-6418-5624">
-                <FaPhone className="phone" />
-              </a>
-            </p>
-          </ContentBoxHashTag>
-        </ContentBoxText>
-        <ContentBoxPicture
-          variants={animationRight}
-          initial="hidden"
-          animate={animate ? "visible" : "hidden"}
-          transition={transitionText}
-        ></ContentBoxPicture>
+            <ul>
+              {listItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </FourthBoxSub>
+        </FourthBoxText>
       </Content>
     </Container>
   );
