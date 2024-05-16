@@ -117,6 +117,12 @@ const FourthBoxSub = styled(motion.p)`
       justify-content: center;
       align-items: center;
       transition:  0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
 
       @media (max-width: 768px) {
       width: 100%;
@@ -126,7 +132,6 @@ const FourthBoxSub = styled(motion.p)`
       align-items: center;
       margin: 1rem;
       }
-    }
   }
 
   @media (max-width: 768px) {
@@ -220,7 +225,7 @@ const FourthSection = () => {
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-          transition={transition}>Design</FourthBoxTitle>
+          transition={transition}>Graphic Design</FourthBoxTitle>
           <FourthBoxSub          
           variants={animationRight}
           initial="hidden"
