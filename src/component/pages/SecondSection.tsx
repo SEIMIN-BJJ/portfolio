@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import TechIMG from "../assets/images/desktop.png";
-import TechSecondIMG from "../assets/images/desktopTwo.jpg"
+// import TechSecondIMG from "../assets/images/desktopTwo.jpg"
 import { motion } from "framer-motion";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
@@ -392,10 +392,10 @@ const SecondSection = () => {
             <ul>
             <SiHtml5 style={{marginRight:'1rem', color:'#FF6D01'}}/> 
             <SiCss3 style={{marginRight:'1rem', color:'#2565F2'}}/>
-            <SiJavascript style={{marginRight:'1rem', color: ''}}/>
-            <SiTypescript style={{marginRight:'1rem', color: ''}}/>
-            <SiSass style={{marginRight:'1rem', color: ''}}/>
-            <SiReact style={{marginRight:'1rem', color: ''}}/>
+            <SiJavascript style={{marginRight:'1rem', color: '#F7DF1E'}}/>
+            <SiTypescript style={{marginRight:'1rem', color: '#3179C7'}}/>
+            <SiSass style={{marginRight:'1rem', color: '#CF649A'}}/>
+            <SiReact style={{marginRight:'1rem', color: '#5ED3F3'}}/>
             <SiGithub style={{marginRight:'1rem', color: ''}}/>
             </ul>
           </SecondBoxSub>
