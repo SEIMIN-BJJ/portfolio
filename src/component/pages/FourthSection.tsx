@@ -156,7 +156,7 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 `;
 
 const ModalContent = styled.div`
@@ -164,6 +164,7 @@ const ModalContent = styled.div`
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  cursor: pointer;
 
   img {
     width: 100%; 
