@@ -27,7 +27,7 @@ const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
   }
 `;
@@ -100,7 +100,7 @@ const FourthBoxSub = styled(motion.p)`
 
     @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +125,7 @@ const FourthBoxSub = styled(motion.p)`
 
     @media (max-width: 768px) {
       width: 100%;
-      height: 100%;
+      height: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -276,7 +276,7 @@ const FourthSection = () => {
         setAnimate(false);
       }
     } else {
-      if (scrollPosition > 2100 && scrollPosition < 4000) {
+      if (scrollPosition > 2100 && scrollPosition < 10000) {
         setAnimate(true);
       } else {
         setAnimate(false);
