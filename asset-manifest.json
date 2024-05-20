@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2708859e.css",
-    "main.js": "/portfolio/static/js/main.72f5c7dc.js",
+    "main.js": "/portfolio/static/js/main.dbc3fc3c.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/me.png": "/portfolio/static/media/me.5737e5c57605728d4e23.png",
     "static/media/ChosunCentennial_otf.otf": "/portfolio/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
@@ -22,11 +22,11 @@
     "static/media/nightMarket.jpg": "/portfolio/static/media/nightMarket.c31a6c2e770f7bfc248f.jpg",
     "index.html": "/portfolio/index.html",
     "main.2708859e.css.map": "/portfolio/static/css/main.2708859e.css.map",
-    "main.72f5c7dc.js.map": "/portfolio/static/js/main.72f5c7dc.js.map",
+    "main.dbc3fc3c.js.map": "/portfolio/static/js/main.dbc3fc3c.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2708859e.css",
-    "static/js/main.72f5c7dc.js"
+    "static/js/main.dbc3fc3c.js"
   ]
 }
