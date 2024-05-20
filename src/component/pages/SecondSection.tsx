@@ -49,15 +49,14 @@ const Content = styled.div`
 `;
 
 // const SecondBoxPicture = styled(motion.div)`
-//   width: 100%;
-//   height: 100vh;
+//   width: 40%;
+//   height: 60%;
 //   flex-direction: column;
 //   background-image: url(${TechSecondIMG});
-//   background-size: cover;
+//   background-size: contain;
 //   background-repeat: no-repeat;
-//   background-position: center center;
+//   background-position: 250% center;
 //   position: absolute;
-//   text-align: center;
 //   z-index: 0;
 
 //   @media (max-width: 768px) {

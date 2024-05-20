@@ -194,7 +194,7 @@ const ThirdBoxSub = styled(motion.section)`
 
       video {
         width: 100%;
-        height: 100% !important;
+        height: 100%;
         object-fit: cover;
         position: relative;
         z-index: 1;
@@ -910,6 +910,7 @@ const ThirdSection = () => {
                 <p className="RockFestaText">ROCK FESTA</p>
                   <video autoPlay loop muted playsInline >
                     <source src={process.env.PUBLIC_URL + "/videos/fire.mp4"} type="video/mp4" />
+
                   </video>
               </li>
                 {/* <p className="RockFestaText">ROCK FESTA</p>
