@@ -99,13 +99,13 @@ const FourthBoxSub = styled(motion.p)`
     grid-gap: 5px;
 
     @media (max-width: 768px) {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
     li {
       width: 100%;
@@ -122,7 +122,6 @@ const FourthBoxSub = styled(motion.p)`
       &:hover {
         background-color: #ccc;
       }
-    }
 
     @media (max-width: 768px) {
       width: 100%;
@@ -131,8 +130,8 @@ const FourthBoxSub = styled(motion.p)`
       justify-content: center;
       align-items: center;
       margin: 1rem;
-    }
   }
+}
 
   @media (max-width: 768px) {
     width: 100%;
@@ -144,6 +143,7 @@ const FourthBoxSub = styled(motion.p)`
     margin: 1rem auto;
     line-height: 2.3rem;
   }
+}
 `;
 
 const ModalOverlay = styled.div`
