@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import NightMarket from "../assets/images/nightMarket.jpg"
+import NightMarket from "../assets/images/nightMarket.jpg";
 import "../../App.scss"; // Ensure this path is correct relative to your file structure
 
 const Container = styled.section`
@@ -11,7 +11,6 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
 
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
@@ -20,7 +19,7 @@ const Container = styled.section`
 
 const Content = styled.div`
   width: 55rem;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +38,7 @@ const FourthBoxText = styled(motion.div)`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: -21vh;
+  margin-top: 21vh;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -161,11 +160,17 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background: #fff;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+
+  img {
+    width: 100%; 
+    height: auto; 
+    max-width: 80%;
+    max-height: 80%;
+  }
 
   button {
     position: absolute;
@@ -174,6 +179,7 @@ const ModalContent = styled.div`
     background: none;
     border: none;
     font-size: 1.5rem;
+    color: #fff;
     cursor: pointer;
   }
 `;
@@ -183,14 +189,64 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const Modal = ({ content, onClose }: ModalProps) => (
-  <ModalOverlay onClick={onClose}>
-    <ModalContent onClick={(e) => e.stopPropagation()}>
-      <button onClick={onClose}>X</button>
-      <div>{content}</div>
-    </ModalContent>
-  </ModalOverlay>
-);
+const isString = (text: string | number): text is string => {
+  return typeof text === "string";
+};
+
+const ImageTitleContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Pretendard-Bold';
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover img {
+    filter: grayscale(0%);
+  }
+
+  &:hover p {
+    opacity: 1;
+  }
+`;
+
+const Modal = ({ content, onClose }: ModalProps) => {
+
+  const imageURL = isString(content) ? content : "";
+  return (
+    <ModalOverlay onClick={onClose}>
+      <ModalContent onClick={(e) => e.stopPropagation()}>
+        <button onClick={onClose}></button>
+        <img src={imageURL} onClick={onClose} alt="" />
+      </ModalContent>
+    </ModalOverlay>
+  );
+};
 
 const FourthSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -239,10 +295,39 @@ const FourthSection = () => {
     handleScroll();
   }, []);
 
-  const listItems = ["야시장 포스터", "포스터", "웹포스터", "앨범커버", "주짓수 포스터", "명함", "게임포스터", "힐링포스터"];
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    }
 
-  const handleItemClick = (item: string | number) => {
-    setModalContent(item);
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalContent('');
+  };
+
+  const images = [
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+    { title: "중앙시장 야시장", src: NightMarket },
+  ];
+
+  const handleItemClick = (index: number) => {
+    setModalContent(images[index].src); 
     setIsModalOpen(true);
   };
 
@@ -270,9 +355,12 @@ const FourthSection = () => {
             transition={transitionSecond}
           >
             <ul>
-              {listItems.map((item, index) => (
-                <li key={index} onClick={() => handleItemClick(item)}>
-                  {item}
+              {images.map((image, index) => (
+                <li key={index} onClick={() => handleItemClick(index)}>
+                  <ImageTitleContainer>
+                    <img src={image.src} alt="" />
+                    <p>{image.title}</p>
+                  </ImageTitleContainer>
                 </li>
               ))}
             </ul>
@@ -280,7 +368,7 @@ const FourthSection = () => {
         </FourthBoxText>
       </Content>
       {isModalOpen && (
-        <Modal content={modalContent} onClose={() => setIsModalOpen(false)} />
+        <Modal content={modalContent} onClose={closeModal} />
       )}
     </Container>
   );
