@@ -346,7 +346,7 @@ const FourthSection = () => {
             animate={animate ? "visible" : "hidden"}
             transition={transition}
           >
-            Graphic Design
+            Graphic Design(추가중)
           </FourthBoxTitle>
           <FourthBoxSub
             variants={animationRight}
