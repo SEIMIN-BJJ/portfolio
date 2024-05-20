@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2708859e.css",
-    "main.js": "/portfolio/static/js/main.16a552ff.js",
+    "main.js": "/portfolio/static/js/main.802d3fcb.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/me.png": "/portfolio/static/media/me.5737e5c57605728d4e23.png",
     "static/media/ChosunCentennial_otf.otf": "/portfolio/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
@@ -18,15 +18,14 @@
     "static/media/Pretendard-ExtraLight.otf": "/portfolio/static/media/Pretendard-ExtraLight.c1677723ce338097648f.otf",
     "static/media/Pretendard-Thin.otf": "/portfolio/static/media/Pretendard-Thin.e45abc28d4828e92dd10.otf",
     "static/media/novel-img-1.png": "/portfolio/static/media/novel-img-1.d152668931a50363e3be.png",
-    "static/media/desktopTwo.jpg": "/portfolio/static/media/desktopTwo.ccd99dfa0870033c35e5.jpg",
     "static/media/PressStart2P-Regular.ttf": "/portfolio/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
     "index.html": "/portfolio/index.html",
     "main.2708859e.css.map": "/portfolio/static/css/main.2708859e.css.map",
-    "main.16a552ff.js.map": "/portfolio/static/js/main.16a552ff.js.map",
+    "main.802d3fcb.js.map": "/portfolio/static/js/main.802d3fcb.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2708859e.css",
-    "static/js/main.16a552ff.js"
+    "static/js/main.802d3fcb.js"
   ]
 }
