@@ -48,31 +48,31 @@ const Content = styled.div`
 
 `;
 
-const SecondBoxPicture = styled(motion.div)`
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  background-image: url(${TechSecondIMG});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  text-align: center;
-  z-index: 0;
+// const SecondBoxPicture = styled(motion.div)`
+//   width: 100%;
+//   height: 100vh;
+//   flex-direction: column;
+//   background-image: url(${TechSecondIMG});
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   position: absolute;
+//   text-align: center;
+//   z-index: 0;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 130vh;
-    background-size: cover;
-    background-position: center center;
-    margin: 1rem auto;
-  }
+//   @media (max-width: 768px) {
+//     width: 100%;
+//     height: 130vh;
+//     background-size: cover;
+//     background-position: center center;
+//     margin: 1rem auto;
+//   }
 
-`;
+// `;
 
 const SecondBoxText = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -99,10 +99,10 @@ const SecondBoxTitle = styled(motion.p)`
   align-items: flex-start;
   padding: 3rem 0;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-family: 'Pretendard-ExtraBold';
   position: relative;
-  color:#fff;
+  color:#212020;
 
 
   @media (max-width: 768px) {
@@ -134,7 +134,7 @@ const SecondBoxSub = styled(motion.section)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #fef;
+    /* color: #171717a7; */
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -166,16 +166,16 @@ const SecondBoxHashTag = styled(motion.div)`
     text-align: left;
     border-radius: 10rem;
     font-size: 0.8rem;
-    color: #9c9c9c;
+    color: #171717a7;
     padding: 0.5rem 0;
     letter-spacing: 2px;
     transition: 0.21s ease-in-out;
 
-    &:hover {
+    /* &:hover {
       opacity: 1;
       color:#fff;
       font-size: 0.81rem;
-    }
+    } */
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -302,10 +302,10 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        <SecondBoxPicture
+        {/* <SecondBoxPicture
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-        ></SecondBoxPicture>
+        ></SecondBoxPicture> */}
         <SecondBoxText
           variants={animationRight}
           initial="hidden"
@@ -328,11 +328,11 @@ const SecondSection = () => {
           transition={transitionHashTag}
           >
             {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
-            <p>#특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
-            <p>#팀원들과의 순조로운 협동 및 의견을 반영해 더 나은 결과물을 도출하기 위해 논의하며 수긍할 줄 압니다.</p>
-            <p>#레이아웃의 배치 및 그리드를 명확하게 사용함으로써 사용자가 더 편하게 볼수 있도록 노력합니다.</p>
-            <p>#photoshop / illustrator를 이용하여 디자인 및 편집이 가능합니다.</p>
-            <p>#XD / Figma를 이용하여 UX / UI 프로토타이핑 설계 및 디자인이 가능합니다.</p>
+            <p>특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
+            <p>팀원들과의 순조로운 협동 및 의견을 반영해 더 나은 결과물을 도출하기 위해 논의하며 수긍할 줄 압니다.</p>
+            <p>레이아웃의 배치 및 그리드를 명확하게 사용함으로써 사용자가 더 편하게 볼수 있도록 노력합니다.</p>
+            <p>photoshop / illustrator를 이용하여 디자인 및 편집이 가능합니다.</p>
+            <p>XD / Figma를 이용하여 UX / UI 프로토타이핑 설계 및 디자인이 가능합니다.</p>
           </SecondBoxHashTag>
 
           <SecondBoxSub          
@@ -342,10 +342,10 @@ const SecondSection = () => {
           transition={transitionIcons}
           >
             <ul>
-              <SiAdobephotoshop style={{marginRight:'1rem'}}/>
-              <SiAdobeillustrator style={{marginRight:'1rem'}} />
-              <SiAdobexd style={{marginRight:'1rem'}}/>
-              <SiAdobepremierepro style={{marginRight: '1rem'}}/>
+              <SiAdobephotoshop style={{marginRight:'1rem', color:'#31A8FF'}}/>
+              <SiAdobeillustrator style={{marginRight:'1rem', color:'#FF9A01'}} />
+              <SiAdobexd style={{marginRight:'1rem', color:'#FF61F6'}}/>
+              <SiAdobepremierepro style={{marginRight: '1rem', color:'#9A9AFF'}}/>
               <SiFigma style={{marginRight:'1rem'}} />
             </ul>
           </SecondBoxSub>
@@ -375,12 +375,12 @@ const SecondSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}
           >
-            <p>#SCSS 컴파일링을 통해 코드를 작성함으로써 효율적인 보수작업을 지향합니다.</p>
-            <p>#styled-components를 활용하여 신속한 마크업 작업을 통해 프로젝트에 빠르게 결과물을 도출하고, <br />Router를 적극 활용하여 사용자 경험을 극대화합니다.</p>
-            <p>#RESTful API 호출에는 axios를 활용하여 데이터 획득 및 전송 작업을 신속하게 처리합니다. </p>
-            <p>#Figma와 XD의 디자인을 참조하여 퍼블리싱을 진행하며, 반응형 퍼블리싱을 통해 모바일 및 데스크톱 환경에서 <br />일관된 사용자 경험을 제공합니다.</p>
-            <p>#웹 접근성과 웹 표준성을 고려하여 SEO 최적화를 실시하며, 페이지 구축에 있어 최상의 성능과 <br />사용자 친화적인 디자인을 추구합니다.</p>
-            <p>#더 나은 사용자 경험과 효율적인 개발을 위해 끊임없는 자기 계발에 주력하며, 협업에서의 커뮤니케이션과 <br />문제 해결 능력을 강조합니다.</p>
+            <p>SCSS 컴파일링을 통해 코드를 작성함으로써 효율적인 보수작업을 지향합니다.</p>
+            <p>styled-components를 활용하여 신속한 마크업 작업을 통해 프로젝트에 빠르게 결과물을 도출하고, <br />Router를 적극 활용하여 사용자 경험을 극대화합니다.</p>
+            <p>RESTful API 호출에는 axios를 활용하여 데이터 획득 및 전송 작업을 신속하게 처리합니다. </p>
+            <p>Figma와 XD의 디자인을 참조하여 퍼블리싱을 진행하며, 반응형 퍼블리싱을 통해 모바일 및 데스크톱 환경에서 <br />일관된 사용자 경험을 제공합니다.</p>
+            <p>웹 접근성과 웹 표준성을 고려하여 SEO 최적화를 실시하며, 페이지 구축에 있어 최상의 성능과 <br />사용자 친화적인 디자인을 추구합니다.</p>
+            <p>더 나은 사용자 경험과 효율적인 개발을 위해 끊임없는 자기 계발에 주력하며, 협업에서의 커뮤니케이션과 <br />문제 해결 능력을 강조합니다.</p>
           </SecondBoxHashTag>
 
           <SecondBoxSub          
@@ -390,13 +390,13 @@ const SecondSection = () => {
           transition={transitionIcons}
           >
             <ul>
-            <SiHtml5 style={{marginRight:'1rem'}}/> 
-            <SiCss3 style={{marginRight:'1rem'}}/>
-            <SiJavascript style={{marginRight:'1rem'}}/>
-            <SiTypescript style={{marginRight:'1rem'}}/>
-            <SiSass style={{marginRight:'1rem'}}/>
-            <SiReact style={{marginRight:'1rem'}}/>
-            <SiGithub style={{marginRight:'1rem'}}/>
+            <SiHtml5 style={{marginRight:'1rem', color:'#FF6D01'}}/> 
+            <SiCss3 style={{marginRight:'1rem', color:'#2565F2'}}/>
+            <SiJavascript style={{marginRight:'1rem', color: ''}}/>
+            <SiTypescript style={{marginRight:'1rem', color: ''}}/>
+            <SiSass style={{marginRight:'1rem', color: ''}}/>
+            <SiReact style={{marginRight:'1rem', color: ''}}/>
+            <SiGithub style={{marginRight:'1rem', color: ''}}/>
             </ul>
           </SecondBoxSub>
         </SecondBoxText>
