@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import TechIMG from "../assets/images/desktop.png";
-// import TechSecondIMG from "../assets/images/desktopTwo.jpg"
+import TechSecondIMG from "../assets/images/desktopTwo.jpg"
 import { motion } from "framer-motion";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
@@ -48,26 +48,26 @@ const Content = styled.div`
 
 `;
 
-// const SecondBoxPicture = styled(motion.div)`
-//   width: 40%;
-//   height: 60%;
-//   flex-direction: column;
-//   background-image: url(${TechSecondIMG});
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   background-position: 250% center;
-//   position: absolute;
-//   z-index: 0;
+const SecondBoxPicture = styled(motion.div)`
+  width: 100%;
+  height: 70%;
+  flex-direction: column;
+  background-image: url(${TechSecondIMG});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  position: absolute;
+  z-index: 0;
 
-//   @media (max-width: 768px) {
-//     width: 100%;
-//     height: 130vh;
-//     background-size: cover;
-//     background-position: center center;
-//     margin: 1rem auto;
-//   }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 130vh;
+    background-size: cover;
+    background-position: center center;
+    margin: 1rem auto;
+  }
 
-// `;
+`;
 
 const SecondBoxText = styled(motion.div)`
   width: 100%;
@@ -301,10 +301,12 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        {/* <SecondBoxPicture
+        <SecondBoxPicture
+          variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
-        ></SecondBoxPicture> */}
+          transition={transitionSecond}
+        ></SecondBoxPicture>
         <SecondBoxText
           variants={animationRight}
           initial="hidden"
@@ -316,8 +318,7 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-          >
-            Graphic Design
+          >Graphic Design
           </SecondBoxTitle>
 
           <SecondBoxHashTag          
@@ -326,7 +327,6 @@ const SecondSection = () => {
           animate={animate ? "visible" : "hidden"}
           transition={transitionHashTag}
           >
-            {/* <p onClick={handleModalOpen}>#꼼꼼함</p> */}
             <p>특유의 꼼꼼함으로 가이드를 세워 픽셀단위로 세심하게 제작하며 통일성 있는 디자인을 제작합니다.</p>
             <p>팀원들과의 순조로운 협동 및 의견을 반영해 더 나은 결과물을 도출하기 위해 논의하며 수긍할 줄 압니다.</p>
             <p>레이아웃의 배치 및 그리드를 명확하게 사용함으로써 사용자가 더 편하게 볼수 있도록 노력합니다.</p>
@@ -365,8 +365,7 @@ const SecondSection = () => {
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transition}
-          >
-            Development</SecondBoxTitle>
+          >Development</SecondBoxTitle>
 
         <SecondBoxHashTag          
           variants={animationRight}
