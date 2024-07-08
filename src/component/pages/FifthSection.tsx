@@ -14,7 +14,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffe;
 
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
