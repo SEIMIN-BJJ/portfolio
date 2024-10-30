@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import TechIMG from "../assets/images/desktop.png";
-import TechSecondIMG from "../assets/images/desktopTwo.jpg"
+// import TechSecondIMG from "../assets/images/desktopTwo.jpg"
 import { motion } from "framer-motion";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
@@ -48,26 +48,26 @@ const Content = styled.div`
 
 `;
 
-const SecondBoxPicture = styled(motion.div)`
-  width: 100%;
-  height: 70%;
-  flex-direction: column;
-  background-image: url(${TechSecondIMG});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 80% center;
-  position: absolute;
-  z-index: 0;
+// const SecondBoxPicture = styled(motion.div)`
+//   width: 100%;
+//   height: 70%;
+//   flex-direction: column;
+//   background-image: url(${TechSecondIMG});
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: 80% center;
+//   position: absolute;
+//   z-index: 0;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 130vh;
-    background-size: cover;
-    background-position: center center;
-    margin: 1rem auto;
-  }
+//   @media (max-width: 768px) {
+//     width: 100%;
+//     height: 130vh;
+//     background-size: cover;
+//     background-position: center center;
+//     margin: 1rem auto;
+//   }
 
-`;
+// `;
 
 const SecondBoxText = styled(motion.div)`
   width: 100%;
@@ -301,12 +301,12 @@ const SecondSection = () => {
   return (
     <Container>
       <Content>
-        <SecondBoxPicture
+        {/* <SecondBoxPicture
           variants={animationRight}
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
           transition={transitionSecond}
-        ></SecondBoxPicture>
+        ></SecondBoxPicture> */}
         <SecondBoxText
           variants={animationRight}
           initial="hidden"
